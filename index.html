@@ -4,12 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Smart Home Security | Camera & Smart Home Packages in Omaha</title>
+
   <meta
     name="description"
-    content="Smart Home Security offers security camera and smart home packages for Omaha and surrounding areas."
+    content="Compare Smart Home Security camera and smart-home packages for Omaha and the surrounding area, then request pricing online in under a minute."
   >
 
-  <title>Smart Home Security | Home Security Packages</title>
+  <link rel="canonical" href="https://smarthomesecurity-omaha.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Smart Home Security">
+  <meta property="og:title" content="Smart Home Security | Camera & Smart Home Packages in Omaha">
+  <meta property="og:description" content="Compare camera and smart-home packages for Omaha and the surrounding area, then request pricing online in under a minute.">
+  <meta property="og:image" content="images/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://smarthomesecurity-omaha.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Smart Home Security | Camera & Smart Home Packages in Omaha">
+  <meta name="twitter:description" content="Compare camera and smart-home packages for Omaha and the surrounding area, then request pricing online in under a minute.">
+  <meta name="twitter:image" content="images/social-share.jpg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Smart home security package referral",
+    "provider": {
+      "@type": "Organization",
+      "name": "Smart Home Security",
+      "legalName": "Murrays Empire LLC",
+      "areaServed": {
+        "@type": "City",
+        "name": "Omaha"
+      }
+    },
+    "areaServed": "Omaha, Nebraska and surrounding areas",
+    "description": "Smart Home Security helps Omaha-area homeowners compare security camera and smart-home equipment packages and connects them with a provider for pricing and setup.",
+    "offers": [
+      { "@type": "Offer", "name": "Package A — More Coverage", "price": "79.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Package B — Balanced Security", "price": "74.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Package C — Smart Essentials", "price": "63.99", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -21,6 +67,7 @@
       --off-white: #f4f7fb;
       --text: #12233c;
       --muted: #64748b;
+      --focus: #ffd166;
     }
 
     * {
@@ -44,9 +91,24 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     .container {
       width: min(1160px, 92%);
       margin: auto;
+    }
+
+    /* Visible keyboard focus for all interactive elements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: 6px;
     }
 
     .announcement {
@@ -62,14 +124,9 @@
       color: #79bcff;
     }
 
-    .service-area {
-      padding: 8px 15px;
-      color: #cbdcf2;
-      background: #07172d;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      text-align: center;
-      font-size: 13px;
-      font-weight: 700;
+    .announcement .divider {
+      margin: 0 8px;
+      color: #3a5a82;
     }
 
     header {
@@ -101,14 +158,15 @@
     .brand-icon {
       width: 44px;
       height: 44px;
+      flex: 0 0 44px;
       display: grid;
       place-items: center;
-      color: white;
-      background: linear-gradient(135deg, #2588ff, #0a4eba);
-      border: 1px solid rgba(255,255,255,.55);
       border-radius: 13px;
-      box-shadow: 0 10px 22px rgba(18,112,255,.32);
-      font-size: 24px;
+    }
+
+    .brand-icon svg {
+      width: 100%;
+      height: 100%;
     }
 
     .brand small {
@@ -171,6 +229,18 @@
       border: 2px solid rgba(255,255,255,.85);
     }
 
+    .icon {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: -0.125em;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -229,7 +299,7 @@
 
     h1 {
       margin: 17px 0 18px;
-      font-size: clamp(42px, 5.8vw, 76px);
+      font-size: clamp(38px, 5.8vw, 76px);
       line-height: .98;
       letter-spacing: -2.5px;
     }
@@ -262,10 +332,15 @@
       font-weight: 800;
     }
 
-    .hero-points span::before {
-      content: "✓";
-      margin-right: 8px;
+    .hero-points span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-points .icon {
       color: #6de69a;
+      stroke-width: 3;
     }
 
     .flyer-frame {
@@ -280,6 +355,8 @@
     .flyer-frame img {
       display: block;
       width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
       border-radius: 13px;
     }
 
@@ -305,6 +382,7 @@
     }
 
     .trust-bar {
+      padding: 0;
       background: #061a35;
       border-top: 1px solid rgba(255,255,255,.1);
       border-bottom: 1px solid rgba(255,255,255,.1);
@@ -316,9 +394,11 @@
     }
 
     .trust-item {
-      padding: 25px 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 15px;
       border-right: 1px solid rgba(255,255,255,.12);
-      text-align: center;
     }
 
     .trust-item:last-child {
@@ -326,14 +406,24 @@
     }
 
     .trust-icon {
-      display: block;
-      font-size: 25px;
+      display: grid;
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: #78bbff;
+      background: rgba(103,185,255,.12);
+      border-radius: 9px;
+    }
+
+    .trust-icon .icon {
+      width: 18px;
+      height: 18px;
     }
 
     .trust-item strong {
       display: block;
-      margin-top: 5px;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .trust-item small {
@@ -363,10 +453,14 @@
     }
 
     .section-copy {
-      max-width: 720px;
+      max-width: 640px;
       margin: 0;
       color: #586d8a;
       font-size: 17px;
+    }
+
+    .services .section-copy {
+      color: #afc0d6;
     }
 
     .packages {
@@ -403,20 +497,6 @@
     .plan.featured {
       border: 2px solid var(--red);
       box-shadow: 0 18px 38px rgba(203,33,43,.16);
-    }
-
-    .featured-label {
-      position: absolute;
-      top: 18px;
-      right: -35px;
-      width: 140px;
-      padding: 5px;
-      color: white;
-      background: var(--red);
-      font-size: 11px;
-      font-weight: 900;
-      text-align: center;
-      transform: rotate(42deg);
     }
 
     .package-name {
@@ -465,6 +545,9 @@
     }
 
     .plan li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
       padding: 8px 0;
       border-bottom: 1px solid #e8eef5;
       color: #334a68;
@@ -472,17 +555,15 @@
       font-weight: 700;
     }
 
-    .plan li::before {
-      content: "✓";
-      display: inline-grid;
+    .plan li .icon {
+      flex: 0 0 18px;
       width: 18px;
       height: 18px;
-      place-items: center;
-      margin-right: 9px;
       color: #147641;
       background: #dff6e7;
       border-radius: 50%;
-      font-size: 12px;
+      padding: 3px;
+      stroke-width: 3;
     }
 
     .plan .button {
@@ -508,10 +589,6 @@
       color: #74b8ff;
     }
 
-    .services .section-copy {
-      color: #afc0d6;
-    }
-
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -531,9 +608,14 @@
       height: 55px;
       display: grid;
       place-items: center;
+      color: #78bbff;
       background: rgba(27,123,255,.17);
       border-radius: 14px;
-      font-size: 27px;
+    }
+
+    .service-icon .icon {
+      width: 26px;
+      height: 26px;
     }
 
     .service-card h3 {
@@ -566,13 +648,14 @@
 
     .request h2 {
       margin: 11px 0 16px;
-      font-size: clamp(35px, 4vw, 55px);
+      font-size: clamp(32px, 4vw, 55px);
       line-height: 1.05;
     }
 
     .request p {
       color: #d8e5f6;
       font-size: 17px;
+      max-width: 520px;
     }
 
     .steps {
@@ -608,6 +691,12 @@
       box-shadow: 0 25px 60px rgba(0,0,0,.32);
     }
 
+    .form-lead {
+      margin: 0 0 18px;
+      color: #d8e5f6;
+      font-size: 14px;
+    }
+
     .field-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -620,6 +709,11 @@
       color: white;
       font-size: 13px;
       font-weight: 900;
+    }
+
+    .optional-tag {
+      color: #bed3ee;
+      font-weight: normal;
     }
 
     input,
@@ -663,6 +757,21 @@
       justify-content: space-between;
       gap: 20px;
       font-size: 13px;
+      flex-wrap: wrap;
+    }
+
+    .footer-legal {
+      max-width: 620px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: #78bbff;
     }
 
     @media (max-width: 880px) {
@@ -704,7 +813,46 @@
       }
 
       .hero {
-        padding: 56px 0 62px;
+        padding: 34px 0 44px;
+      }
+
+      .hero-grid {
+        gap: 26px;
+      }
+
+      .hero-grid > div:first-child {
+        order: 1;
+      }
+
+      .hero-grid > div:last-child {
+        order: 2;
+      }
+
+      .flyer-frame {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 12px 0 10px;
+        font-size: clamp(30px, 9vw, 40px);
+        letter-spacing: -1.2px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        margin-top: 20px;
+      }
+
+      .hero-points {
+        margin-top: 18px;
+      }
+
+      section {
+        padding: 52px 0;
       }
 
       .field-row,
@@ -723,19 +871,25 @@
 
       .flyer-badge {
         right: 0;
-        bottom: -23px;
+        bottom: -18px;
+        padding: 10px 13px;
+        font-size: 12px;
       }
 
       .flyer-frame {
-        margin-bottom: 25px;
+        margin-bottom: 22px;
       }
 
       .footer-grid {
         display: block;
       }
 
-      .footer-grid > div:last-child {
+      .footer-links {
         margin-top: 10px;
+      }
+
+      .footer-grid > div:last-child {
+        margin-top: 14px;
       }
     }
   </style>
@@ -744,17 +898,27 @@
 <body>
 
   <div class="announcement">
-    <strong>SMART HOME SECURITY</strong> — Security Camera & Smart Home Packages
-  </div>
-
-  <div class="service-area">
-    Serving Omaha & surrounding areas
+    <strong>Smart Home Security</strong>
+    <span class="divider">|</span>
+    Serving Omaha & Surrounding Areas
   </div>
 
   <header>
     <nav class="container">
       <a class="brand" href="#top">
-        <div class="brand-icon">⌂</div>
+        <div class="brand-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smart Home Security logo">
+            <path d="M24 3.5 L41 10.5 V22.5 C41 33.5 33.6 41.2 24 44.5 C14.4 41.2 7 33.5 7 22.5 V10.5 Z" fill="url(#navGrad)" stroke="rgba(255,255,255,0.55)" stroke-width="1.4"/>
+            <path d="M24 13 L33 17.6 V23.4 C33 29.6 29.2 33.9 24 36 C18.8 33.9 15 29.6 15 23.4 V17.6 Z" fill="rgba(255,255,255,0.14)"/>
+            <path d="M17.6 24.2 L22 28.6 L30.6 19.6" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <defs>
+              <linearGradient id="navGrad" x1="7" y1="3.5" x2="41" y2="44.5" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#2588ff"/>
+                <stop offset="1" stop-color="#0a4eba"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
 
         <div>
           SMART HOME SECURITY
@@ -788,13 +952,13 @@
           </h1>
 
           <p>
-            Protect your home with smart security packages featuring cameras,
-            video doorbells, sensors, and connected home technology.
+            Compare security camera and smart-home packages built for Omaha-area homes,
+            then request pricing in under a minute.
           </p>
 
           <div class="hero-buttons">
             <a class="button button-red" href="#request">
-              Request Service →
+              Get My Security Options →
             </a>
 
             <a class="button button-outline" href="#packages">
@@ -803,17 +967,27 @@
           </div>
 
           <div class="hero-points">
-            <span>Security camera packages</span>
-            <span>Smart home equipment</span>
-            <span>Omaha-area service</span>
+            <span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              Security camera packages
+            </span>
+            <span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              Smart home equipment
+            </span>
+            <span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              Omaha-area service
+            </span>
           </div>
         </div>
 
         <div style="position:relative;">
           <div class="flyer-frame">
             <img
-              src="smart-home-security-flyer.jpg"
-              alt="Smart Home Security packages A, B and C"
+              src="images/security-equipment.jpg"
+              alt="Smart home security camera, video doorbell, and touchscreen control panel installed at a home entryway"
+              loading="eager"
             >
           </div>
 
@@ -830,27 +1004,43 @@
       <div class="container trust-grid">
 
         <div class="trust-item">
-          <span class="trust-icon">🛡</span>
-          <strong>Protect What Matters</strong>
-          <small>Security options for home</small>
+          <span class="trust-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.4 8.4-7 9.5C8.4 20.4 5 17 5 12V6l7-3z"/></svg>
+          </span>
+          <div>
+            <strong>Protect What Matters</strong>
+            <small>Security options for home</small>
+          </div>
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">📱</span>
-          <strong>Smart Home Technology</strong>
-          <small>Connected equipment options</small>
+          <span class="trust-icon">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          </span>
+          <div>
+            <strong>Smart Home Technology</strong>
+            <small>Connected equipment options</small>
+          </div>
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">📷</span>
-          <strong>Camera Packages</strong>
-          <small>See important areas</small>
+          <span class="trust-icon">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="7" width="15" height="12" rx="2"/><path d="M18 10l4-2v10l-4-2"/></svg>
+          </span>
+          <div>
+            <strong>Camera Packages</strong>
+            <small>See important areas</small>
+          </div>
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">✉</span>
-          <strong>Fast Follow-Up</strong>
-          <small>A representative will email you</small>
+          <span class="trust-icon">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <div>
+            <strong>Personal Follow-Up</strong>
+            <small>We'll reach out with next steps</small>
+          </div>
         </div>
 
       </div>
@@ -866,8 +1056,7 @@
         </h2>
 
         <p class="section-copy">
-          Select a package below and submit your information to get started.
-          A Smart Home Security representative will email you with the next steps.
+          Select a package and submit your details to get started.
         </p>
 
         <div class="plans">
@@ -882,10 +1071,10 @@
             </div>
 
             <ul>
-              <li>Touchscreen panel</li>
-              <li>Door and window sensors</li>
-              <li>Video doorbell</li>
-              <li>Two outdoor cameras</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Touchscreen panel</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Door and window sensors</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Video doorbell</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Two outdoor cameras</li>
             </ul>
 
             <a
@@ -898,8 +1087,6 @@
           </article>
 
           <article class="plan featured">
-            <div class="featured-label">POPULAR</div>
-
             <span class="package-name red-tag">PACKAGE B</span>
 
             <h3>Balanced Security</h3>
@@ -909,10 +1096,10 @@
             </div>
 
             <ul>
-              <li>Touchscreen panel</li>
-              <li>Door and window sensors</li>
-              <li>Video doorbell camera</li>
-              <li>Outdoor camera</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Touchscreen panel</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Door and window sensors</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Video doorbell camera</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Outdoor camera</li>
             </ul>
 
             <a
@@ -934,10 +1121,10 @@
             </div>
 
             <ul>
-              <li>Touchscreen panel</li>
-              <li>Door and window sensors</li>
-              <li>Video doorbell camera</li>
-              <li>Connected home setup</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Touchscreen panel</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Door and window sensors</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Video doorbell camera</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Connected home setup</li>
             </ul>
 
             <a
@@ -952,9 +1139,9 @@
         </div>
 
         <div class="disclosure">
-          <strong>Package details:</strong> Final pricing, equipment,
-          installation, monitoring availability, taxes, fees, and contract terms
-          are confirmed by the provider before service begins.
+          <strong>Package details:</strong> Final pricing, equipment, installation,
+          monitoring availability, taxes, fees, and contract terms are confirmed by
+          the provider before service begins.
         </div>
 
       </div>
@@ -970,14 +1157,15 @@
         </h2>
 
         <p class="section-copy">
-          Ask about the security equipment options available with your selected
-          package.
+          Ask about equipment options available with your selected package.
         </p>
 
         <div class="service-grid">
 
           <article class="service-card">
-            <div class="service-icon">🖥</div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
 
             <h3>Smart Security Panels</h3>
 
@@ -988,7 +1176,9 @@
           </article>
 
           <article class="service-card">
-            <div class="service-icon">📷</div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="7" width="15" height="12" rx="2"/><path d="M18 10l4-2v10l-4-2"/></svg>
+            </div>
 
             <h3>Cameras & Video Doorbells</h3>
 
@@ -999,7 +1189,9 @@
           </article>
 
           <article class="service-card">
-            <div class="service-icon">🔐</div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+            </div>
 
             <h3>Door & Window Sensors</h3>
 
@@ -1022,8 +1214,7 @@
           <h2>Request your Smart Home Security package.</h2>
 
           <p>
-            Choose your package and submit your details. A Smart Home Security
-            representative will email you with the next steps.
+            Choose your package and submit your details below to get started.
           </p>
 
           <div class="steps">
@@ -1039,32 +1230,39 @@
 
             <div class="step">
               <div class="step-number">3</div>
-              Receive an email from our team
+              We'll follow up by phone or email with next steps
             </div>
           </div>
         </div>
 
         <!-- NETLIFY FORM:
-             This form works after your website is deployed through Netlify.
-             In Netlify: Site Configuration > Forms > Form Notifications,
-             add your own email address to receive each submission. -->
+             This form works once your site is deployed on Netlify.
+             In Netlify: Site Configuration > Forms > Form detection must be
+             enabled (it is, by virtue of data-netlify="true" plus a matching
+             hidden form in the build output). Then go to
+             Site Configuration > Forms > Form notifications > Add notification
+             > Email notification, and add your own email address so every
+             submission is sent to your inbox. -->
         <form
           name="smart-home-security-package-request"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          action="/thank-you.html"
         >
-          <input
-            type="hidden"
-            name="form-name"
-            value="smart-home-security-package-request"
-          >
+          <input type="hidden" name="form-name" value="smart-home-security-package-request">
+          <input type="hidden" name="subject" value="NEW SMART HOME SECURITY LEAD">
 
           <p style="display:none;">
             <label>
               Do not fill this out:
               <input name="bot-field">
             </label>
+          </p>
+
+          <p class="form-lead">
+            This form sends a request for pricing — it does not complete a purchase.
+            A team member will follow up by phone or email.
           </p>
 
           <div class="field-row">
@@ -1080,13 +1278,14 @@
             </div>
 
             <div>
-              <label for="phone">Phone Number</label>
+              <label for="phone">
+                Phone Number <span class="optional-tag">(optional)</span>
+              </label>
               <input
                 id="phone"
                 name="phone-number"
                 type="tel"
                 placeholder="Best number to reach you"
-                required
               >
             </div>
           </div>
@@ -1131,10 +1330,8 @@
           </select>
 
           <label for="notes">
-            Questions or home details
-            <span style="color:#bed3ee;font-weight:normal;">
-              (optional)
-            </span>
+            Optional Questions
+            <span class="optional-tag">(optional)</span>
           </label>
 
           <textarea
@@ -1144,13 +1341,14 @@
           ></textarea>
 
           <button class="button button-red form-button" type="submit">
-            Request My Security Package →
+            Get My Security Options →
           </button>
 
           <p class="fine-print">
-            By submitting, you agree that Smart Home Security may contact you
-            about your request. Final pricing, equipment, installation,
-            monitoring, and contract terms are confirmed by the provider.
+            By submitting this request, you agree that Smart Home Security may
+            contact you by phone or email about your inquiry. Final pricing,
+            equipment, installation, monitoring, and contract terms are
+            confirmed by the provider.
           </p>
         </form>
 
@@ -1162,21 +1360,13 @@
   <footer>
     <div class="container footer-grid">
 
-      <div class="brand">
-        <div class="brand-icon">⌂</div>
-
-        <div>
-          SMART HOME SECURITY
-          <small>SMART HOME PROTECTION</small>
-        </div>
+      <div class="footer-legal">
+        © 2026 Smart Home Security. All rights reserved. Operated by Murrays Empire LLC.
       </div>
 
-      <div>
-        © 2026 Smart Home Security. Operated by Murrays Empire LLC. All rights reserved.
-        <br>
-        <span style="font-size:12px; color:#8fa7c7;">
-          Smart Home Security is operated by Murrays Empire LLC.
-        </span>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
       </div>
 
     </div>
