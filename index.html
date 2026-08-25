@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Smart Home Security provides professional smart security systems, cameras, doorbells, and installation for Omaha homeowners.">
   <title>Smart Home Security | Omaha, Nebraska</title>
 
   <style>
@@ -11,19 +10,24 @@
       --navy: #061326;
       --blue: #1265e8;
       --red: #e7252d;
-      --white: #f8fbff;
-      --muted: #aebdd3;
+      --white: #ffffff;
+      --muted: #afbdd2;
       --card: #0c1d35;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--white);
       background: var(--navy);
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
     }
 
@@ -38,180 +42,176 @@
     }
 
     .topbar {
-      background: #030914;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-      color: #d8e4f5;
-      font-size: .92rem;
+      background: #020812;
+      color: #d8e5f8;
       text-align: center;
-      padding: 12px 0;
+      font-size: 14px;
+      padding: 11px 15px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(6,19,38,.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.10);
+      z-index: 99;
+      background: rgba(6,19,38,.97);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
     nav {
       min-height: 82px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      align-items: center;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
+      font-size: 18px;
       font-weight: 900;
-      letter-spacing: .7px;
+      letter-spacing: .5px;
     }
 
     .logo {
-      width: 43px;
-      height: 43px;
+      width: 44px;
+      height: 44px;
       display: grid;
       place-items: center;
+      font-size: 25px;
       border: 2px solid white;
-      border-radius: 13px;
-      color: white;
-      font-size: 24px;
-      box-shadow: 0 0 0 5px rgba(18,101,232,.23);
+      border-radius: 12px;
+      box-shadow: 0 0 0 5px rgba(18,101,232,.22);
     }
 
-    .brand span {
+    .brand small {
       display: block;
       color: var(--muted);
-      font-size: .68rem;
+      font-size: 10px;
       letter-spacing: 2px;
-      margin-top: -2px;
+      margin-top: 1px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
       gap: 22px;
-      color: #dce8f8;
       font-weight: 700;
+      color: #dbe8fa;
     }
 
     .nav-links a:hover {
-      color: #65a3ff;
+      color: #70a9ff;
     }
 
     .button {
       display: inline-block;
       padding: 14px 21px;
+      border: 0;
       border-radius: 8px;
+      cursor: pointer;
       font-weight: 900;
-      text-transform: uppercase;
       letter-spacing: .4px;
-      transition: transform .2s ease, filter .2s ease;
+      text-transform: uppercase;
+      transition: .2s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
-      filter: brightness(1.1);
+      filter: brightness(1.12);
     }
 
     .button-red {
+      color: white;
       background: var(--red);
-      box-shadow: 0 10px 24px rgba(231,37,45,.28);
+      box-shadow: 0 9px 22px rgba(231,37,45,.30);
+    }
+
+    .button-blue {
+      color: white;
+      background: var(--blue);
+      box-shadow: 0 9px 22px rgba(18,101,232,.30);
     }
 
     .button-outline {
+      color: white;
       border: 2px solid white;
+      background: transparent;
     }
 
     .hero {
-      min-height: 630px;
-      display: grid;
-      align-items: center;
+      padding: 72px 0 62px;
       background:
-        linear-gradient(90deg, rgba(3,10,24,.96) 0%, rgba(3,10,24,.82) 47%, rgba(3,10,24,.25) 100%),
-        radial-gradient(circle at 78% 25%, rgba(18,101,232,.30), transparent 35%),
-        url('images/smart-home-security-hero.jpg') center/cover;
+        radial-gradient(circle at 78% 0%, rgba(18,101,232,.25), transparent 33%),
+        linear-gradient(135deg, #061326 0%, #0a2040 60%, #061326 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 36px;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
+      gap: 48px;
     }
 
     .eyebrow {
-      color: #77adff;
-      font-size: .9rem;
+      color: #73abff;
+      font-size: 14px;
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      margin: 12px 0 20px;
+      font-size: clamp(42px, 6vw, 76px);
       line-height: .98;
-      margin: 15px 0 20px;
       letter-spacing: -2px;
     }
 
-    h1 em {
+    h1 span {
       color: var(--red);
-      font-style: normal;
     }
 
     .hero p {
-      max-width: 630px;
+      max-width: 580px;
       color: #d4e0f2;
-      font-size: 1.15rem;
+      font-size: 18px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
       margin-top: 30px;
-    }
-
-    .trust {
-      margin-top: 34px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
       color: #dce9fa;
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    .trust b {
-      color: #74aaff;
+    .hero-points b {
+      color: #70a9ff;
     }
 
-    .device-card {
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,255,255,.26);
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 22px 60px rgba(0,0,0,.45);
+    .flyer-box {
+      padding: 10px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 22px 55px rgba(0,0,0,.45);
     }
 
-    .device-icon {
-      font-size: 112px;
-      line-height: 1;
-    }
-
-    .device-card h2 {
-      margin: 15px 0 8px;
-      font-size: 1.45rem;
-    }
-
-    .device-card p {
-      margin: 0;
-      font-size: .98rem;
+    .flyer-box img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
     }
 
     .benefits {
@@ -226,46 +226,46 @@
     }
 
     .benefit {
-      padding: 27px 18px;
-      border-right: 1px solid rgba(255,255,255,.12);
+      padding: 28px 15px;
       text-align: center;
+      border-right: 1px solid rgba(255,255,255,.12);
     }
 
     .benefit:last-child {
       border-right: 0;
     }
 
-    .benefit .icon {
+    .benefit-icon {
       color: #6ca5ff;
-      font-size: 1.7rem;
+      font-size: 28px;
     }
 
     .benefit h3 {
       margin: 8px 0 0;
-      font-size: 1rem;
+      font-size: 16px;
     }
 
     section {
-      padding: 86px 0;
+      padding: 85px 0;
     }
 
     .section-label {
-      color: #6ca5ff;
+      color: #74abff;
       font-weight: 900;
+      letter-spacing: 1.7px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
     }
 
     .section-title {
-      max-width: 700px;
-      margin: 10px 0 14px;
-      font-size: clamp(2rem, 4vw, 3.1rem);
+      margin: 10px 0 15px;
+      font-size: clamp(32px, 4vw, 52px);
       line-height: 1.08;
     }
 
-    .section-copy {
-      color: var(--muted);
+    .section-text {
       max-width: 700px;
+      color: var(--muted);
+      font-size: 17px;
     }
 
     .services {
@@ -273,26 +273,27 @@
     }
 
     .cards {
-      margin-top: 38px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 36px;
     }
 
     .card {
       padding: 29px;
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.10);
       border-radius: 14px;
+      background: var(--card);
     }
 
-    .card .service-icon {
-      font-size: 2.1rem;
+    .service-icon {
+      color: #71a9ff;
+      font-size: 33px;
     }
 
     .card h3 {
-      margin: 15px 0 9px;
-      font-size: 1.25rem;
+      margin: 14px 0 9px;
+      font-size: 20px;
     }
 
     .card p {
@@ -300,108 +301,139 @@
       color: var(--muted);
     }
 
-    .quote {
-      background: linear-gradient(115deg, #0d4fc0, #061933 57%, #92131b);
+    .request-service {
+      background:
+        radial-gradient(circle at 84% 10%, rgba(231,37,45,.36), transparent 33%),
+        linear-gradient(115deg, #0d4fc0, #061933 62%, #541016);
     }
 
-    .quote-grid {
+    .request-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
+      grid-template-columns: .9fr 1.1fr;
       align-items: center;
+      gap: 48px;
     }
 
-    .quote h2 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.05;
-      margin: 10px 0 15px;
+    .request-service h2 {
+      margin: 10px 0 17px;
+      font-size: clamp(34px, 4.2vw, 57px);
+      line-height: 1.04;
+    }
+
+    .request-service p {
+      color: #dbe7f7;
+      font-size: 17px;
     }
 
     form {
-      padding: 28px;
-      background: rgba(0,0,0,.3);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 14px;
+      padding: 30px;
+      background: rgba(0,0,0,.34);
+      border: 1px solid rgba(255,255,255,.23);
+      border-radius: 16px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.26);
     }
 
     label {
       display: block;
-      margin: 12px 0 6px;
-      font-weight: 700;
-      font-size: .93rem;
+      margin: 13px 0 6px;
+      font-weight: 800;
+      font-size: 14px;
     }
 
     input,
+    select,
     textarea {
       width: 100%;
+      padding: 14px;
       border: 1px solid rgba(255,255,255,.30);
       border-radius: 7px;
-      padding: 13px;
-      background: #fff;
-      color: #122033;
+      background: white;
+      color: #11213a;
       font: inherit;
     }
 
     textarea {
+      min-height: 105px;
       resize: vertical;
-      min-height: 90px;
     }
 
-    form button {
+    .form-button {
       width: 100%;
-      border: 0;
-      cursor: pointer;
-      margin-top: 18px;
+      margin-top: 19px;
     }
 
     .fine-print {
-      font-size: .77rem;
-      color: #c9d8ed;
-      margin: 12px 0 0;
+      margin: 13px 0 0;
+      color: #cbd8e8;
+      font-size: 12px;
+      text-align: center;
     }
 
     footer {
-      padding: 42px 0;
-      background: #020916;
-      color: #b4c4da;
+      padding: 40px 0;
+      background: #020812;
+      color: #adbed4;
     }
 
     .footer-grid {
       display: flex;
       justify-content: space-between;
-      gap: 30px;
       align-items: center;
+      gap: 20px;
     }
 
-    .footer-grid p {
-      margin: 7px 0 0;
-    }
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
 
-    @media (max-width: 800px) {
-      .nav-links { display: none; }
-      .hero { min-height: auto; padding: 84px 0; }
       .hero-grid,
-      .quote-grid { grid-template-columns: 1fr; }
-      .device-card { display: none; }
-      .benefit-grid,
-      .cards { grid-template-columns: 1fr 1fr; }
-      .benefit:nth-child(2) { border-right: 0; }
+      .request-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .flyer-box {
+        max-width: 620px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .benefit:nth-child(2) {
+        border-right: 0;
+      }
+
       .benefit:nth-child(-n+2) {
         border-bottom: 1px solid rgba(255,255,255,.12);
       }
     }
 
     @media (max-width: 500px) {
-      .benefit-grid,
-      .cards { grid-template-columns: 1fr; }
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
 
       .benefit {
         border-right: 0;
         border-bottom: 1px solid rgba(255,255,255,.12);
       }
 
-      .benefit:last-child { border-bottom: 0; }
-      .footer-grid { display: block; }
+      .benefit:last-child {
+        border-bottom: 0;
+      }
+
+      .footer-grid {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -409,7 +441,7 @@
 <body>
 
   <div class="topbar">
-    Serving Omaha & surrounding communities
+    Serving Omaha and surrounding communities
   </div>
 
   <header>
@@ -418,14 +450,15 @@
         <div class="logo">⌂</div>
         <div>
           SMART HOME SECURITY
-          <span>OMAHA, NEBRASKA</span>
+          <small>OMAHA, NEBRASKA</small>
         </div>
       </a>
 
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
-        <a href="#quote">Get a Quote</a>
+        <a href="#request-service">Request Service</a>
+        <a class="button button-red" href="#request-service">Get Started</a>
       </div>
     </nav>
   </header>
@@ -440,31 +473,30 @@
 
           <h1>
             SMART SECURITY.<br>
-            <em>TOTAL PEACE OF MIND.</em>
+            <span>TOTAL PEACE OF MIND.</span>
           </h1>
 
           <p>
-            Protect the people and property that matter most with professionally
-            installed smart home security, cameras, doorbells, and monitoring options.
+            Smart home security systems, cameras, doorbells, sensors,
+            professional installation, and security solutions designed around
+            your home.
           </p>
 
-          <div class="hero-actions">
-            <a class="button button-red" href="#quote">Get a Free Quote</a>
-            <a class="button button-outline" href="#services">View Services</a>
+          <div class="hero-buttons">
+            <a class="button button-red" href="#request-service">Request Service</a>
+            <a class="button button-outline" href="#services">Explore Services</a>
           </div>
 
-          <div class="trust">
-            <span><b>✓</b> Professional installation</span>
-            <span><b>✓</b> Smart technology</span>
-            <span><b>✓</b> Local Omaha service</span>
+          <div class="hero-points">
+            <span><b>✓</b> Professional Installation</span>
+            <span><b>✓</b> Smart Technology</span>
+            <span><b>✓</b> Omaha Service</span>
           </div>
         </div>
 
-        <aside class="device-card">
-          <div class="device-icon">📷</div>
-          <h2>See. Secure. Control.</h2>
-          <p>Manage your home security from one connected system.</p>
-        </aside>
+        <div class="flyer-box">
+          <img src="smart-home-security-flyer.jpg" alt="Smart Home Security promotional packages">
+        </div>
 
       </div>
     </section>
@@ -472,22 +504,22 @@
     <section class="benefits" id="why-us">
       <div class="container benefit-grid">
         <div class="benefit">
-          <div class="icon">◈</div>
+          <div class="benefit-icon">🛡</div>
           <h3>Protect What Matters</h3>
         </div>
 
         <div class="benefit">
-          <div class="icon">⌁</div>
+          <div class="benefit-icon">📱</div>
           <h3>Smart Tech You Can Trust</h3>
         </div>
 
         <div class="benefit">
-          <div class="icon">◷</div>
+          <div class="benefit-icon">◷</div>
           <h3>Monitoring Options</h3>
         </div>
 
         <div class="benefit">
-          <div class="icon">⌂</div>
+          <div class="benefit-icon">⌂</div>
           <h3>Peace of Mind</h3>
         </div>
       </div>
@@ -495,36 +527,34 @@
 
     <section class="services" id="services">
       <div class="container">
-
-        <div class="section-label">Security built around your home</div>
+        <div class="section-label">Smart protection for your home</div>
 
         <h2 class="section-title">
-          The smart protection your Omaha home deserves.
+          Security equipment and installation built around your needs.
         </h2>
 
-        <p class="section-copy">
-          Choose the equipment and protection features that fit your home,
-          your routine, and your budget. We make the process simple from quote
-          through installation.
+        <p class="section-text">
+          Whether you want to secure your doors, monitor your driveway, add a
+          video doorbell, or create a complete smart security setup, we can
+          help you choose a solution for your property.
         </p>
 
         <div class="cards">
-
           <article class="card">
             <div class="service-icon">▣</div>
             <h3>Smart Security Panels</h3>
             <p>
-              Easy-to-use touchscreen control panels built to keep your
-              system within reach.
+              Simple touchscreen security panels that help you manage your
+              system from one convenient location.
             </p>
           </article>
 
           <article class="card">
-            <div class="service-icon">◉</div>
-            <h3>Video Doorbells & Cameras</h3>
+            <div class="service-icon">📷</div>
+            <h3>Cameras & Video Doorbells</h3>
             <p>
-              Know what is happening at your door and around your property,
-              whether you are home or away.
+              Keep an eye on your front door, driveway, entry points, and the
+              areas around your property.
             </p>
           </article>
 
@@ -532,47 +562,69 @@
             <div class="service-icon">▥</div>
             <h3>Door & Window Sensors</h3>
             <p>
-              Get a complete setup designed to help protect the entry points
-              throughout your home.
+              Add protection to the doors and windows that matter most in your
+              home.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section class="quote" id="quote">
-      <div class="container quote-grid">
+    <section class="request-service" id="request-service">
+      <div class="container request-grid">
 
         <div>
-          <div class="section-label" style="color:#dbeaff;">
-            No-pressure consultation
+          <div class="section-label" style="color:#dceaff;">
+            Get started today
           </div>
 
-          <h2>Get your free home security quote today.</h2>
+          <h2>Request smart home security service.</h2>
 
           <p>
-            Tell us a little about your home and what you want to protect.
-            Our team will contact you to discuss the best options.
+            Fill out the form and tell us what you need. We will review your
+            request and contact you to discuss your home security options.
+          </p>
+
+          <p>
+            You can request cameras, doorbells, sensors, smart security panels,
+            installation, upgrades, or a complete home security setup.
           </p>
         </div>
 
-        <form onsubmit="event.preventDefault(); alert('Thank you! Your quote request has been submitted.');">
-          <label for="name">Your name</label>
-          <input id="name" name="name" type="text" required>
+        <!-- To receive form submissions, connect this form to Formspree, Netlify Forms, or your website builder form tool. -->
+        <form action="#" method="post" onsubmit="event.preventDefault(); document.getElementById('success-message').style.display='block'; this.reset();">
 
-          <label for="phone">Phone number</label>
-          <input id="phone" name="phone" type="tel" required>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
 
-          <label for="message">What do you need protected?</label>
-          <textarea id="message" name="message" placeholder="Example: Cameras for the driveway, doorbell camera, and door/window sensors."></textarea>
+          <label for="service">What service do you need?</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Smart Security System</option>
+            <option>Security Cameras</option>
+            <option>Video Doorbell</option>
+            <option>Door and Window Sensors</option>
+            <option>Professional Installation</option>
+            <option>Complete Home Security Setup</option>
+            <option>Other</option>
+          </select>
 
-          <button class="button button-red" type="submit">
-            Request My Free Quote
+          <label for="address">Service Address</label>
+          <input id="address" name="address" type="text" placeholder="Street address, Omaha area">
+
+          <label for="message">Tell us what you need</label>
+          <textarea id="message" name="message" placeholder="Example: I need two outdoor cameras, a doorbell camera, and sensors on my front and back doors."></textarea>
+
+          <button class="button button-red form-button" type="submit">
+            Submit Service Request
           </button>
 
           <p class="fine-print">
-            By submitting, you agree that Smart Home Security may contact you about your request.
+            By submitting this form, you agree to be contacted about your service request.
+          </p>
+
+          <p id="success-message" style="display:none; color:#8dffad; font-weight:bold; text-align:center; margin:15px 0 0;">
+            Thank you. Your request has been received.
           </p>
         </form>
 
@@ -587,11 +639,13 @@
         <div class="logo">⌂</div>
         <div>
           SMART HOME SECURITY
-          <span>OMAHA, NEBRASKA</span>
+          <small>OMAHA, NEBRASKA</small>
         </div>
       </div>
 
-      <p>© <span id="year"></span> Smart Home Security. All rights reserved.</p>
+      <div>
+        © <span id="year"></span> Smart Home Security. All rights reserved.
+      </div>
     </div>
   </footer>
 
