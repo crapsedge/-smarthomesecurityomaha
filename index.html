@@ -15,13 +15,9 @@
       --card: #0c1d35;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -127,12 +123,6 @@
       color: white;
       background: var(--red);
       box-shadow: 0 9px 22px rgba(231,37,45,.30);
-    }
-
-    .button-blue {
-      color: white;
-      background: var(--blue);
-      box-shadow: 0 9px 22px rgba(18,101,232,.30);
     }
 
     .button-outline {
@@ -575,57 +565,98 @@
 
         <div>
           <div class="section-label" style="color:#dceaff;">
-            Get started today
+            Choose Your Security Package
           </div>
 
-          <h2>Request smart home security service.</h2>
+          <h2>Request your Smart Home Security package.</h2>
 
           <p>
-            Fill out the form and tell us what you need. We will review your
-            request and contact you to discuss your home security options.
+            Review the promotional packages above and select the option that
+            works best for your home. Fill out the form and a Smart Home
+            Security team member will email you soon.
           </p>
 
           <p>
-            You can request cameras, doorbells, sensors, smart security panels,
-            installation, upgrades, or a complete home security setup.
+            Select Package A, Package B, Package C, or choose “Help Me Choose”
+            if you would like help deciding which package is best for your home.
           </p>
         </div>
 
-        <!-- To receive form submissions, connect this form to Formspree, Netlify Forms, or your website builder form tool. -->
-        <form action="#" method="post" onsubmit="event.preventDefault(); document.getElementById('success-message').style.display='block'; this.reset();">
+        <form
+          action="#"
+          method="post"
+          onsubmit="event.preventDefault(); document.getElementById('success-message').style.display='block'; this.reset();"
+        >
 
           <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" placeholder="Your full name" required>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            required
+          >
 
-          <label for="service">What service do you need?</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option>Smart Security System</option>
-            <option>Security Cameras</option>
-            <option>Video Doorbell</option>
-            <option>Door and Window Sensors</option>
-            <option>Professional Installation</option>
-            <option>Complete Home Security Setup</option>
-            <option>Other</option>
+          <label for="phone">Phone Number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Best number to reach you"
+            required
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Your email address"
+            required
+          >
+
+          <label for="address">Home Address</label>
+          <input
+            id="address"
+            name="address"
+            type="text"
+            placeholder="Street address, city, and ZIP code"
+            required
+          >
+
+          <label for="package">Which package are you interested in?</label>
+          <select id="package" name="package" required>
+            <option value="">Select a package</option>
+            <option value="Package A">Package A — $79.99 Monthly</option>
+            <option value="Package B">Package B — $74.99 Monthly</option>
+            <option value="Package C">Package C — $63.99 Monthly</option>
+            <option value="Help Me Choose">Help Me Choose a Package</option>
           </select>
 
-          <label for="address">Service Address</label>
-          <input id="address" name="address" type="text" placeholder="Street address, Omaha area">
-
-          <label for="message">Tell us what you need</label>
-          <textarea id="message" name="message" placeholder="Example: I need two outdoor cameras, a doorbell camera, and sensors on my front and back doors."></textarea>
+          <label for="message">Questions or additional details</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us anything else about your home or security needs."
+          ></textarea>
 
           <button class="button button-red form-button" type="submit">
-            Submit Service Request
+            Request My Package
           </button>
 
           <p class="fine-print">
-            By submitting this form, you agree to be contacted about your service request.
+            By submitting this form, you agree that Smart Home Security may
+            contact you about your request.
           </p>
 
-          <p id="success-message" style="display:none; color:#8dffad; font-weight:bold; text-align:center; margin:15px 0 0;">
-            Thank you. Your request has been received.
-          </p>
+          <div
+            id="success-message"
+            style="display:none; margin-top:18px; padding:15px; color:#eaffef; background:rgba(25,154,75,.35); border:1px solid #77e99c; border-radius:8px; text-align:center; font-weight:bold;"
+          >
+            Thank you! Your package request has been received. A Smart Home
+            Security team member will email you soon.
+          </div>
+
         </form>
 
       </div>
