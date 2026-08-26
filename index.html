@@ -33,27 +33,6 @@
     href="https://smarthomesecurity-omaha.com/"
   >
 
-  <!-- FAVICONS -->
-
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="images/favicon.ico"
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="images/favicon-32.png"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="images/apple-touch-icon.png"
-  >
-
   <!-- SOCIAL SHARING -->
 
   <meta
@@ -78,7 +57,7 @@
 
   <meta
     property="og:image"
-    content="https://smarthomesecurity-omaha.com/images/social-share.jpg"
+    content="https://smarthomesecurity-omaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
   >
 
   <meta
@@ -103,7 +82,7 @@
 
   <meta
     name="twitter:image"
-    content="https://smarthomesecurity-omaha.com/images/social-share.jpg"
+    content="https://smarthomesecurity-omaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
   >
 
   <!-- STRUCTURED DATA -->
@@ -131,19 +110,29 @@
   <style>
 
     :root {
+
+      /* PROFESSIONAL BRAND COLORS */
+
       --navy: #07172d;
-      --navy-deep: #041022;
-      --blue: #1f78f2;
-      --blue-dark: #155cbd;
-      --blue-light: #78bbff;
-      --red: #df2d36;
-      --red-bright: #f0444d;
-      --green: #168a4a;
+      --navy-deep: #020a18;
+      --navy-mid: #0b2a55;
+
+      --blue: #155cbd;
+      --blue-bright: #2378e8;
+      --blue-light: #8bbcf2;
+
+      --red: #c9151e;
+      --red-bright: #e52b35;
+
+      --green: #34751f;
+
       --white: #ffffff;
-      --off-white: #f4f7fb;
+      --off-white: #f5f7fa;
+
       --text: #12233c;
-      --muted: #5b6e86;
-      --border: #dbe5f0;
+      --muted: #64748b;
+      --border: #d8e0e9;
+
       --focus: #ffd166;
     }
 
@@ -199,18 +188,18 @@
       border-radius: 6px;
     }
 
-    /* =====================================
+    /* =========================
        ANNOUNCEMENT
-    ===================================== */
+    ========================= */
 
     .announcement {
       padding: 10px 15px;
 
-      color: #dcecff;
-      background: #030b18;
+      color: #dce8f7;
+      background: #020814;
 
       border-bottom:
-        1px solid rgba(255,255,255,.1);
+        1px solid rgba(255,255,255,.08);
 
       text-align: center;
 
@@ -219,17 +208,17 @@
     }
 
     .announcement strong {
-      color: #83c5ff;
+      color: var(--blue-light);
     }
 
     .announcement .divider {
       margin: 0 9px;
-      color: #506a8c;
+      color: #526a87;
     }
 
-    /* =====================================
+    /* =========================
        HEADER
-    ===================================== */
+    ========================= */
 
     header {
       position: sticky;
@@ -237,7 +226,7 @@
       z-index: 100;
 
       background:
-        rgba(7,23,45,.97);
+        rgba(7,23,45,.98);
 
       -webkit-backdrop-filter:
         blur(14px);
@@ -246,7 +235,7 @@
         blur(14px);
 
       border-bottom:
-        1px solid rgba(255,255,255,.1);
+        1px solid rgba(255,255,255,.08);
     }
 
     nav {
@@ -289,7 +278,7 @@
 
       margin-top: -3px;
 
-      color: #aabed8;
+      color: #9db2cb;
 
       font-size: 9px;
       letter-spacing: 2px;
@@ -301,7 +290,7 @@
 
       gap: 23px;
 
-      color: #dbe8f9;
+      color: #dce7f4;
 
       font-size: 13px;
       font-weight: 800;
@@ -315,9 +304,9 @@
       display: none;
     }
 
-    /* =====================================
+    /* =========================
        BUTTONS
-    ===================================== */
+    ========================= */
 
     .button {
       display: inline-flex;
@@ -331,7 +320,7 @@
 
       font-size: 13px;
       font-weight: 900;
-      letter-spacing: .3px;
+      letter-spacing: .25px;
 
       text-transform: uppercase;
 
@@ -340,40 +329,35 @@
       transition:
         transform .2s ease,
         box-shadow .2s ease,
-        filter .2s ease;
+        background .2s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
-      filter: brightness(1.06);
     }
 
     .button-red {
       color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--red-bright),
-          var(--red)
-        );
+      background: var(--red);
 
       box-shadow:
-        0 10px 25px rgba(223,45,54,.30);
+        0 9px 22px rgba(201,21,30,.24);
+    }
+
+    .button-red:hover {
+      background: var(--red-bright);
     }
 
     .button-blue {
       color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2d8cff,
-          #0d5bc7
-        );
+      background: var(--blue);
 
       box-shadow:
-        0 10px 25px rgba(22,112,240,.28);
+        0 9px 22px rgba(21,92,189,.22);
+    }
+
+    .button-blue:hover {
+      background: var(--blue-bright);
     }
 
     .button-outline {
@@ -381,12 +365,17 @@
       background: transparent;
 
       border:
-        2px solid rgba(255,255,255,.8);
+        1.5px solid rgba(255,255,255,.72);
     }
 
-    /* =====================================
+    .button-outline:hover {
+      background:
+        rgba(255,255,255,.08);
+    }
+
+    /* =========================
        HERO
-    ===================================== */
+    ========================= */
 
     .hero {
       position: relative;
@@ -396,20 +385,15 @@
 
       background:
         radial-gradient(
-          circle at 84% 12%,
-          rgba(25,122,255,.42),
-          transparent 29%
-        ),
-        radial-gradient(
-          circle at 5% 100%,
-          rgba(224,45,54,.18),
-          transparent 26%
+          circle at 86% 14%,
+          rgba(35,120,232,.22),
+          transparent 31%
         ),
         linear-gradient(
           125deg,
-          #06142a,
-          #0b2a55 58%,
-          #06142a
+          var(--navy-deep),
+          var(--navy-mid) 62%,
+          var(--navy)
         );
     }
 
@@ -428,7 +412,7 @@
     }
 
     h1 span {
-      color: #ff565f;
+      color: var(--red-bright);
     }
 
     .hero-copy {
@@ -436,7 +420,7 @@
 
       margin: 0;
 
-      color: #d8e6f7;
+      color: #d7e3f1;
 
       font-size: 18px;
       line-height: 1.6;
@@ -456,7 +440,7 @@
 
       margin-top: 4px;
 
-      color: #7dc0ff;
+      color: var(--blue-light);
 
       font-size: 30px;
     }
@@ -478,7 +462,7 @@
 
       margin-top: 27px;
 
-      color: #e1edfb;
+      color: #e0e9f4;
 
       font-size: 14px;
       font-weight: 800;
@@ -492,22 +476,22 @@
     }
 
     .check {
-      color: #64e793;
+      color: #71b98d;
 
       font-size: 18px;
       font-weight: 900;
     }
 
-    /* =====================================
+    /* =========================
        GENERAL SECTIONS
-    ===================================== */
+    ========================= */
 
     section {
       padding: 72px 0;
     }
 
     .section-label {
-      color: var(--blue-dark);
+      color: var(--blue);
 
       font-size: 11px;
       font-weight: 900;
@@ -535,14 +519,14 @@
 
       margin: 0;
 
-      color: #526780;
+      color: var(--muted);
 
       font-size: 16px;
     }
 
-    /* =====================================
+    /* =========================
        PACKAGES
-    ===================================== */
+    ========================= */
 
     .packages {
       color: var(--text);
@@ -552,21 +536,24 @@
     .package-flyer {
       margin-top: 32px;
 
-      padding: 8px;
+      padding: 7px;
 
       background: var(--navy);
 
-      border-radius: 18px;
+      border:
+        1px solid #102d55;
+
+      border-radius: 16px;
 
       box-shadow:
-        0 18px 45px rgba(7,23,45,.16);
+        0 18px 42px rgba(7,23,45,.15);
     }
 
     .package-flyer img {
       width: 100%;
       height: auto;
 
-      border-radius: 11px;
+      border-radius: 10px;
     }
 
     .package-select-title {
@@ -609,7 +596,7 @@
       border-radius: 14px;
 
       box-shadow:
-        0 10px 25px rgba(25,64,110,.06);
+        0 8px 22px rgba(7,23,45,.06);
     }
 
     .package-choice.featured {
@@ -622,8 +609,8 @@
 
       padding: 6px 10px;
 
-      color: #155cbd;
-      background: #e6f0ff;
+      color: var(--blue);
+      background: #e8f0fb;
 
       border-radius: 999px;
 
@@ -632,19 +619,19 @@
     }
 
     .package-tag.red {
-      color: #c81e29;
-      background: #ffe7e8;
+      color: var(--red);
+      background: #fbe8ea;
     }
 
     .package-tag.green {
-      color: #14723a;
-      background: #e2f6e8;
+      color: var(--green);
+      background: #ebf3e7;
     }
 
     .package-choice h3 {
       margin: 16px 0 4px;
 
-      color: #183456;
+      color: #173354;
 
       font-size: 21px;
     }
@@ -652,7 +639,7 @@
     .package-price {
       margin-bottom: 20px;
 
-      color: #103462;
+      color: var(--navy);
 
       font-size: 35px;
       font-weight: 900;
@@ -661,7 +648,7 @@
     }
 
     .package-price span {
-      color: #607391;
+      color: #687a90;
 
       font-size: 13px;
       font-weight: 700;
@@ -678,11 +665,11 @@
 
       padding: 14px 16px;
 
-      color: #435a75;
-      background: #eaf1fa;
+      color: #45596f;
+      background: #eef3f8;
 
       border-left:
-        4px solid #2f7ce1;
+        4px solid var(--blue);
 
       border-radius: 8px;
 
@@ -690,27 +677,22 @@
       line-height: 1.55;
     }
 
-    /* =====================================
+    /* =========================
        REQUEST
-    ===================================== */
+    ========================= */
 
     .request {
       background:
         radial-gradient(
-          circle at 94% 6%,
-          rgba(223,45,54,.38),
-          transparent 25%
-        ),
-        radial-gradient(
-          circle at 0% 100%,
-          rgba(24,116,245,.36),
-          transparent 28%
+          circle at 100% 0%,
+          rgba(35,120,232,.16),
+          transparent 30%
         ),
         linear-gradient(
           125deg,
-          #0d4bad,
-          #061a35 56%,
-          #451018
+          #06162d,
+          #0a2447 65%,
+          #06162d
         );
     }
 
@@ -725,7 +707,7 @@
     }
 
     .request .section-label {
-      color: #cde7ff;
+      color: var(--blue-light);
     }
 
     .request h2 {
@@ -742,7 +724,7 @@
 
       margin: 0;
 
-      color: #d8e5f6;
+      color: #d4e0ed;
 
       font-size: 16px;
     }
@@ -774,8 +756,8 @@
       display: grid;
       place-items: center;
 
-      color: #07306d;
-      background: #8fcaff;
+      color: white;
+      background: var(--blue);
 
       border-radius: 50%;
 
@@ -787,15 +769,15 @@
       padding: 30px;
 
       background:
-        rgba(3,13,30,.62);
+        rgba(2,10,24,.72);
 
       border:
-        1px solid rgba(255,255,255,.24);
+        1px solid rgba(255,255,255,.15);
 
       border-radius: 18px;
 
       box-shadow:
-        0 25px 60px rgba(0,0,0,.30);
+        0 22px 55px rgba(0,0,0,.28);
     }
 
     .form-heading {
@@ -808,7 +790,7 @@
     .form-lead {
       margin: 5px 0 17px;
 
-      color: #cdddf0;
+      color: #c4d3e4;
 
       font-size: 13px;
     }
@@ -832,7 +814,7 @@
     }
 
     .optional {
-      color: #b8cce5;
+      color: #aebfd1;
       font-weight: normal;
     }
 
@@ -864,10 +846,10 @@
       padding: 14px;
 
       background:
-        rgba(255,255,255,.07);
+        rgba(255,255,255,.055);
 
       border:
-        1px solid rgba(255,255,255,.18);
+        1px solid rgba(255,255,255,.13);
 
       border-radius: 9px;
     }
@@ -884,7 +866,7 @@
     .consent-box label {
       margin: 0;
 
-      color: #e5edf8;
+      color: #dce6f0;
 
       font-size: 11px;
       font-weight: 600;
@@ -898,15 +880,15 @@
       margin-top: 19px;
     }
 
-    /* =====================================
+    /* =========================
        REFERRAL
-    ===================================== */
+    ========================= */
 
     .referral {
       padding: 48px 0;
 
       color: var(--text);
-      background: white;
+      background: var(--off-white);
     }
 
     .referral-box {
@@ -920,21 +902,15 @@
 
       padding: 28px 30px;
 
-      background:
-        linear-gradient(
-          135deg,
-          #fff5f6,
-          #ffffff
-        );
+      background: white;
 
       border:
-        1px solid #f0cdd0;
+        1px solid var(--border);
 
       border-radius: 16px;
 
       box-shadow:
-        0 12px 28px
-        rgba(73,35,45,.06);
+        0 10px 25px rgba(7,23,45,.06);
     }
 
     .referral-money {
@@ -949,7 +925,7 @@
     .referral-copy strong {
       display: block;
 
-      color: #152f52;
+      color: var(--navy);
 
       font-size: 22px;
     }
@@ -957,7 +933,7 @@
     .referral-copy p {
       margin: 5px 0 0;
 
-      color: #52657c;
+      color: #56697f;
 
       font-size: 14px;
     }
@@ -967,23 +943,23 @@
 
       margin-top: 7px;
 
-      color: #667991;
+      color: #718196;
 
       font-size: 11px;
     }
 
-    /* =====================================
-       BOTTOM DISCLOSURE
-    ===================================== */
+    /* =========================
+       LEGAL NOTE
+    ========================= */
 
     .legal-note {
       padding: 22px 0;
 
-      color: #9fb2ca;
+      color: #9eb0c5;
       background: #061426;
 
       border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,.07);
     }
 
     .legal-note p {
@@ -995,15 +971,15 @@
       line-height: 1.6;
     }
 
-    /* =====================================
+    /* =========================
        FOOTER
-    ===================================== */
+    ========================= */
 
     footer {
       padding: 30px 0;
 
-      color: #9bb0cc;
-      background: #030d1d;
+      color: #95a9c0;
+      background: #020a18;
     }
 
     .footer-grid {
@@ -1031,9 +1007,9 @@
       color: var(--blue-light);
     }
 
-    /* =====================================
+    /* =========================
        TABLET
-    ===================================== */
+    ========================= */
 
     @media (max-width: 880px) {
 
@@ -1062,9 +1038,9 @@
 
     }
 
-    /* =====================================
+    /* =========================
        MOBILE
-    ===================================== */
+    ========================= */
 
     @media (max-width: 520px) {
 
@@ -1287,12 +1263,12 @@
 
                 <stop
                   offset="0"
-                  stop-color="#2588ff"
+                  stop-color="#2378e8"
                 />
 
                 <stop
                   offset="1"
-                  stop-color="#0a4eba"
+                  stop-color="#155cbd"
                 />
 
               </linearGradient>
@@ -1450,8 +1426,6 @@
           select the setup you're interested in.
         </p>
 
-        <!-- ONLY SITE PRODUCT IMAGE -->
-
         <div class="package-flyer">
 
           <img
@@ -1473,8 +1447,6 @@
         </p>
 
         <div class="package-choices">
-
-          <!-- A -->
 
           <article class="package-choice">
 
@@ -1506,8 +1478,6 @@
 
           </article>
 
-          <!-- B -->
-
           <article class="package-choice featured">
 
             <span class="package-tag red">
@@ -1537,8 +1507,6 @@
             </a>
 
           </article>
-
-          <!-- C -->
 
           <article class="package-choice">
 
@@ -1606,13 +1574,13 @@
           </div>
 
           <h2>
-            Ready to review your security options?
+            Ready to get your home set up?
           </h2>
 
           <p class="request-copy">
 
-            Send your information and we'll follow up
-            regarding available options and the next steps.
+            Send us your information and we'll help
+            get the process started.
 
           </p>
 
@@ -1624,7 +1592,7 @@
                 ✓
               </span>
 
-              Choose a package
+              Choose your package
 
             </div>
 
@@ -1644,7 +1612,7 @@
                 ✓
               </span>
 
-              Review the next steps
+              We'll help with the next steps
 
             </div>
 
@@ -1691,11 +1659,11 @@
           </p>
 
           <p class="form-heading">
-            Request Your Security Options
+            Let's Get You Set Up
           </p>
 
           <p class="form-lead">
-            Send your information below.
+            Tell us where to reach you.
           </p>
 
           <div class="field-row">
@@ -1839,7 +1807,7 @@
             class="button button-red form-button"
             type="submit"
           >
-            Request My Security Options
+            Get My Home Set Up
           </button>
 
         </form>
@@ -1899,7 +1867,7 @@
 
   </main>
 
-  <!-- SHORT LEGAL DISCLOSURE -->
+  <!-- LEGAL -->
 
   <section class="legal-note">
 
