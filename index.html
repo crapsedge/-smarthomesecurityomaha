@@ -166,8 +166,10 @@
 
     body {
       margin: 0;
+
       color: var(--white);
       background: var(--navy-deep);
+
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
     }
@@ -566,7 +568,6 @@
       padding: 13px 15px;
 
       color: #dbe7f6;
-
       background: rgba(0,0,0,.18);
 
       border:
@@ -578,7 +579,9 @@
       line-height: 1.5;
     }
 
-    /* HERO IMAGE */
+    /* =========================
+       HERO IMAGE
+    ========================== */
 
     .hero-image-wrap {
       position: relative;
@@ -720,7 +723,7 @@
     }
 
     /* =========================
-       PROMOTIONAL FLYER
+       PROMOTION
     ========================== */
 
     .promotion {
@@ -1126,16 +1129,18 @@
       border-radius: 8px;
     }
 
+    /* SHORTER CONSENT */
+
     .consent-box {
       display: grid;
       grid-template-columns: auto 1fr;
 
       align-items: start;
 
-      gap: 10px;
+      gap: 11px;
 
       margin-top: 18px;
-      padding: 13px;
+      padding: 14px;
 
       background: rgba(255,255,255,.07);
 
@@ -1146,8 +1151,8 @@
     }
 
     .consent-box input {
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
 
       margin: 2px 0 0;
 
@@ -1161,7 +1166,7 @@
 
       font-size: 11px;
       font-weight: 600;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     .form-button {
@@ -1170,18 +1175,27 @@
     }
 
     .fine-print {
-      margin: 12px 0 0;
+      margin: 13px 0 0;
 
       color: #c8d7e9;
 
-      font-size: 11px;
+      font-size: 10.5px;
       line-height: 1.55;
 
       text-align: center;
     }
 
+    .fine-print a {
+      color: #9dceff;
+
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      font-weight: 700;
+    }
+
     /* =========================
-       REFERRAL BANNER
+       REFERRAL
     ========================== */
 
     .referral {
@@ -1250,27 +1264,6 @@
 
       font-size: 11px;
       line-height: 1.5;
-    }
-
-    /* =========================
-       LEGAL / BUSINESS DISCLOSURE
-    ========================== */
-
-    .business-disclosure {
-      padding: 26px 0;
-
-      color: #aebfd4;
-      background: #061426;
-
-      border-top:
-        1px solid rgba(255,255,255,.08);
-    }
-
-    .business-disclosure p {
-      margin: 0;
-
-      font-size: 11px;
-      line-height: 1.65;
     }
 
     /* =========================
@@ -1376,6 +1369,7 @@
 
       nav {
         min-height: 68px;
+
         gap: 10px;
       }
 
@@ -1489,6 +1483,10 @@
 
       form {
         padding: 22px;
+      }
+
+      .consent-box {
+        padding: 12px;
       }
 
       .referral {
@@ -1917,7 +1915,7 @@
 
     </section>
 
-    <!-- PROMOTIONAL FLYER -->
+    <!-- PROMOTION -->
     <section
       class="promotion"
       id="promotion"
@@ -1936,9 +1934,8 @@
           </h2>
 
           <p>
-            View the promotional package flyer for a quick
-            side-by-side look at the available equipment,
-            monthly pricing and referral offer.
+            Get a quick side-by-side look at current package
+            pricing, equipment options and the referral offer.
           </p>
 
           <a
@@ -1999,9 +1996,8 @@
         </h2>
 
         <p class="section-copy">
-          Review the promotional options below. Final eligibility,
-          equipment availability, pricing and service terms are
-          confirmed by the security provider before service begins.
+          Review the available promotional options below and
+          choose the setup you're interested in.
         </p>
 
         <div class="plans">
@@ -2274,14 +2270,12 @@
         <div class="package-note">
 
           <strong>
-            Important package information:
+            Package information:
           </strong>
 
-          Package pricing shown is promotional and subject to provider
-          confirmation. Equipment availability, installation,
-          monitoring, customer eligibility, taxes, fees, agreement
-          length and other service terms may vary. Review the
-          provider's final service agreement before accepting service.
+          Promotional pricing and equipment are subject to provider
+          confirmation. Availability, installation, monitoring,
+          eligibility, taxes, fees and final agreement terms may vary.
 
         </div>
 
@@ -2308,8 +2302,8 @@
           </h2>
 
           <p class="request-copy">
-            Send your information and Smart Home Security will
-            follow up regarding the available options and next steps.
+            Send your information and we'll follow up regarding
+            available options and the next steps.
           </p>
 
           <div class="request-benefits">
@@ -2320,7 +2314,7 @@
                 ✓
               </span>
 
-              Choose a promotional package
+              Choose a package
 
             </div>
 
@@ -2330,7 +2324,7 @@
                 ✓
               </span>
 
-              Enter your contact information
+              Enter your information
 
             </div>
 
@@ -2340,7 +2334,7 @@
                 ✓
               </span>
 
-              Review provider details before service begins
+              Review the next steps
 
             </div>
 
@@ -2391,8 +2385,7 @@
           </p>
 
           <p class="form-lead">
-            This request does not complete a purchase,
-            installation agreement or monitoring contract.
+            This request does not complete a purchase or service contract.
           </p>
 
           <div class="field-row">
@@ -2510,6 +2503,7 @@
             autocomplete="off"
           >
 
+          <!-- SHORT REQUIRED CONSENT -->
           <div class="consent-box">
 
             <input
@@ -2521,14 +2515,9 @@
             >
 
             <label for="provider-consent">
-              I understand Smart Home Security is a marketing and
-              customer referral service operated by Murrays Empire LLC.
-              I authorize Smart Home Security to share the information
-              I submit with the applicable security provider for this
-              inquiry, and I authorize Smart Home Security and/or that
-              provider to contact me by phone or email regarding this
-              request. This submission does not complete a purchase or
-              service agreement.
+              I agree that Smart Home Security may share my information
+              with the security provider handling my request and that
+              I may be contacted by phone or email about my inquiry.
             </label>
 
           </div>
@@ -2542,11 +2531,23 @@
 
           <p class="fine-print">
 
-            Final pricing, equipment, installation, monitoring,
-            eligibility, taxes, fees and contract terms are determined
-            and confirmed by the applicable security provider before
-            service begins. Please review our Privacy Policy and Terms
-            for additional information.
+            Smart Home Security is operated by Murrays Empire LLC and
+            provides marketing and customer referral services.
+            Submitting this form does not create a purchase or service
+            agreement. Final pricing, equipment, installation,
+            monitoring and terms are confirmed by the security provider.
+
+            <br><br>
+
+            <a href="/privacy-policy.html">
+              Privacy Policy
+            </a>
+
+            &nbsp;·&nbsp;
+
+            <a href="/terms.html">
+              Terms
+            </a>
 
           </p>
 
@@ -2573,19 +2574,17 @@
           <div class="referral-copy">
 
             <strong>
-              Qualifying Referral Reward
+              Refer Someone. Earn $100.
             </strong>
 
             <p>
-              Refer someone to Smart Home Security and you may
-              qualify for a $100 referral reward after the referred
-              customer's completed security setup is confirmed.
+              Refer someone to Smart Home Security and receive
+              $100 after their qualifying security installation
+              is completed and confirmed.
             </p>
 
             <small>
-              Eligibility, qualifying requirements, exclusions,
-              payment timing and other referral program terms apply.
-              Review the Referral Program page before participating.
+              Eligibility and referral program terms apply.
             </small>
 
           </div>
@@ -2604,27 +2603,6 @@
     </section>
 
   </main>
-
-  <!-- BUSINESS DISCLOSURE -->
-  <section class="business-disclosure">
-
-    <div class="container">
-
-      <p>
-        Smart Home Security is operated by Murrays Empire LLC and
-        provides marketing, package information and customer referral
-        services. Smart Home Security is not represented on this
-        website as the company performing monitoring, equipment
-        installation or providing the final security-service contract.
-        Those services and final terms are provided by the applicable
-        third-party security provider. Promotional offers are subject
-        to provider approval, eligibility, availability and final
-        agreement terms.
-      </p>
-
-    </div>
-
-  </section>
 
   <!-- FOOTER -->
   <footer>
