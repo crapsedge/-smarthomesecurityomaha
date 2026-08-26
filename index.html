@@ -251,7 +251,7 @@
     }
 
     nav {
-      min-height: 76px;
+      min-height: 78px;
 
       display: flex;
       align-items: center;
@@ -266,15 +266,17 @@
 
       gap: 11px;
 
-      font-size: 18px;
+      font-size: 21px;
       font-weight: 900;
-      letter-spacing: .4px;
+      letter-spacing: .5px;
+
+      white-space: nowrap;
     }
 
     .brand-icon {
-      width: 43px;
-      height: 43px;
-      flex: 0 0 43px;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
     }
 
     .brand-icon svg {
@@ -383,7 +385,7 @@
     }
 
     /* =========================
-       ICON
+       ICONS
     ========================== */
 
     .icon {
@@ -583,10 +585,6 @@
        HERO IMAGE
     ========================== */
 
-    .hero-image-wrap {
-      position: relative;
-    }
-
     .hero-image {
       padding: 10px;
 
@@ -610,6 +608,7 @@
       width: 100%;
 
       aspect-ratio: 4 / 3;
+
       object-fit: cover;
 
       border-radius: 13px;
@@ -723,27 +722,22 @@
     }
 
     /* =========================
-       PROMOTION
+       CURRENT PROMOTION
     ========================== */
 
     .promotion {
       color: var(--text);
       background: #ffffff;
 
-      padding: 62px 0;
+      padding: 58px 0;
     }
 
-    .promotion-grid {
-      display: grid;
-      grid-template-columns: .62fr 1.38fr;
-
-      align-items: center;
-
-      gap: 38px;
+    .promotion-copy {
+      margin-bottom: 28px;
     }
 
     .promotion-copy h2 {
-      margin: 9px 0 13px;
+      margin: 8px 0 10px;
 
       color: var(--navy);
 
@@ -753,16 +747,14 @@
     }
 
     .promotion-copy p {
-      margin: 0 0 18px;
+      margin: 0;
 
       color: #566b83;
 
       font-size: 15px;
     }
 
-    .promo-image-link {
-      display: block;
-
+    .promo-image-wrap {
       padding: 8px;
 
       background: #07172d;
@@ -773,20 +765,11 @@
         0 18px 42px rgba(7,23,45,.18);
     }
 
-    .promo-image-link img {
+    .promo-image-wrap img {
       width: 100%;
       height: auto;
 
       border-radius: 10px;
-    }
-
-    .promo-caption {
-      margin-top: 10px;
-
-      color: #667991;
-
-      font-size: 11px;
-      text-align: center;
     }
 
     /* =========================
@@ -1129,8 +1112,6 @@
       border-radius: 8px;
     }
 
-    /* SHORTER CONSENT */
-
     .consent-box {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -1172,26 +1153,6 @@
     .form-button {
       width: 100%;
       margin-top: 19px;
-    }
-
-    .fine-print {
-      margin: 13px 0 0;
-
-      color: #c8d7e9;
-
-      font-size: 10.5px;
-      line-height: 1.55;
-
-      text-align: center;
-    }
-
-    .fine-print a {
-      color: #9dceff;
-
-      text-decoration: underline;
-      text-underline-offset: 2px;
-
-      font-weight: 700;
     }
 
     /* =========================
@@ -1267,6 +1228,48 @@
     }
 
     /* =========================
+       LEGAL DISCLOSURE
+    ========================== */
+
+    .legal-note {
+      padding: 24px 0;
+
+      color: #9fb2ca;
+      background: #061426;
+
+      border-top:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    .legal-note p {
+      max-width: 950px;
+
+      margin: 0;
+
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 16px;
+
+      margin-top: 10px;
+
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .legal-links a {
+      color: #9dceff;
+
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* =========================
        FOOTER
     ========================== */
 
@@ -1317,17 +1320,12 @@
 
       .hero-grid,
       .plans,
-      .request-grid,
-      .promotion-grid {
+      .request-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-image-wrap {
+      .hero-image {
         max-width: 650px;
-      }
-
-      .promotion-grid {
-        gap: 26px;
       }
 
       .benefit-grid {
@@ -1368,30 +1366,35 @@
       }
 
       nav {
-        min-height: 68px;
+        min-height: 72px;
 
-        gap: 10px;
+        gap: 9px;
       }
 
       .brand {
-        font-size: 13px;
+        font-size: 16px;
         gap: 8px;
+
+        letter-spacing: .25px;
       }
 
       .brand small {
-        font-size: 7.5px;
-        letter-spacing: 1.25px;
+        font-size: 7px;
+        letter-spacing: 1.2px;
       }
 
       .brand-icon {
-        width: 36px;
-        height: 36px;
-        flex-basis: 36px;
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
       }
 
       .mobile-nav-cta {
-        padding: 10px 12px;
-        font-size: 11px;
+        padding: 10px 11px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
       }
 
       .hero {
@@ -1438,7 +1441,7 @@
         margin-top: 19px;
       }
 
-      .hero-image-wrap {
+      .hero-image {
         max-width: 340px;
         margin: auto;
       }
@@ -1503,6 +1506,10 @@
 
       .referral-money {
         font-size: 46px;
+      }
+
+      .legal-note {
+        padding: 22px 0;
       }
 
       .footer-grid {
@@ -1762,7 +1769,7 @@
 
         </div>
 
-        <div class="hero-image-wrap">
+        <div>
 
           <div class="hero-image">
 
@@ -1781,7 +1788,7 @@
 
     </section>
 
-    <!-- BENEFIT BAR -->
+    <!-- BENEFITS -->
     <section
       class="benefit-bar"
       aria-label="Security service highlights"
@@ -1915,13 +1922,13 @@
 
     </section>
 
-    <!-- PROMOTION -->
+    <!-- CURRENT PROMOTION -->
     <section
       class="promotion"
       id="promotion"
     >
 
-      <div class="container promotion-grid">
+      <div class="container">
 
         <div class="promotion-copy">
 
@@ -1930,48 +1937,24 @@
           </div>
 
           <h2>
-            See the current package overview.
+            Current Smart Home Security Packages
           </h2>
 
           <p>
-            Get a quick side-by-side look at current package
-            pricing, equipment options and the referral offer.
+            Compare our current promotional package options below.
           </p>
-
-          <a
-            class="button button-blue"
-            href="images/security-packages-promo.webp"
-            target="_blank"
-            rel="noopener"
-          >
-            View Full-Size Flyer
-          </a>
 
         </div>
 
-        <div>
+        <div class="promo-image-wrap">
 
-          <a
-            class="promo-image-link"
-            href="images/security-packages-promo.webp"
-            target="_blank"
-            rel="noopener"
-            aria-label="Open Smart Home Security promotional package flyer full size"
+          <img
+            src="images/security-packages-promo.webp"
+            width="1404"
+            height="1120"
+            alt="Smart Home Security promotional packages A, B and C"
+            loading="lazy"
           >
-
-            <img
-              src="images/security-packages-promo.webp"
-              width="1404"
-              height="1120"
-              alt="Smart Home Security promotional flyer displaying Packages A, B and C, professional installation, monitoring and referral information"
-              loading="lazy"
-            >
-
-          </a>
-
-          <div class="promo-caption">
-            Tap the flyer to view it full size.
-          </div>
 
         </div>
 
@@ -2385,7 +2368,7 @@
           </p>
 
           <p class="form-lead">
-            This request does not complete a purchase or service contract.
+            Choose a package and send your information below.
           </p>
 
           <div class="field-row">
@@ -2503,7 +2486,6 @@
             autocomplete="off"
           >
 
-          <!-- SHORT REQUIRED CONSENT -->
           <div class="consent-box">
 
             <input
@@ -2528,28 +2510,6 @@
           >
             Request My Security Options
           </button>
-
-          <p class="fine-print">
-
-            Smart Home Security is operated by Murrays Empire LLC and
-            provides marketing and customer referral services.
-            Submitting this form does not create a purchase or service
-            agreement. Final pricing, equipment, installation,
-            monitoring and terms are confirmed by the security provider.
-
-            <br><br>
-
-            <a href="/privacy-policy.html">
-              Privacy Policy
-            </a>
-
-            &nbsp;·&nbsp;
-
-            <a href="/terms.html">
-              Terms
-            </a>
-
-          </p>
 
         </form>
 
@@ -2604,6 +2564,40 @@
 
   </main>
 
+  <!-- BOTTOM DISCLOSURE -->
+  <section class="legal-note">
+
+    <div class="container">
+
+      <p>
+        Smart Home Security is operated by Murrays Empire LLC and
+        provides marketing and customer referral services.
+        Installation, monitoring, equipment, billing and final
+        service agreements are provided by the applicable third-party
+        security provider. Promotional pricing and offers are subject
+        to provider eligibility, availability and final agreement terms.
+      </p>
+
+      <div class="legal-links">
+
+        <a href="/privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/terms.html">
+          Terms
+        </a>
+
+        <a href="/referral.html">
+          Referral Program Terms
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- FOOTER -->
   <footer>
 
@@ -2631,14 +2625,6 @@
 
         <a href="/referral.html">
           Referral Program
-        </a>
-
-        <a href="/privacy-policy.html">
-          Privacy Policy
-        </a>
-
-        <a href="/terms.html">
-          Terms
         </a>
 
       </div>
