@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -32,13 +33,8 @@
     href="https://smarthomesecurity-omaha.com/"
   >
 
-  <link
-    rel="preload"
-    as="image"
-    href="images/security-equipment.jpg"
-  >
-
   <!-- FAVICONS -->
+
   <link
     rel="icon"
     type="image/x-icon"
@@ -59,6 +55,7 @@
   >
 
   <!-- SOCIAL SHARING -->
+
   <meta
     property="og:type"
     content="website"
@@ -76,7 +73,7 @@
 
   <meta
     property="og:description"
-    content="Smart-home security packages starting at $63.99/month with professional installation and 24/7 monitoring options."
+    content="Home-security packages starting at $63.99/month with professional installation and 24/7 monitoring options."
   >
 
   <meta
@@ -101,7 +98,7 @@
 
   <meta
     name="twitter:description"
-    content="Smart-home security packages starting at $63.99/month with professional installation and 24/7 monitoring options."
+    content="Home-security packages starting at $63.99/month with professional installation and 24/7 monitoring options."
   >
 
   <meta
@@ -110,48 +107,42 @@
   >
 
   <!-- STRUCTURED DATA -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Smart Home Security",
     "url": "https://smarthomesecurity-omaha.com/",
-    "serviceType": "Smart home security marketing, package information and customer referral service",
+    "serviceType": "Smart home security package information and customer referral service",
     "provider": {
       "@type": "Organization",
       "name": "Smart Home Security",
-      "legalName": "Murrays Empire LLC",
-      "url": "https://smarthomesecurity-omaha.com/"
+      "legalName": "Murrays Empire LLC"
     },
     "areaServed": {
       "@type": "City",
       "name": "Omaha"
     },
-    "description": "Smart Home Security provides information about available smart-home security packages and connects interested customers with an applicable security provider for final pricing, eligibility, installation, monitoring and service agreements."
+    "description": "Smart Home Security provides information about available home-security packages and connects interested customers with an applicable security provider."
   }
   </script>
 
   <style>
+
     :root {
       --navy: #07172d;
       --navy-deep: #041022;
-      --navy-mid: #0a2348;
-
       --blue: #1f78f2;
       --blue-dark: #155cbd;
       --blue-light: #78bbff;
-
       --red: #df2d36;
       --red-bright: #f0444d;
-
       --green: #168a4a;
-
       --white: #ffffff;
       --off-white: #f4f7fb;
-
       --text: #12233c;
       --muted: #5b6e86;
-
       --border: #dbe5f0;
       --focus: #ffd166;
     }
@@ -170,7 +161,11 @@
       color: var(--white);
       background: var(--navy-deep);
 
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       line-height: 1.5;
     }
 
@@ -184,9 +179,9 @@
       max-width: 100%;
     }
 
-    button,
     input,
-    select {
+    select,
+    button {
       font: inherit;
     }
 
@@ -204,9 +199,9 @@
       border-radius: 6px;
     }
 
-    /* =========================
-       TOP ANNOUNCEMENT
-    ========================== */
+    /* =====================================
+       ANNOUNCEMENT
+    ===================================== */
 
     .announcement {
       padding: 10px 15px;
@@ -232,26 +227,30 @@
       color: #506a8c;
     }
 
-    /* =========================
+    /* =====================================
        HEADER
-    ========================== */
+    ===================================== */
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
 
-      background: rgba(7,23,45,.97);
+      background:
+        rgba(7,23,45,.97);
 
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter:
+        blur(14px);
+
+      backdrop-filter:
+        blur(14px);
 
       border-bottom:
         1px solid rgba(255,255,255,.1);
     }
 
     nav {
-      min-height: 78px;
+      min-height: 82px;
 
       display: flex;
       align-items: center;
@@ -264,19 +263,20 @@
       display: flex;
       align-items: center;
 
-      gap: 11px;
+      gap: 12px;
 
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 900;
-      letter-spacing: .5px;
+      letter-spacing: .45px;
 
       white-space: nowrap;
     }
 
     .brand-icon {
-      width: 46px;
-      height: 46px;
-      flex: 0 0 46px;
+      width: 48px;
+      height: 48px;
+
+      flex: 0 0 48px;
     }
 
     .brand-icon svg {
@@ -292,14 +292,14 @@
       color: #aabed8;
 
       font-size: 9px;
-      letter-spacing: 1.9px;
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
 
-      gap: 22px;
+      gap: 23px;
 
       color: #dbe8f9;
 
@@ -315,9 +315,9 @@
       display: none;
     }
 
-    /* =========================
+    /* =====================================
        BUTTONS
-    ========================== */
+    ===================================== */
 
     .button {
       display: inline-flex;
@@ -326,7 +326,7 @@
 
       padding: 14px 21px;
 
-      border: none;
+      border: 0;
       border-radius: 8px;
 
       font-size: 13px;
@@ -384,35 +384,15 @@
         2px solid rgba(255,255,255,.8);
     }
 
-    /* =========================
-       ICONS
-    ========================== */
-
-    .icon {
-      width: 1em;
-      height: 1em;
-
-      display: inline-block;
-
-      vertical-align: -0.125em;
-
-      fill: none;
-      stroke: currentColor;
-
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    /* =========================
+    /* =====================================
        HERO
-    ========================== */
+    ===================================== */
 
     .hero {
       position: relative;
       overflow: hidden;
 
-      padding: 70px 0 58px;
+      padding: 78px 0 72px;
 
       background:
         radial-gradient(
@@ -433,57 +413,16 @@
         );
     }
 
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-
-      align-items: center;
-
-      gap: 52px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-
-      gap: 8px;
-
-      padding: 8px 12px;
-
-      color: #c6e6ff;
-      background: rgba(103,185,255,.12);
-
-      border:
-        1px solid rgba(103,185,255,.25);
-
-      border-radius: 999px;
-
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-
-      background: #65e795;
-
-      border-radius: 50%;
-
-      box-shadow:
-        0 0 0 5px rgba(101,231,149,.15);
+    .hero-content {
+      max-width: 850px;
     }
 
     h1 {
-      margin: 17px 0 18px;
+      margin: 0 0 22px;
 
-      font-size: clamp(40px,5.8vw,74px);
+      font-size:
+        clamp(43px,6vw,76px);
+
       line-height: .98;
       letter-spacing: -2.5px;
     }
@@ -493,17 +432,18 @@
     }
 
     .hero-copy {
-      max-width: 620px;
+      max-width: 720px;
 
       margin: 0;
 
       color: #d8e6f7;
 
       font-size: 18px;
+      line-height: 1.6;
     }
 
     .starting-price {
-      margin-top: 22px;
+      margin-top: 25px;
 
       color: white;
 
@@ -512,9 +452,13 @@
     }
 
     .starting-price strong {
+      display: block;
+
+      margin-top: 4px;
+
       color: #7dc0ff;
 
-      font-size: 25px;
+      font-size: 30px;
     }
 
     .hero-buttons {
@@ -523,172 +467,43 @@
 
       gap: 13px;
 
-      margin-top: 26px;
+      margin-top: 29px;
     }
 
     .hero-points {
       display: flex;
       flex-wrap: wrap;
 
-      gap: 18px;
+      gap: 24px;
 
-      margin-top: 25px;
+      margin-top: 27px;
 
-      color: #dbeafa;
+      color: #e1edfb;
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
     }
 
-    .hero-points span {
+    .hero-point {
       display: inline-flex;
       align-items: center;
 
-      gap: 7px;
+      gap: 8px;
     }
 
-    .hero-points .icon {
-      color: #6de69a;
-      stroke-width: 3;
+    .check {
+      color: #64e793;
+
+      font-size: 18px;
+      font-weight: 900;
     }
 
-    .offer-disclosure {
-      max-width: 650px;
-
-      margin: 18px 0 0;
-
-      color: #adc0d9;
-
-      font-size: 11px;
-      line-height: 1.5;
-    }
-
-    .provider-disclosure {
-      max-width: 670px;
-
-      margin: 18px 0 0;
-      padding: 13px 15px;
-
-      color: #dbe7f6;
-      background: rgba(0,0,0,.18);
-
-      border:
-        1px solid rgba(255,255,255,.15);
-
-      border-radius: 9px;
-
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
-    /* =========================
-       HERO IMAGE
-    ========================== */
-
-    .hero-image {
-      padding: 10px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.26),
-          rgba(255,255,255,.06)
-        );
-
-      border:
-        1px solid rgba(255,255,255,.28);
-
-      border-radius: 20px;
-
-      box-shadow:
-        0 30px 65px rgba(0,0,0,.42);
-    }
-
-    .hero-image img {
-      width: 100%;
-
-      aspect-ratio: 4 / 3;
-
-      object-fit: cover;
-
-      border-radius: 13px;
-    }
-
-    /* =========================
-       BENEFIT BAR
-    ========================== */
-
-    .benefit-bar {
-      padding: 0;
-
-      background: #061a35;
-
-      border-top:
-        1px solid rgba(255,255,255,.1);
-
-      border-bottom:
-        1px solid rgba(255,255,255,.1);
-    }
-
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-    }
-
-    .benefit {
-      display: flex;
-      align-items: center;
-
-      gap: 11px;
-
-      padding: 17px 14px;
-
-      border-right:
-        1px solid rgba(255,255,255,.1);
-    }
-
-    .benefit:last-child {
-      border-right: none;
-    }
-
-    .benefit-icon {
-      width: 36px;
-      height: 36px;
-      flex: 0 0 36px;
-
-      display: grid;
-      place-items: center;
-
-      color: #7bc0ff;
-      background: rgba(103,185,255,.12);
-
-      border-radius: 9px;
-    }
-
-    .benefit-icon .icon {
-      width: 19px;
-      height: 19px;
-    }
-
-    .benefit strong {
-      display: block;
-      font-size: 13px;
-    }
-
-    .benefit small {
-      display: block;
-
-      color: #9fb4d0;
-
-      font-size: 11px;
-    }
-
-    /* =========================
+    /* =====================================
        GENERAL SECTIONS
-    ========================== */
+    ===================================== */
 
     section {
-      padding: 74px 0;
+      padding: 72px 0;
     }
 
     .section-label {
@@ -704,9 +519,13 @@
     .section-title {
       max-width: 800px;
 
-      margin: 9px 0 12px;
+      margin: 8px 0 12px;
 
-      font-size: clamp(32px,4vw,49px);
+      color: var(--navy);
+
+      font-size:
+        clamp(32px,4vw,49px);
+
       line-height: 1.08;
       letter-spacing: -1.3px;
     }
@@ -721,136 +540,84 @@
       font-size: 16px;
     }
 
-    /* =========================
-       CURRENT PROMOTION
-    ========================== */
+    /* =====================================
+       PACKAGES
+    ===================================== */
 
-    .promotion {
+    .packages {
       color: var(--text);
-      background: #ffffff;
-
-      padding: 58px 0;
+      background: var(--white);
     }
 
-    .promotion-copy {
-      margin-bottom: 28px;
+    .package-flyer {
+      margin-top: 32px;
+
+      padding: 8px;
+
+      background: var(--navy);
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 18px 45px rgba(7,23,45,.16);
     }
 
-    .promotion-copy h2 {
-      margin: 8px 0 10px;
+    .package-flyer img {
+      width: 100%;
+      height: auto;
+
+      border-radius: 11px;
+    }
+
+    .package-select-title {
+      margin: 42px 0 8px;
 
       color: var(--navy);
 
-      font-size: clamp(30px,4vw,46px);
-      line-height: 1.08;
-      letter-spacing: -1.2px;
+      font-size: 26px;
+      font-weight: 900;
     }
 
-    .promotion-copy p {
+    .package-select-copy {
       margin: 0;
 
-      color: #566b83;
+      color: var(--muted);
 
       font-size: 15px;
     }
 
-    .promo-image-wrap {
-      padding: 8px;
-
-      background: #07172d;
-
-      border-radius: 17px;
-
-      box-shadow:
-        0 18px 42px rgba(7,23,45,.18);
-    }
-
-    .promo-image-wrap img {
-      width: 100%;
-      height: auto;
-
-      border-radius: 10px;
-    }
-
-    /* =========================
-       PACKAGES
-    ========================== */
-
-    .packages {
-      color: var(--text);
-      background: var(--off-white);
-    }
-
-    .plans {
+    .package-choices {
       display: grid;
       grid-template-columns: repeat(3,1fr);
 
-      gap: 21px;
+      gap: 20px;
 
-      margin-top: 35px;
+      margin-top: 25px;
     }
 
-    .plan {
-      position: relative;
-
+    .package-choice {
       display: flex;
       flex-direction: column;
 
-      min-height: 420px;
+      padding: 25px;
 
-      padding: 28px;
-
-      background: white;
+      background: var(--off-white);
 
       border:
         1px solid var(--border);
 
-      border-radius: 16px;
+      border-radius: 14px;
 
       box-shadow:
-        0 14px 30px rgba(25,64,110,.09);
-
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+        0 10px 25px rgba(25,64,110,.06);
     }
 
-    .plan:hover {
-      transform: translateY(-5px);
-
-      box-shadow:
-        0 20px 38px rgba(25,64,110,.14);
-    }
-
-    .plan.featured {
+    .package-choice.featured {
       border:
         2px solid var(--red);
-
-      box-shadow:
-        0 18px 38px rgba(203,33,43,.15);
     }
 
-    .popular {
-      position: absolute;
-
-      right: 17px;
-      top: -13px;
-
-      padding: 6px 11px;
-
-      color: white;
-      background: var(--red);
-
-      border-radius: 999px;
-
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 1px;
-
-      text-transform: uppercase;
-    }
-
-    .package-name {
+    .package-tag {
       width: max-content;
 
       padding: 6px 10px;
@@ -864,78 +631,45 @@
       font-weight: 900;
     }
 
-    .package-name.red {
+    .package-tag.red {
       color: #c81e29;
       background: #ffe7e8;
     }
 
-    .package-name.green {
+    .package-tag.green {
       color: #14723a;
       background: #e2f6e8;
     }
 
-    .plan h3 {
-      margin: 17px 0 5px;
+    .package-choice h3 {
+      margin: 16px 0 4px;
 
-      font-size: 23px;
+      color: #183456;
+
+      font-size: 21px;
     }
 
-    .price {
+    .package-price {
+      margin-bottom: 20px;
+
       color: #103462;
 
-      font-size: 38px;
+      font-size: 35px;
       font-weight: 900;
+
       line-height: 1;
     }
 
-    .price span {
+    .package-price span {
       color: #607391;
 
       font-size: 13px;
       font-weight: 700;
     }
 
-    .plan ul {
-      margin: 21px 0;
-      padding: 0;
-
-      list-style: none;
-    }
-
-    .plan li {
-      display: flex;
-      align-items: center;
-
-      gap: 9px;
-
-      padding: 9px 0;
-
-      color: #334a68;
-
-      border-bottom:
-        1px solid #e8eef5;
-
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .plan li .icon {
-      width: 18px;
-      height: 18px;
-      flex: 0 0 18px;
-
-      padding: 3px;
-
-      color: #147641;
-      background: #dff6e7;
-
-      border-radius: 50%;
-
-      stroke-width: 3;
-    }
-
-    .plan .button {
+    .package-choice .button {
       width: 100%;
+
       margin-top: auto;
     }
 
@@ -956,9 +690,9 @@
       line-height: 1.55;
     }
 
-    /* =========================
-       REQUEST FORM
-    ========================== */
+    /* =====================================
+       REQUEST
+    ===================================== */
 
     .request {
       background:
@@ -982,7 +716,8 @@
 
     .request-grid {
       display: grid;
-      grid-template-columns: .85fr 1.15fr;
+      grid-template-columns:
+        .85fr 1.15fr;
 
       align-items: center;
 
@@ -990,13 +725,15 @@
     }
 
     .request .section-label {
-      color: #d6eaff;
+      color: #cde7ff;
     }
 
     .request h2 {
-      margin: 9px 0 14px;
+      margin: 8px 0 14px;
 
-      font-size: clamp(32px,4vw,51px);
+      font-size:
+        clamp(32px,4vw,50px);
+
       line-height: 1.06;
     }
 
@@ -1010,28 +747,29 @@
       font-size: 16px;
     }
 
-    .request-benefits {
+    .steps {
       display: grid;
 
-      gap: 12px;
+      gap: 13px;
 
-      margin-top: 24px;
+      margin-top: 25px;
     }
 
-    .request-benefit {
+    .step {
       display: flex;
       align-items: center;
 
-      gap: 10px;
+      gap: 11px;
 
       font-size: 14px;
       font-weight: 800;
     }
 
-    .request-check {
-      width: 29px;
-      height: 29px;
-      flex: 0 0 29px;
+    .step-check {
+      width: 30px;
+      height: 30px;
+
+      flex: 0 0 30px;
 
       display: grid;
       place-items: center;
@@ -1041,14 +779,15 @@
 
       border-radius: 50%;
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 900;
     }
 
     form {
-      padding: 29px;
+      padding: 30px;
 
-      background: rgba(3,13,30,.60);
+      background:
+        rgba(3,13,30,.62);
 
       border:
         1px solid rgba(255,255,255,.24);
@@ -1062,7 +801,7 @@
     .form-heading {
       margin: 0;
 
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 900;
     }
 
@@ -1101,7 +840,7 @@
     select {
       width: 100%;
 
-      padding: 13px;
+      padding: 14px;
 
       color: var(--text);
       background: white;
@@ -1114,7 +853,8 @@
 
     .consent-box {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns:
+        auto 1fr;
 
       align-items: start;
 
@@ -1123,7 +863,8 @@
       margin-top: 18px;
       padding: 14px;
 
-      background: rgba(255,255,255,.07);
+      background:
+        rgba(255,255,255,.07);
 
       border:
         1px solid rgba(255,255,255,.18);
@@ -1147,17 +888,19 @@
 
       font-size: 11px;
       font-weight: 600;
+
       line-height: 1.5;
     }
 
     .form-button {
       width: 100%;
+
       margin-top: 19px;
     }
 
-    /* =========================
+    /* =====================================
        REFERRAL
-    ========================== */
+    ===================================== */
 
     .referral {
       padding: 48px 0;
@@ -1168,7 +911,8 @@
 
     .referral-box {
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns:
+        auto 1fr auto;
 
       align-items: center;
 
@@ -1189,7 +933,8 @@
       border-radius: 16px;
 
       box-shadow:
-        0 12px 28px rgba(73,35,45,.06);
+        0 12px 28px
+        rgba(73,35,45,.06);
     }
 
     .referral-money {
@@ -1197,6 +942,7 @@
 
       font-size: 48px;
       font-weight: 900;
+
       line-height: 1;
     }
 
@@ -1224,15 +970,14 @@
       color: #667991;
 
       font-size: 11px;
-      line-height: 1.5;
     }
 
-    /* =========================
-       LEGAL DISCLOSURE
-    ========================== */
+    /* =====================================
+       BOTTOM DISCLOSURE
+    ===================================== */
 
     .legal-note {
-      padding: 24px 0;
+      padding: 22px 0;
 
       color: #9fb2ca;
       background: #061426;
@@ -1242,7 +987,7 @@
     }
 
     .legal-note p {
-      max-width: 950px;
+      max-width: 980px;
 
       margin: 0;
 
@@ -1250,31 +995,12 @@
       line-height: 1.6;
     }
 
-    .legal-links {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 16px;
-
-      margin-top: 10px;
-
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .legal-links a {
-      color: #9dceff;
-
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* =========================
+    /* =====================================
        FOOTER
-    ========================== */
+    ===================================== */
 
     footer {
-      padding: 31px 0;
+      padding: 30px 0;
 
       color: #9bb0cc;
       background: #030d1d;
@@ -1296,7 +1022,7 @@
       display: flex;
       flex-wrap: wrap;
 
-      gap: 16px;
+      gap: 18px;
 
       font-weight: 700;
     }
@@ -1305,11 +1031,12 @@
       color: var(--blue-light);
     }
 
-    /* =========================
+    /* =====================================
        TABLET
-    ========================== */
+    ===================================== */
 
     @media (max-width: 880px) {
+
       .nav-links {
         display: none;
       }
@@ -1318,46 +1045,31 @@
         display: inline-flex;
       }
 
-      .hero-grid,
-      .plans,
+      .package-choices,
       .request-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-image {
-        max-width: 650px;
-      }
-
-      .benefit-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .benefit:nth-child(2) {
-        border-right: 0;
-      }
-
-      .benefit:nth-child(-n+2) {
-        border-bottom:
-          1px solid rgba(255,255,255,.1);
-      }
-
       .referral-box {
-        grid-template-columns: auto 1fr;
+        grid-template-columns:
+          auto 1fr;
       }
 
       .referral-box .button {
         grid-column: 1 / -1;
         width: 100%;
       }
+
     }
 
-    /* =========================
+    /* =====================================
        MOBILE
-    ========================== */
+    ===================================== */
 
     @media (max-width: 520px) {
+
       .announcement {
-        font-size: 11px;
+        font-size: 10.5px;
         line-height: 1.4;
       }
 
@@ -1366,27 +1078,27 @@
       }
 
       nav {
-        min-height: 72px;
-
-        gap: 9px;
+        min-height: 76px;
+        gap: 8px;
       }
 
       .brand {
-        font-size: 16px;
         gap: 8px;
 
-        letter-spacing: .25px;
+        font-size: 16.5px;
+        letter-spacing: .2px;
+      }
+
+      .brand-icon {
+        width: 41px;
+        height: 41px;
+
+        flex-basis: 41px;
       }
 
       .brand small {
         font-size: 7px;
-        letter-spacing: 1.2px;
-      }
-
-      .brand-icon {
-        width: 39px;
-        height: 39px;
-        flex-basis: 39px;
+        letter-spacing: 1.25px;
       }
 
       .mobile-nav-cta {
@@ -1398,35 +1110,28 @@
       }
 
       .hero {
-        padding: 38px 0 45px;
-      }
-
-      .hero-grid {
-        gap: 27px;
+        padding: 56px 0 52px;
       }
 
       h1 {
-        margin: 12px 0;
+        margin-bottom: 20px;
 
-        font-size: clamp(32px,9.5vw,42px);
-        letter-spacing: -1.4px;
+        font-size:
+          clamp(39px,11vw,54px);
+
+        letter-spacing: -1.7px;
       }
 
       .hero-copy {
-        font-size: 15px;
-      }
-
-      .starting-price {
-        font-size: 14px;
+        font-size: 15.5px;
       }
 
       .starting-price strong {
-        display: block;
-        margin-top: 3px;
+        font-size: 29px;
       }
 
       .hero-buttons {
-        margin-top: 21px;
+        display: grid;
       }
 
       .hero-buttons .button {
@@ -1437,59 +1142,43 @@
         display: grid;
 
         gap: 10px;
-
-        margin-top: 19px;
-      }
-
-      .hero-image {
-        max-width: 340px;
-        margin: auto;
-      }
-
-      .provider-disclosure,
-      .offer-disclosure {
-        font-size: 10.5px;
-      }
-
-      .benefit-grid,
-      .field-row {
-        grid-template-columns: 1fr;
-      }
-
-      .benefit {
-        border-right: 0;
-
-        border-bottom:
-          1px solid rgba(255,255,255,.1);
-      }
-
-      .benefit:last-child {
-        border-bottom: 0;
       }
 
       section {
         padding: 54px 0;
       }
 
-      .promotion {
-        padding: 48px 0;
+      .package-flyer {
+        margin-top: 25px;
+        padding: 5px;
+
+        border-radius: 13px;
       }
 
-      .plans {
-        gap: 27px;
+      .package-flyer img {
+        border-radius: 8px;
       }
 
-      .plan {
-        min-height: 0;
-        padding: 24px;
+      .package-select-title {
+        margin-top: 32px;
+
+        font-size: 23px;
+      }
+
+      .package-choices {
+        gap: 18px;
+      }
+
+      .package-choice {
+        padding: 23px;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
       }
 
       form {
         padding: 22px;
-      }
-
-      .consent-box {
-        padding: 12px;
       }
 
       .referral {
@@ -1509,7 +1198,7 @@
       }
 
       .legal-note {
-        padding: 22px 0;
+        padding: 20px 0;
       }
 
       .footer-grid {
@@ -1517,15 +1206,19 @@
       }
 
       .footer-links {
-        margin-top: 12px;
+        margin-top: 14px;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- TOP ANNOUNCEMENT -->
+  <!-- ANNOUNCEMENT -->
+
   <div class="announcement">
 
     <strong>
@@ -1536,11 +1229,12 @@
       |
     </span>
 
-    Professional Installation Available*
+    Professional Installation Available
 
   </div>
 
   <!-- HEADER -->
+
   <header>
 
     <nav class="container">
@@ -1623,16 +1317,8 @@
 
       <div class="nav-links">
 
-        <a href="#promotion">
-          Promotions
-        </a>
-
         <a href="#packages">
           Packages
-        </a>
-
-        <a href="#request">
-          Get Started
         </a>
 
         <a href="/referral.html">
@@ -1662,299 +1348,79 @@
   <main id="top">
 
     <!-- HERO -->
+
     <section class="hero">
 
-      <div class="container hero-grid">
+      <div class="container hero-content">
 
-        <div>
+        <h1>
 
-          <div class="eyebrow">
+          SMART SECURITY.<br>
 
-            <span class="status-dot"></span>
-
-            Smart Home Security
-
-          </div>
-
-          <h1>
-
-            SMART SECURITY.<br>
-
-            <span>
-              TOTAL PEACE OF MIND.
-            </span>
-
-          </h1>
-
-          <p class="hero-copy">
-            Explore cameras, video doorbells, touchscreen control,
-            door sensors and professionally monitored home-security
-            options available through our security provider.
-          </p>
-
-          <div class="starting-price">
-
-            Promotional packages starting at
-
-            <strong>
-              $63.99/month
-            </strong>
-
-          </div>
-
-          <div class="hero-buttons">
-
-            <a
-              class="button button-red"
-              href="#packages"
-            >
-              View Packages
-            </a>
-
-            <a
-              class="button button-outline"
-              href="#request"
-            >
-              Get Started
-            </a>
-
-          </div>
-
-          <div class="hero-points">
-
-            <span>
-
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M20 6L9 17l-5-5"/>
-              </svg>
-
-              Professional Installation*
-
-            </span>
-
-            <span>
-
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M20 6L9 17l-5-5"/>
-              </svg>
-
-              24/7 Monitoring Options
-
-            </span>
-
-          </div>
-
-          <p class="offer-disclosure">
-            *Promotional pricing, equipment and installation offers
-            are subject to provider eligibility, availability and
-            agreement terms. Taxes, fees and other provider charges
-            may apply.
-          </p>
-
-          <p class="provider-disclosure">
-            Smart Home Security is a marketing and customer referral
-            service operated by Murrays Empire LLC. Installation,
-            monitoring, equipment, billing and final service
-            agreements are provided by the applicable third-party
-            security provider.
-          </p>
-
-        </div>
-
-        <div>
-
-          <div class="hero-image">
-
-            <img
-              src="images/security-equipment.jpg"
-              alt="Smart home security equipment including touchscreen control panel, outdoor camera and video doorbell"
-              loading="eager"
-              fetchpriority="high"
-            >
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- BENEFITS -->
-    <section
-      class="benefit-bar"
-      aria-label="Security service highlights"
-    >
-
-      <div class="container benefit-grid">
-
-        <div class="benefit">
-
-          <span class="benefit-icon">
-
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M12 3l7 3v6c0 5-3.4 8.4-7 9.5C8.4 20.4 5 17 5 12V6l7-3z"/>
-            </svg>
-
+          <span>
+            TOTAL PEACE OF MIND.
           </span>
 
-          <div>
+        </h1>
 
-            <strong>
-              Home Protection
-            </strong>
+        <p class="hero-copy">
 
-            <small>
-              Smart security equipment
-            </small>
+          Explore cameras, video doorbells,
+          touchscreen control, door sensors and
+          professionally monitored home-security
+          options for your home.
 
-          </div>
+        </p>
 
-        </div>
+        <div class="starting-price">
 
-        <div class="benefit">
+          Packages starting at
 
-          <span class="benefit-icon">
-
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="9"
-              />
-
-              <path d="M12 7v5l3 2"/>
-
-            </svg>
-
-          </span>
-
-          <div>
-
-            <strong>
-              24/7 Monitoring
-            </strong>
-
-            <small>
-              Provider monitoring options
-            </small>
-
-          </div>
+          <strong>
+            $63.99/month
+          </strong>
 
         </div>
 
-        <div class="benefit">
+        <div class="hero-buttons">
 
-          <span class="benefit-icon">
-
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M14 6l4 4"/>
-              <path d="M3 21l6-6"/>
-              <path d="M13 7l4-4 4 4-4 4"/>
-            </svg>
-
-          </span>
-
-          <div>
-
-            <strong>
-              Professional Setup
-            </strong>
-
-            <small>
-              Installation options available
-            </small>
-
-          </div>
-
-        </div>
-
-        <div class="benefit">
-
-          <span class="benefit-icon">
-
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M4 12h16"/>
-              <path d="M12 4l8 8-8 8"/>
-            </svg>
-
-          </span>
-
-          <div>
-
-            <strong>
-              Simple Start
-            </strong>
-
-            <small>
-              Short information request
-            </small>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CURRENT PROMOTION -->
-    <section
-      class="promotion"
-      id="promotion"
-    >
-
-      <div class="container">
-
-        <div class="promotion-copy">
-
-          <div class="section-label">
-            Current Promotion
-          </div>
-
-          <h2>
-            Current Smart Home Security Packages
-          </h2>
-
-          <p>
-            Compare our current promotional package options below.
-          </p>
-
-        </div>
-
-        <div class="promo-image-wrap">
-
-          <img
-            src="images/security-packages-promo.webp"
-            width="1404"
-            height="1120"
-            alt="Smart Home Security promotional packages A, B and C"
-            loading="lazy"
+          <a
+            class="button button-red"
+            href="#packages"
           >
+            View Packages
+          </a>
+
+          <a
+            class="button button-outline"
+            href="#request"
+          >
+            Get Started
+          </a>
+
+        </div>
+
+        <div class="hero-points">
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            Professional Installation
+
+          </div>
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            24/7 Monitoring Options
+
+          </div>
 
         </div>
 
@@ -1963,6 +1429,7 @@
     </section>
 
     <!-- PACKAGES -->
+
     <section
       class="packages"
       id="packages"
@@ -1979,16 +1446,39 @@
         </h2>
 
         <p class="section-copy">
-          Review the available promotional options below and
-          choose the setup you're interested in.
+          Compare the current package options and
+          select the setup you're interested in.
         </p>
 
-        <div class="plans">
+        <!-- ONLY SITE PRODUCT IMAGE -->
 
-          <!-- PACKAGE A -->
-          <article class="plan">
+        <div class="package-flyer">
 
-            <span class="package-name">
+          <img
+            src="images/security-packages-promo.webp"
+            width="1404"
+            height="1120"
+            alt="Smart Home Security Packages A, B and C with equipment and monthly pricing"
+            loading="eager"
+          >
+
+        </div>
+
+        <h3 class="package-select-title">
+          Select Your Package
+        </h3>
+
+        <p class="package-select-copy">
+          Choose an option below to continue.
+        </p>
+
+        <div class="package-choices">
+
+          <!-- A -->
+
+          <article class="package-choice">
+
+            <span class="package-tag">
               PACKAGE A
             </span>
 
@@ -1996,7 +1486,7 @@
               More Coverage
             </h3>
 
-            <div class="price">
+            <div class="package-price">
 
               $79.99
 
@@ -2005,66 +1495,6 @@
               </span>
 
             </div>
-
-            <ul>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Touchscreen panel
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Door sensors
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Video doorbell
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Two outdoor cameras
-
-              </li>
-
-            </ul>
 
             <a
               class="button button-blue"
@@ -2076,14 +1506,11 @@
 
           </article>
 
-          <!-- PACKAGE B -->
-          <article class="plan featured">
+          <!-- B -->
 
-            <span class="popular">
-              Most Popular
-            </span>
+          <article class="package-choice featured">
 
-            <span class="package-name red">
+            <span class="package-tag red">
               PACKAGE B
             </span>
 
@@ -2091,7 +1518,7 @@
               Balanced Security
             </h3>
 
-            <div class="price">
+            <div class="package-price">
 
               $74.99
 
@@ -2100,66 +1527,6 @@
               </span>
 
             </div>
-
-            <ul>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Touchscreen panel
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Door sensors
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Video doorbell camera
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Outdoor camera
-
-              </li>
-
-            </ul>
 
             <a
               class="button button-red"
@@ -2171,10 +1538,11 @@
 
           </article>
 
-          <!-- PACKAGE C -->
-          <article class="plan">
+          <!-- C -->
 
-            <span class="package-name green">
+          <article class="package-choice">
+
+            <span class="package-tag green">
               PACKAGE C
             </span>
 
@@ -2182,7 +1550,7 @@
               Smart Essentials
             </h3>
 
-            <div class="price">
+            <div class="package-price">
 
               $63.99
 
@@ -2191,52 +1559,6 @@
               </span>
 
             </div>
-
-            <ul>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Touchscreen panel
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Door sensors
-
-              </li>
-
-              <li>
-
-                <svg
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-
-                Video doorbell camera
-
-              </li>
-
-            </ul>
 
             <a
               class="button button-blue"
@@ -2256,9 +1578,11 @@
             Package information:
           </strong>
 
-          Promotional pricing and equipment are subject to provider
-          confirmation. Availability, installation, monitoring,
-          eligibility, taxes, fees and final agreement terms may vary.
+          Promotional pricing and equipment are
+          subject to provider confirmation.
+          Availability, installation, monitoring,
+          eligibility, taxes, fees and final
+          agreement terms may vary.
 
         </div>
 
@@ -2266,7 +1590,8 @@
 
     </section>
 
-    <!-- GET STARTED -->
+    <!-- REQUEST -->
+
     <section
       class="request"
       id="request"
@@ -2285,15 +1610,17 @@
           </h2>
 
           <p class="request-copy">
-            Send your information and we'll follow up regarding
-            available options and the next steps.
+
+            Send your information and we'll follow up
+            regarding available options and the next steps.
+
           </p>
 
-          <div class="request-benefits">
+          <div class="steps">
 
-            <div class="request-benefit">
+            <div class="step">
 
-              <span class="request-check">
+              <span class="step-check">
                 ✓
               </span>
 
@@ -2301,9 +1628,9 @@
 
             </div>
 
-            <div class="request-benefit">
+            <div class="step">
 
-              <span class="request-check">
+              <span class="step-check">
                 ✓
               </span>
 
@@ -2311,9 +1638,9 @@
 
             </div>
 
-            <div class="request-benefit">
+            <div class="step">
 
-              <span class="request-check">
+              <span class="step-check">
                 ✓
               </span>
 
@@ -2326,6 +1653,7 @@
         </div>
 
         <!-- NETLIFY FORM -->
+
         <form
           name="smart-home-security-package-request"
           method="POST"
@@ -2346,7 +1674,6 @@
             value="NEW SMART HOME SECURITY LEAD"
           >
 
-          <!-- SPAM TRAP -->
           <p style="display:none;">
 
             <label>
@@ -2368,7 +1695,7 @@
           </p>
 
           <p class="form-lead">
-            Choose a package and send your information below.
+            Send your information below.
           </p>
 
           <div class="field-row">
@@ -2497,9 +1824,13 @@
             >
 
             <label for="provider-consent">
-              I agree that Smart Home Security may share my information
-              with the security provider handling my request and that
-              I may be contacted by phone or email about my inquiry.
+
+              I agree that Smart Home Security may
+              share my information with the security
+              provider handling my request and that I
+              may be contacted by phone or email about
+              my inquiry.
+
             </label>
 
           </div>
@@ -2518,6 +1849,7 @@
     </section>
 
     <!-- REFERRAL -->
+
     <section
       class="referral"
       id="referral"
@@ -2538,9 +1870,12 @@
             </strong>
 
             <p>
-              Refer someone to Smart Home Security and receive
-              $100 after their qualifying security installation
-              is completed and confirmed.
+
+              Refer someone to Smart Home Security
+              and receive $100 after their qualifying
+              security installation is completed and
+              confirmed.
+
             </p>
 
             <small>
@@ -2564,21 +1899,51 @@
 
   </main>
 
-  <!-- BOTTOM DISCLOSURE -->
+  <!-- SHORT LEGAL DISCLOSURE -->
+
   <section class="legal-note">
 
     <div class="container">
 
       <p>
-        Smart Home Security is operated by Murrays Empire LLC and
-        provides marketing and customer referral services.
-        Installation, monitoring, equipment, billing and final
-        service agreements are provided by the applicable third-party
-        security provider. Promotional pricing and offers are subject
-        to provider eligibility, availability and final agreement terms.
+
+        Smart Home Security provides marketing and
+        customer referral services. Installation,
+        monitoring, equipment, billing and final
+        service agreements are provided by the
+        applicable security provider. Promotional
+        pricing and offers are subject to provider
+        eligibility, availability and final agreement terms.
+
       </p>
 
-      <div class="legal-links">
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        © 2026 Smart Home Security.
+        All rights reserved.
+        Operated by Murrays Empire LLC.
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#packages">
+          Packages
+        </a>
+
+        <a href="/referral.html">
+          Referral Program
+        </a>
 
         <a href="/privacy-policy.html">
           Privacy Policy
@@ -2588,45 +1953,6 @@
           Terms
         </a>
 
-        <a href="/referral.html">
-          Referral Program Terms
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="container footer-grid">
-
-      <div>
-        © 2026 Smart Home Security.
-        All rights reserved.
-        Operated by Murrays Empire LLC.
-      </div>
-
-      <div class="footer-links">
-
-        <a href="#promotion">
-          Promotions
-        </a>
-
-        <a href="#packages">
-          Packages
-        </a>
-
-        <a href="#request">
-          Get Started
-        </a>
-
-        <a href="/referral.html">
-          Referral Program
-        </a>
-
       </div>
 
     </div>
@@ -2634,15 +1960,20 @@
   </footer>
 
   <script>
+
     function setPackage(packageName) {
+
       const packageSelect =
         document.getElementById("package");
 
       if (packageSelect) {
         packageSelect.value = packageName;
       }
+
     }
+
   </script>
 
 </body>
+
 </html>
