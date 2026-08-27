@@ -1,35 +1,79 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Thank You | Smart Home Security</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-  <meta name="robots" content="noindex, follow">
+  <title>
+    Request Received | Smart Home Security
+  </title>
+
+  <meta
+    name="description"
+    content="Your Smart Home Security request has been received."
+  >
+
+  <meta
+    name="robots"
+    content="noindex,follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#07172d"
+  >
 
   <style>
+
     :root {
+
       --navy: #07172d;
-      --navy-deep: #041022;
-      --blue: #1f78f2;
-      --red: #df2d36;
+      --navy-deep: #020a18;
+      --navy-mid: #0b2a55;
+
+      --blue: #155cbd;
+      --blue-bright: #2378e8;
+      --blue-light: #8bbcf2;
+
+      --red: #c9151e;
+      --red-bright: #e52b35;
+
+      --green: #23834b;
+
       --white: #ffffff;
-      --off-white: #f4f7fb;
+      --off-white: #f5f7fa;
+
       --text: #12233c;
-      --muted: #64748b;
+      --muted: #536a83;
+      --border: #d8e0e9;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       color: var(--text);
       background: var(--off-white);
-      line-height: 1.6;
+
+      line-height: 1.65;
     }
 
     a {
@@ -42,151 +86,444 @@
       margin: auto;
     }
 
+    /* =========================
+       ANNOUNCEMENT
+    ========================= */
+
     .announcement {
       padding: 10px 15px;
-      color: #dcecff;
-      background: #030b18;
+
+      color: #dce8f7;
+      background: #020814;
+
       text-align: center;
-      font-size: 14px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
     }
 
+    .announcement strong {
+      color: var(--blue-light);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: var(--navy);
       color: white;
-      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: var(--navy);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
     }
 
     nav {
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 20px;
     }
 
     .brand {
       font-size: 18px;
       font-weight: 900;
+      letter-spacing: .3px;
     }
 
     .brand small {
       display: block;
+
       color: #aabed8;
-      font-size: 10px;
+
+      font-size: 9px;
       letter-spacing: 1.8px;
     }
 
     .home-link {
-      padding: 11px 16px;
-      border: 1px solid rgba(255,255,255,.35);
+      padding: 10px 15px;
+
+      color: white;
+
+      border:
+        1px solid rgba(255,255,255,.35);
+
       border-radius: 8px;
-      font-size: 13px;
+
+      font-size: 12px;
       font-weight: 800;
     }
 
-    .hero {
-      padding: 70px 0;
-      color: white;
-      text-align: center;
+    .home-link:hover {
       background:
-        radial-gradient(circle at 90% 0%, rgba(31,120,242,.35), transparent 30%),
-        linear-gradient(125deg, #06142a, #0b2a55 58%, #06142a);
+        rgba(255,255,255,.08);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 68px 0 64px;
+
+      color: white;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(35,120,232,.27),
+          transparent 31%
+        ),
+        linear-gradient(
+          125deg,
+          var(--navy-deep),
+          var(--navy-mid) 60%,
+          var(--navy)
+        );
     }
 
     .check {
-      width: 74px;
-      height: 74px;
-      margin: 0 auto 20px;
+      width: 76px;
+      height: 76px;
+
+      margin: 0 auto 21px;
+
       display: grid;
       place-items: center;
+
       color: white;
-      background: #168a4a;
+      background: var(--green);
+
+      border:
+        4px solid rgba(255,255,255,.15);
+
       border-radius: 50%;
+
       font-size: 38px;
       font-weight: 900;
+
+      box-shadow:
+        0 12px 28px rgba(0,0,0,.22);
+    }
+
+    .eyebrow {
+      margin-bottom: 7px;
+
+      color: var(--blue-light);
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 0 0 14px;
-      font-size: clamp(38px, 7vw, 64px);
-      line-height: 1.05;
+
+      font-size:
+        clamp(39px, 7vw, 64px);
+
+      line-height: 1.04;
+      letter-spacing: -1.5px;
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 660px;
+
       margin: auto;
+
       color: #d8e6f7;
+
       font-size: 18px;
     }
+
+    /* =========================
+       MAIN
+    ========================= */
 
     main {
       padding: 50px 0 75px;
     }
 
     .card {
-      max-width: 720px;
+      max-width: 740px;
+
       margin: auto;
-      padding: 32px;
+      padding: 34px;
+
       background: white;
-      border: 1px solid #dbe5f0;
+
+      border:
+        1px solid var(--border);
+
       border-radius: 16px;
-      box-shadow: 0 14px 30px rgba(25,64,110,.09);
-      text-align: center;
+
+      box-shadow:
+        0 14px 30px rgba(25,64,110,.09);
     }
 
     .card h2 {
-      margin-top: 0;
+      margin: 0 0 12px;
+
       color: #0c2f5c;
+
+      text-align: center;
+
+      font-size: 27px;
     }
 
-    .card p {
-      color: #425a76;
+    .intro {
+      max-width: 620px;
+
+      margin: 0 auto;
+
+      color: var(--muted);
+
+      text-align: center;
     }
 
-    .notice {
-      margin-top: 22px;
-      padding: 16px;
-      background: #eaf1fa;
-      border-left: 4px solid var(--blue);
-      border-radius: 8px;
-      color: #425a76;
-      text-align: left;
+    /* =========================
+       NEXT STEPS
+    ========================= */
+
+    .next-steps {
+      display: grid;
+      gap: 13px;
+
+      margin-top: 28px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns:
+        36px 1fr;
+
+      align-items: start;
+
+      gap: 12px;
+
+      padding: 15px;
+
+      background: #f7f9fc;
+
+      border:
+        1px solid #e0e7ef;
+
+      border-radius: 10px;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+
+      color: white;
+      background: var(--blue);
+
+      border-radius: 50%;
+
       font-size: 14px;
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+    }
+
+    .step p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       DISCLOSURES
+    ========================= */
+
+    .referral-notice {
+      margin-top: 25px;
+      padding: 18px;
+
+      background: #eaf1fa;
+
+      border-left:
+        5px solid var(--blue);
+
+      border-radius: 9px;
+
+      color: #425a76;
+
+      font-size: 13px;
+    }
+
+    .referral-notice strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+    }
+
+    .provider-notice {
+      margin-top: 16px;
+      padding: 18px;
+
+      background: #f8f9fb;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 9px;
+
+      color: #536a83;
+
+      font-size: 13px;
+    }
+
+    .provider-notice strong {
+      color: var(--navy);
+    }
+
+    .existing-customer {
+      margin-top: 16px;
+      padding: 18px;
+
+      background: #fff6ea;
+
+      border-left:
+        5px solid #d88b23;
+
+      border-radius: 9px;
+
+      color: #66523b;
+
+      font-size: 13px;
+    }
+
+    .existing-customer strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #694311;
+    }
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .button-wrap {
+      text-align: center;
     }
 
     .button {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 14px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 27px;
+      padding: 14px 23px;
+
       color: white;
-      background: linear-gradient(135deg, #f0444d, var(--red));
+      background: var(--red);
+
       border-radius: 8px;
-      font-size: 14px;
+
+      font-size: 13px;
       font-weight: 900;
+      letter-spacing: .2px;
+
       text-transform: uppercase;
+
+      box-shadow:
+        0 9px 22px rgba(201,21,30,.22);
     }
+
+    .button:hover {
+      background: var(--red-bright);
+    }
+
+    .legal-links {
+      margin-top: 22px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 17px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 30px 0;
+
       color: #9bb0cc;
       background: #030d1d;
+
       font-size: 13px;
     }
 
     .footer-row {
       display: flex;
       justify-content: space-between;
+
       gap: 20px;
+
       flex-wrap: wrap;
     }
 
     .footer-links {
       display: flex;
+      flex-wrap: wrap;
+
       gap: 16px;
+
       font-weight: 700;
     }
 
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
+
       nav {
         min-height: 68px;
       }
@@ -195,88 +532,334 @@
         font-size: 15px;
       }
 
+      .home-link {
+        padding: 9px 10px;
+
+        font-size: 10px;
+      }
+
       .hero {
         padding: 48px 0;
       }
 
-      .card {
-        padding: 24px;
+      .hero p {
+        font-size: 16px;
       }
+
+      .card {
+        padding: 23px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
+  <!-- ANNOUNCEMENT -->
+
   <div class="announcement">
-    Smart Home Security | Serving Omaha & Surrounding Areas
+
+    <strong>
+      Smart Home Security
+    </strong>
+
+    |
+    Serving Omaha & Surrounding Areas
+
   </div>
 
+  <!-- HEADER -->
+
   <header>
+
     <nav class="container">
-      <a class="brand" href="/">
+
+      <a
+        class="brand"
+        href="/"
+        aria-label="Smart Home Security home"
+      >
+
         SMART HOME SECURITY
-        <small>SMART HOME PROTECTION</small>
+
+        <small>
+          SMART HOME PROTECTION
+        </small>
+
       </a>
 
-      <a class="home-link" href="/">Back to Home</a>
+      <a
+        class="home-link"
+        href="/"
+      >
+        Back to Home
+      </a>
+
     </nav>
+
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="check">✓</div>
+  <!-- HERO -->
 
-      <h1>Request Received.</h1>
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="check">
+        ✓
+      </div>
+
+      <div class="eyebrow">
+        Submission Successful
+      </div>
+
+      <h1>
+        Request Received.
+      </h1>
 
       <p>
+
         Thank you for contacting Smart Home Security.
-        Your information has been submitted successfully.
+        Your request has been submitted successfully.
+
       </p>
+
     </div>
+
   </section>
 
+  <!-- MAIN -->
+
   <main>
+
     <div class="container">
 
       <div class="card">
 
-        <h2>What happens next?</h2>
+        <h2>
+          What happens next?
+        </h2>
 
-        <p>
-          A team member will review your request and follow up by phone or email
-          with the next steps and available package information.
+        <p class="intro">
+
+          We'll review the information you submitted and help
+          move your home-security request to the next step.
+
         </p>
 
-        <div class="notice">
-          Submitting a request does not complete a purchase or create a service
-          contract. Final pricing, equipment, installation, monitoring,
-          applicable fees, and contract terms are confirmed before service begins.
+        <!-- NEXT STEPS -->
+
+        <div class="next-steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <div>
+
+              <strong>
+                We review your request
+              </strong>
+
+              <p>
+
+                We'll review your contact information,
+                service address, and package selection.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <div>
+
+              <strong>
+                Your request may be referred
+              </strong>
+
+              <p>
+
+                Your information may be provided to the
+                applicable third-party security provider
+                handling your request.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <div>
+
+              <strong>
+                You'll receive follow-up
+              </strong>
+
+              <p>
+
+                Smart Home Security and/or the applicable
+                security provider may contact you by phone
+                or email regarding your inquiry and next steps.
+
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <a class="button" href="/">
-          Return to Home
+        <!-- REFERRAL DISCLOSURE -->
+
+        <div class="referral-notice">
+
+          <strong>
+            Smart Home Security Is a Referral Service
+          </strong>
+
+          Smart Home Security is operated by Murrays Empire LLC
+          and provides marketing, customer-intake, and referral
+          services.
+
+          We are not the alarm monitoring company, installation
+          company, billing company, or ongoing security-service
+          provider.
+
+          If you proceed with service, the applicable third-party
+          security provider will be responsible for the final
+          security-service relationship.
+
+        </div>
+
+        <!-- PURCHASE / CONTRACT NOTICE -->
+
+        <div class="provider-notice">
+
+          <strong>
+            Your request is not a purchase or service contract.
+          </strong>
+
+          Submitting this form does not guarantee approval,
+          installation, equipment availability, a particular
+          installation date, or a particular price.
+
+          Final equipment, pricing, monitoring, installation,
+          eligibility, taxes, fees, promotions, and contractual
+          terms must be confirmed by the applicable security
+          provider before service begins.
+
+        </div>
+
+        <!-- EXISTING CUSTOMER -->
+
+        <div class="existing-customer">
+
+          <strong>
+            Already Have Active Security Service?
+          </strong>
+
+          Smart Home Security does not manage or cancel
+          third-party security accounts.
+
+          If you need to cancel, change, transfer, upgrade,
+          downgrade, troubleshoot, or discuss billing for an
+          existing security account, contact the actual company
+          providing and servicing your security account directly.
+
+          Contacting Smart Home Security does not cancel an
+          existing security-provider agreement.
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <div class="button-wrap">
+
+          <a
+            class="button"
+            href="/"
+          >
+            Return to Home
+          </a>
+
+        </div>
+
+        <!-- LEGAL LINKS -->
+
+        <div class="legal-links">
+
+          <a href="/privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          <a href="/terms.html">
+            Terms of Use
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <div>
+
+        © 2026 Smart Home Security.
+        All rights reserved.
+        Operated by Murrays Empire LLC.
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/terms.html">
+          Terms
         </a>
 
       </div>
 
     </div>
-  </main>
 
-  <footer>
-    <div class="container footer-row">
-
-      <div>
-        © 2026 Smart Home Security. Operated by Murrays Empire LLC.
-      </div>
-
-      <div class="footer-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-      </div>
-
-    </div>
   </footer>
 
 </body>
+
 </html>
