@@ -30,7 +30,7 @@
 
   <link
     rel="canonical"
-    href="https://smarthomesecurity-omaha.com/"
+    href="https://smarthomesecurityomaha.com/"
   >
 
   <!-- SOCIAL SHARING -->
@@ -57,12 +57,12 @@
 
   <meta
     property="og:image"
-    content="https://smarthomesecurity-omaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
+    content="https://smarthomesecurityomaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
   >
 
   <meta
     property="og:url"
-    content="https://smarthomesecurity-omaha.com/"
+    content="https://smarthomesecurityomaha.com/"
   >
 
   <meta
@@ -82,7 +82,7 @@
 
   <meta
     name="twitter:image"
-    content="https://smarthomesecurity-omaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
+    content="https://smarthomesecurityomaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
   >
 
   <!-- STRUCTURED DATA -->
@@ -92,7 +92,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Smart Home Security",
-    "url": "https://smarthomesecurity-omaha.com/",
+    "url": "https://smarthomesecurityomaha.com/",
     "serviceType": "Smart home security package information and customer referral service",
     "provider": {
       "@type": "Organization",
@@ -1620,20 +1620,18 @@
 
         </div>
 
-        <!-- NETLIFY FORM -->
+        <!-- WEB3FORMS FORM -->
 
         <form
           name="smart-home-security-package-request"
+          action="https://api.web3forms.com/submit"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thank-you.html"
         >
 
           <input
             type="hidden"
-            name="form-name"
-            value="smart-home-security-package-request"
+            name="access_key"
+            value="cb3969cb-c305-4bf1-a016-2e5d9b1bb7f2"
           >
 
           <input
@@ -1642,21 +1640,25 @@
             value="NEW SMART HOME SECURITY LEAD"
           >
 
-          <p style="display:none;">
+          <input
+            type="hidden"
+            name="from_name"
+            value="Smart Home Security Website"
+          >
 
-            <label>
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://smarthomesecurityomaha.com/thank-you.html"
+          >
 
-              Do not fill this out:
-
-              <input
-                name="bot-field"
-                tabindex="-1"
-                autocomplete="off"
-              >
-
-            </label>
-
-          </p>
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display:none;"
+            tabindex="-1"
+            autocomplete="off"
+          >
 
           <p class="form-heading">
             Let's Get You Set Up
@@ -1676,7 +1678,7 @@
 
               <input
                 id="name"
-                name="full-name"
+                name="Full Name"
                 type="text"
                 placeholder="Your full name"
                 autocomplete="name"
@@ -1693,7 +1695,7 @@
 
               <input
                 id="phone"
-                name="phone-number"
+                name="Phone Number"
                 type="tel"
                 placeholder="Best number to reach you"
                 autocomplete="tel"
@@ -1724,7 +1726,7 @@
 
           <input
             id="address"
-            name="address"
+            name="Service Address"
             type="text"
             placeholder="Street address, city, ZIP code"
             autocomplete="street-address"
@@ -1737,7 +1739,7 @@
 
           <select
             id="package"
-            name="package-choice"
+            name="Package Choice"
             required
           >
 
@@ -1775,7 +1777,7 @@
 
           <input
             id="referred-by"
-            name="referred-by"
+            name="Referred By"
             type="text"
             placeholder="Name of the person who referred you"
             autocomplete="off"
@@ -1785,7 +1787,7 @@
 
             <input
               id="provider-consent"
-              name="provider-consent"
+              name="Permission To Contact"
               type="checkbox"
               value="Yes"
               required
