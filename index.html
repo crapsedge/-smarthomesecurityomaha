@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -9,17 +10,12 @@
   >
 
   <title>
-    Smart Home Security | Home Security Packages in Omaha
+    Smart Home Security | Home Security Options in Omaha
   </title>
 
   <meta
     name="description"
-    content="Explore Smart Home Security packages in Omaha and surrounding areas with video doorbells, outdoor cameras, touchscreen control, smart-home equipment, and professional installation options."
-  >
-
-  <meta
-    name="robots"
-    content="index,follow,max-image-preview:large"
+    content="Explore home-security options available to Omaha-area customers through Smart Home Security, an independent marketing and customer-referral service operated by Murrays Empire LLC."
   >
 
   <meta
@@ -27,12 +23,19 @@
     content="#07172d"
   >
 
+  <meta
+    name="robots"
+    content="index,follow,max-image-preview:large"
+  >
+
   <link
     rel="canonical"
     href="https://smarthomesecurityomaha.com/"
   >
 
-  <!-- SOCIAL SHARING -->
+  <!-- =========================
+       SOCIAL SHARING
+  ========================== -->
 
   <meta
     property="og:type"
@@ -51,7 +54,12 @@
 
   <meta
     property="og:description"
-    content="Compare smart home security packages for Omaha and surrounding areas."
+    content="Explore home-security package options for Omaha and surrounding areas through an independent marketing and customer-referral service."
+  >
+
+  <meta
+    property="og:image"
+    content="https://smarthomesecurityomaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
   >
 
   <meta
@@ -59,37 +67,65 @@
     content="https://smarthomesecurityomaha.com/"
   >
 
-  <!-- FONT -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
   >
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
+  <meta
+    name="twitter:title"
+    content="Smart Home Security | Omaha"
   >
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
+  <meta
+    name="twitter:description"
+    content="Explore home-security package options for Omaha and surrounding areas."
   >
 
-  <!-- STRUCTURED DATA -->
+  <meta
+    name="twitter:image"
+    content="https://smarthomesecurityomaha.com/8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
+  >
+
+  <!-- =========================
+       STRUCTURED DATA
+       IMPORTANT:
+       This identifies the business as a
+       marketing/referral organization,
+       not the security installer.
+  ========================== -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Smart Home Security",
-    "url": "https://smarthomesecurityomaha.com/",
-    "areaServed": "Omaha and surrounding areas",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Murrays Empire LLC"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://smarthomesecurityomaha.com/#organization",
+        "name": "Smart Home Security",
+        "url": "https://smarthomesecurityomaha.com/",
+        "description": "An independent marketing and customer-referral resource for home-security options in Omaha and surrounding areas.",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Murrays Empire LLC"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Omaha"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://smarthomesecurityomaha.com/#website",
+        "url": "https://smarthomesecurityomaha.com/",
+        "name": "Smart Home Security",
+        "publisher": {
+          "@id": "https://smarthomesecurityomaha.com/#organization"
+        }
+      }
+    ]
   }
   </script>
 
@@ -97,30 +133,29 @@
 
     :root {
       --navy: #07172d;
-      --navy-light: #0b2445;
-      --navy-soft: #12345f;
-      --blue: #1f78f2;
-      --blue-dark: #125ec4;
-      --blue-soft: #edf5ff;
+      --navy-deep: #020a18;
+      --navy-mid: #0b2a55;
+
+      --blue: #155cbd;
+      --blue-bright: #2378e8;
+      --blue-light: #8bbcf2;
+
+      --red: #c9151e;
+      --red-bright: #e52b35;
+
+      --green: #34751f;
+
       --white: #ffffff;
-      --off-white: #f4f7fb;
-      --text: #14253e;
-      --muted: #66758a;
-      --border: #dbe3ed;
-      --success: #159a6a;
-      --shadow-small: 0 8px 24px rgba(7, 23, 45, 0.08);
-      --shadow-medium: 0 20px 50px rgba(7, 23, 45, 0.14);
-      --shadow-large: 0 30px 80px rgba(0, 0, 0, 0.22);
-      --radius-small: 8px;
-      --radius-medium: 14px;
-      --radius-large: 22px;
-      --container: 1180px;
-      --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --off-white: #f5f7fa;
+
+      --text: #12233c;
+      --muted: #64748b;
+      --border: #d8e0e9;
+
+      --focus: #ffd166;
     }
 
-    *,
-    *::before,
-    *::after {
+    * {
       box-sizing: border-box;
     }
 
@@ -130,38 +165,14 @@
 
     body {
       margin: 0;
-      overflow-x: hidden;
-      color: var(--text);
-      background: var(--white);
-      font-family: var(--font);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
+      color: var(--white);
+      background: var(--navy-deep);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
     }
 
     body.modal-open {
       overflow: hidden;
-    }
-
-    img,
-    svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    button {
-      touch-action: manipulation;
     }
 
     a {
@@ -169,1636 +180,1478 @@
       text-decoration: none;
     }
 
-    p,
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin-top: 0;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-    }
-
-    p {
-      color: var(--muted);
+    input,
+    select,
+    button {
+      font: inherit;
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--container));
-      margin-inline: auto;
+      width: min(1160px, 92%);
+      margin: auto;
     }
 
-    .section {
-      padding: 88px 0;
-    }
-
-    .section-soft {
-      background: var(--off-white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .section-heading h2 {
-      margin-bottom: 14px;
-      color: var(--navy);
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .section-heading p {
-      max-width: 620px;
-      margin: 0 auto;
-      font-size: 1.02rem;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 2px;
-      background: currentColor;
-      border-radius: 99px;
-    }
-
-    .btn {
-      min-height: 50px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 0 21px;
-      border: 1px solid transparent;
-      border-radius: var(--radius-small);
-      font-size: 0.94rem;
-      font-weight: 800;
-      text-align: center;
-      cursor: pointer;
-      transition:
-        background-color 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease,
-        box-shadow 180ms ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      color: var(--white);
-      background: var(--blue);
-      box-shadow: 0 10px 24px rgba(31, 120, 242, 0.22);
-    }
-
-    .btn-primary:hover {
-      background: var(--blue-dark);
-    }
-
-    .btn-secondary {
-      color: var(--navy);
-      background: var(--white);
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: #b9c7d8;
-      box-shadow: var(--shadow-small);
-    }
-
-    .btn-full {
-      width: 100%;
-    }
-
-    .btn:focus-visible,
-    .nav-link:focus-visible,
-    .menu-toggle:focus-visible,
-    .modal-close:focus-visible,
-    summary:focus-visible {
-      outline: 3px solid rgba(31, 120, 242, 0.35);
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--focus);
       outline-offset: 3px;
+      border-radius: 6px;
     }
 
-    .site-header {
+    /* =========================
+       ANNOUNCEMENT
+    ========================== */
+
+    .announcement {
+      padding: 10px 15px;
+      color: #dce8f7;
+      background: #020814;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .announcement strong {
+      color: var(--blue-light);
+    }
+
+    .announcement .divider {
+      margin: 0 9px;
+      color: #526a87;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid rgba(219, 227, 237, 0.92);
+      z-index: 100;
+      background: rgba(7,23,45,.98);
+      -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .nav-wrap {
-      min-height: 74px;
+    nav {
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
 
-    .logo {
-      display: inline-flex;
+    .brand {
+      display: flex;
       align-items: center;
-      gap: 11px;
-      color: var(--navy);
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: .45px;
       white-space: nowrap;
     }
 
-    .logo-mark {
-      width: 34px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      color: var(--white);
-      background: linear-gradient(145deg, var(--blue), var(--navy-light));
-      clip-path: polygon(50% 0, 92% 16%, 85% 72%, 50% 100%, 15% 72%, 8% 16%);
-      font-size: 0.78rem;
-      font-weight: 800;
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+    }
+
+    .brand-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: -3px;
+      color: #9db2cb;
+      font-size: 9px;
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
-      margin-left: auto;
-    }
-
-    .nav-link {
-      color: #54647a;
-      font-size: 0.9rem;
-      font-weight: 700;
-      transition: color 160ms ease;
-    }
-
-    .nav-link:hover {
-      color: var(--navy);
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      padding: 0;
-      border: 0;
-      border-radius: var(--radius-small);
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      margin: 5px auto;
-      background: var(--navy);
-    }
-
-    .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      color: var(--white);
-      background:
-        radial-gradient(circle at 84% 18%, rgba(31, 120, 242, 0.22), transparent 28%),
-        linear-gradient(135deg, #061225 0%, #07172d 48%, #0b2445 100%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -170px;
-      right: -160px;
-      z-index: -1;
-      width: 540px;
-      height: 540px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -10%;
-      bottom: -42%;
-      z-index: -1;
-      width: 60%;
-      height: 520px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.035);
-      transform: rotate(-10deg);
-    }
-
-    .hero-grid {
-      min-height: 650px;
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 64px;
-      align-items: center;
-      padding: 76px 0;
-    }
-
-    .hero .eyebrow {
-      color: #7bb5ff;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-      margin-bottom: 20px;
-      color: var(--white);
-      font-size: clamp(2.65rem, 6vw, 4.8rem);
+      gap: 23px;
+      color: #dce7f4;
+      font-size: 13px;
       font-weight: 800;
     }
 
-    .hero-copy {
-      max-width: 660px;
-      margin-bottom: 28px;
-      color: rgba(255, 255, 255, 0.79);
-      font-size: clamp(1.02rem, 2vw, 1.2rem);
+    .nav-links a:hover {
+      color: var(--blue-light);
     }
 
-    .hero-actions {
+    .mobile-nav-cta {
+      display: none;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 21px;
+      border: 0;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .25px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-red {
+      color: white;
+      background: var(--red);
+      box-shadow: 0 9px 22px rgba(201,21,30,.24);
+    }
+
+    .button-red:hover {
+      background: var(--red-bright);
+    }
+
+    .button-blue {
+      color: white;
+      background: var(--blue);
+      box-shadow: 0 9px 22px rgba(21,92,189,.22);
+    }
+
+    .button-blue:hover {
+      background: var(--blue-bright);
+    }
+
+    .button-outline {
+      color: white;
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,.72);
+    }
+
+    .button-outline:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 72px;
+
+      background:
+        radial-gradient(
+          circle at 86% 14%,
+          rgba(35,120,232,.22),
+          transparent 31%
+        ),
+        linear-gradient(
+          125deg,
+          var(--navy-deep),
+          var(--navy-mid) 62%,
+          var(--navy)
+        );
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(43px,6vw,76px);
+      line-height: .98;
+      letter-spacing: -2.5px;
+    }
+
+    h1 span {
+      color: var(--red-bright);
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 0;
+      color: #d7e3f1;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .starting-price {
+      margin-top: 25px;
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .starting-price strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--blue-light);
+      font-size: 30px;
+    }
+
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions .btn-secondary {
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.18);
-    }
-
-    .hero-actions .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      gap: 13px;
+      margin-top: 29px;
     }
 
     .hero-points {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 22px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
+      gap: 18px 24px;
+      margin-top: 27px;
+      color: #e0e9f4;
+      font-size: 14px;
+      font-weight: 800;
     }
 
-    .hero-points li {
+    .hero-point {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 0.88rem;
-      font-weight: 600;
     }
 
-    .check-dot {
-      width: 19px;
-      height: 19px;
-      display: inline-grid;
-      place-items: center;
-      flex: 0 0 auto;
-      border-radius: 50%;
-      color: #dff7ed;
-      background: rgba(21, 154, 106, 0.22);
-      font-size: 0.72rem;
-      font-weight: 800;
+    .check {
+      color: #71b98d;
+      font-size: 18px;
+      font-weight: 900;
     }
 
-    .hero-panel {
-      position: relative;
-      padding: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-large);
-      background: rgba(255, 255, 255, 0.07);
-      box-shadow: var(--shadow-large);
-      backdrop-filter: blur(14px);
+    .hero-offer-note {
+      max-width: 800px;
+      margin-top: 17px;
+      color: #aebfd1;
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #60a5fa;
-      box-shadow: 0 0 18px rgba(96, 165, 250, 0.65);
+    /* =========================
+       GENERAL
+    ========================== */
+
+    section {
+      padding: 72px 0;
     }
 
-    .hero-panel-kicker {
-      margin-bottom: 8px;
-      color: #8fbfff;
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+    .section-label {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
-    .hero-panel h2 {
-      margin-bottom: 10px;
-      color: var(--white);
-      font-size: 1.7rem;
-    }
-
-    .hero-panel > p {
-      margin-bottom: 22px;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.94rem;
-    }
-
-    .mini-package-list {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .mini-package {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 15px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-small);
-      background: rgba(255, 255, 255, 0.055);
-    }
-
-    .mini-package strong {
-      color: var(--white);
-      font-size: 0.94rem;
-    }
-
-    .mini-package span {
-      color: #b9d8ff;
-      font-size: 0.92rem;
-      font-weight: 800;
-    }
-
-    .trust-strip {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .trust-item {
-      min-height: 112px;
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 20px 18px;
-      border-right: 1px solid var(--border);
-    }
-
-    .trust-item:last-child {
-      border-right: 0;
-    }
-
-    .trust-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      border-radius: 10px;
-      color: var(--blue);
-      background: var(--blue-soft);
-      font-size: 0.8rem;
-      font-weight: 800;
-    }
-
-    .trust-item strong {
-      display: block;
-      margin-bottom: 2px;
+    .section-title {
+      max-width: 800px;
+      margin: 8px 0 12px;
       color: var(--navy);
-      font-size: 0.94rem;
+      font-size: clamp(32px,4vw,49px);
+      line-height: 1.08;
+      letter-spacing: -1.3px;
     }
 
-    .trust-item span {
+    .section-copy {
+      max-width: 680px;
+      margin: 0;
       color: var(--muted);
-      font-size: 0.79rem;
+      font-size: 16px;
     }
 
-    .packages-grid {
+    /* =========================
+       PACKAGES
+    ========================== */
+
+    .packages {
+      color: var(--text);
+      background: var(--white);
+    }
+
+    .package-flyer {
+      margin-top: 32px;
+      padding: 7px;
+      background: var(--navy);
+      border: 1px solid #102d55;
+      border-radius: 16px;
+      box-shadow: 0 18px 42px rgba(7,23,45,.15);
+    }
+
+    .package-flyer img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .package-select-title {
+      margin: 42px 0 8px;
+      color: var(--navy);
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    .package-select-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .package-choices {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      align-items: stretch;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      margin-top: 25px;
     }
 
-    .package-card {
-      position: relative;
-      min-width: 0;
+    .package-choice {
       display: flex;
       flex-direction: column;
-      padding: 30px;
+      padding: 25px;
+      background: var(--off-white);
       border: 1px solid var(--border);
-      border-radius: var(--radius-medium);
-      background: var(--white);
-      transition:
-        border-color 180ms ease,
-        transform 180ms ease,
-        box-shadow 180ms ease;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(7,23,45,.06);
     }
 
-    .package-card:hover {
-      transform: translateY(-4px);
-      border-color: #b6c8dc;
-      box-shadow: var(--shadow-medium);
+    .package-choice.featured {
+      border: 2px solid var(--red);
     }
 
-    .package-card-featured {
-      border: 2px solid var(--navy);
-      box-shadow: 0 18px 50px rgba(7, 23, 45, 0.11);
-    }
-
-    .package-label {
-      margin-bottom: 9px;
+    .package-tag {
+      width: max-content;
+      padding: 6px 10px;
       color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
+      background: #e8f0fb;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
     }
 
-    .package-card h3 {
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-size: 1.55rem;
+    .package-tag.red {
+      color: var(--red);
+      background: #fbe8ea;
     }
 
-    .package-intro {
-      min-height: 48px;
+    .package-tag.green {
+      color: var(--green);
+      background: #ebf3e7;
+    }
+
+    .package-choice h3 {
+      margin: 16px 0 4px;
+      color: #173354;
+      font-size: 21px;
+    }
+
+    .package-price {
       margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    .price {
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
-      margin-bottom: 22px;
       color: var(--navy);
+      font-size: 35px;
+      font-weight: 900;
+      line-height: 1;
     }
 
-    .price-currency {
-      font-size: 1.1rem;
-      font-weight: 800;
+    .package-price span {
+      color: #687a90;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .price-amount {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-    }
-
-    .price-period {
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 600;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 12px;
-      flex: 1;
-      padding: 20px 0;
-      margin: 0 0 22px;
-      border-top: 1px solid var(--border);
-      list-style: none;
-    }
-
-    .feature-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: #34445a;
-      font-size: 0.9rem;
-    }
-
-    .feature-check {
-      width: 18px;
-      height: 18px;
-      display: inline-grid;
-      place-items: center;
-      flex: 0 0 auto;
-      margin-top: 2px;
-      border-radius: 50%;
-      color: var(--success);
-      background: #eaf8f2;
-      font-size: 0.7rem;
-      font-weight: 800;
+    .package-choice .button {
+      width: 100%;
+      margin-top: auto;
     }
 
     .package-note {
-      margin: 13px 0 0;
-      color: #7a8798;
-      font-size: 0.72rem;
-      text-align: center;
+      margin-top: 20px;
+      padding: 15px 17px;
+      color: #45596f;
+      background: #eef3f8;
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 1.65;
     }
 
-    .comparison-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-medium);
-      background: var(--white);
-      box-shadow: var(--shadow-small);
+    /* =========================
+       REQUEST
+    ========================== */
+
+    .request {
+      background:
+        radial-gradient(
+          circle at 100% 0%,
+          rgba(35,120,232,.16),
+          transparent 30%
+        ),
+        linear-gradient(
+          125deg,
+          #06162d,
+          #0a2447 65%,
+          #06162d
+        );
     }
 
-    .comparison-table {
-      width: 100%;
-      min-width: 720px;
-      border-collapse: collapse;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .comparison-table th:first-child,
-    .comparison-table td:first-child {
-      text-align: left;
-    }
-
-    .comparison-table thead th {
-      color: var(--navy);
-      background: #f9fbfd;
-      font-weight: 800;
-    }
-
-    .comparison-table tbody tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .yes {
-      color: var(--success);
-      font-weight: 800;
-    }
-
-    .dash {
-      color: #aeb8c5;
-    }
-
-    .process-grid {
+    .request-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: start;
+      gap: 50px;
     }
 
-    .process-card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-medium);
-      background: var(--white);
+    .request .section-label {
+      color: var(--blue-light);
     }
 
-    .process-number {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      border-radius: 10px;
-      color: var(--white);
-      background: var(--navy);
-      font-weight: 800;
+    .request h2 {
+      margin: 8px 0 14px;
+      font-size: clamp(32px,4vw,50px);
+      line-height: 1.06;
     }
 
-    .process-card h3 {
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-size: 1.15rem;
-    }
-
-    .process-card p {
-      margin-bottom: 0;
-      font-size: 0.9rem;
-    }
-
-    .cta-band {
-      padding: 72px 0;
-      color: var(--white);
-      background: linear-gradient(135deg, var(--navy), var(--navy-light));
-    }
-
-    .cta-band-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .cta-band h2 {
-      margin-bottom: 10px;
-      color: var(--white);
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .cta-band p {
-      max-width: 700px;
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .faq-list {
-      max-width: 820px;
-      display: grid;
-      gap: 12px;
-      margin: 0 auto;
-    }
-
-    details {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-small);
-      background: var(--white);
-    }
-
-    summary {
-      position: relative;
-      padding: 19px 50px 19px 20px;
-      color: var(--navy);
-      font-weight: 800;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      color: var(--blue);
-      font-size: 1.4rem;
-      font-weight: 500;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
+    .request-copy {
+      max-width: 500px;
       margin: 0;
-      padding: 0 20px 20px;
-      font-size: 0.9rem;
+      color: #d4e0ed;
+      font-size: 16px;
     }
 
-    .site-footer {
-      padding: 64px 0 24px;
-      color: rgba(255, 255, 255, 0.75);
-      background: #041022;
-    }
-
-    .footer-grid {
+    .steps {
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.8fr;
-      gap: 48px;
-      padding-bottom: 40px;
+      gap: 13px;
+      margin-top: 25px;
     }
 
-    .footer-brand .logo {
-      color: var(--white);
-    }
-
-    .footer-brand p {
-      max-width: 430px;
-      margin: 16px 0 0;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 0.85rem;
-    }
-
-    .footer-heading {
-      margin-bottom: 14px;
-      color: var(--white);
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.62);
-      font-size: 0.84rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--white);
-    }
-
-    .footer-bottom {
+    .step {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255, 255, 255, 0.09);
-      color: rgba(255, 255, 255, 0.48);
-      font-size: 0.74rem;
+      align-items: center;
+      gap: 11px;
+      font-size: 14px;
+      font-weight: 800;
     }
 
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      display: none;
-      place-items: center;
-      padding: 18px;
-      background: rgba(4, 16, 34, 0.78);
-      backdrop-filter: blur(8px);
-    }
-
-    .modal-overlay.active {
-      display: grid;
-    }
-
-    .intake-card {
-      position: relative;
-      width: min(100%, 590px);
-      max-height: min(92vh, 820px);
-      overflow-y: auto;
-      padding: 34px;
-      border-radius: var(--radius-large);
-      background: var(--white);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 40px;
-      height: 40px;
+    .step-check {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
       display: grid;
       place-items: center;
-      border: 0;
-      border-radius: 50%;
-      color: var(--navy);
-      background: var(--off-white);
-      cursor: pointer;
-      font-size: 1.4rem;
-    }
-
-    .progress-track {
-      width: calc(100% - 52px);
-      height: 5px;
-      margin-bottom: 30px;
-      overflow: hidden;
-      border-radius: 99px;
-      background: #e9eef5;
-    }
-
-    .progress-fill {
-      width: 33.333%;
-      height: 100%;
-      border-radius: inherit;
+      color: white;
       background: var(--blue);
-      transition: width 200ms ease;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 900;
     }
 
-    .intake-step {
-      display: none;
+    .role-disclosure {
+      margin-top: 28px;
+      padding: 18px;
+      color: #dbe7f3;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px;
+      font-size: 12px;
+      line-height: 1.65;
     }
 
-    .intake-step.active {
+    .role-disclosure strong {
       display: block;
+      margin-bottom: 6px;
+      color: white;
+      font-size: 13px;
     }
 
-    .intake-step h2 {
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-size: 1.6rem;
+    form {
+      padding: 30px;
+      background: rgba(2,10,24,.72);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 18px;
+      box-shadow: 0 22px 55px rgba(0,0,0,.28);
     }
 
-    .intake-step > p {
-      margin-bottom: 22px;
-      font-size: 0.92rem;
+    .form-heading {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 900;
     }
 
-    .option-list {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 22px;
+    .form-lead {
+      margin: 5px 0 17px;
+      color: #c4d3e4;
+      font-size: 13px;
     }
 
-    .option-card {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 15px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-small);
-      color: #34445a;
-      font-size: 0.92rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition:
-        border-color 160ms ease,
-        background-color 160ms ease;
+    .sensitive-warning {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      color: #dce8f7;
+      background: rgba(35,120,232,.10);
+      border: 1px solid rgba(139,188,242,.28);
+      border-radius: 8px;
+      font-size: 11px;
+      line-height: 1.55;
     }
 
-    .option-card:hover {
-      border-color: #a9bfd8;
-      background: #f9fbfd;
+    .sensitive-warning strong {
+      color: white;
     }
 
-    .option-card input {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--blue);
-    }
-
-    .form-grid {
+    .field-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
 
-    .form-group {
-      display: grid;
-      gap: 6px;
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
     }
 
-    .form-group-full {
-      grid-column: 1 / -1;
+    .optional {
+      color: #aebfd1;
+      font-weight: normal;
     }
 
-    .form-group label {
-      color: var(--navy);
-      font-size: 0.8rem;
-      font-weight: 800;
-    }
-
-    .form-control {
+    input,
+    select {
       width: 100%;
-      min-height: 48px;
-      padding: 11px 12px;
-      border: 1px solid #cfd9e6;
-      border-radius: var(--radius-small);
+      padding: 14px;
       color: var(--text);
-      background: var(--white);
-      outline: none;
-      transition:
-        border-color 160ms ease,
-        box-shadow 160ms ease;
+      background: white;
+      border: 1px solid #d7e0ea;
+      border-radius: 8px;
     }
 
-    .form-control:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(31, 120, 242, 0.12);
+    .legal-consents {
+      display: grid;
+      gap: 11px;
+      margin-top: 21px;
     }
 
-    .legal-check {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      margin-top: 16px;
-      color: #6b798b;
-      font-size: 0.73rem;
+    .consent-box {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 11px;
+      margin: 0;
+      padding: 14px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 9px;
     }
 
-    .legal-check input {
-      margin-top: 3px;
+    .consent-box input {
+      width: 19px;
+      height: 19px;
+      margin: 2px 0 0;
       accent-color: var(--blue);
     }
 
-    .intake-nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .form-status {
-      min-height: 22px;
-      margin-top: 12px;
-      color: #a93434;
-      font-size: 0.8rem;
+    .consent-box label {
+      margin: 0;
+      color: #dce6f0;
+      font-size: 11px;
       font-weight: 600;
+      line-height: 1.6;
     }
 
-    .mobile-cta {
+    .legal-link {
+      color: var(--blue-light);
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      cursor: pointer;
+    }
+
+    .legal-link:hover {
+      color: white;
+    }
+
+    .form-legal-note {
+      margin: 16px 0 0;
+      color: #aebfd1;
+      font-size: 10.5px;
+      line-height: 1.65;
+    }
+
+    .form-button {
+      width: 100%;
+      margin-top: 19px;
+    }
+
+    /* =========================
+       REFERRAL
+    ========================== */
+
+    .referral {
+      padding: 48px 0;
+      color: var(--text);
+      background: var(--off-white);
+    }
+
+    .referral-box {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: 28px 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(7,23,45,.06);
+    }
+
+    .referral-money {
+      color: var(--red);
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .referral-copy strong {
+      display: block;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .referral-copy p {
+      margin: 5px 0 0;
+      color: #56697f;
+      font-size: 14px;
+    }
+
+    .referral-copy small {
+      display: block;
+      margin-top: 7px;
+      color: #718196;
+      font-size: 11px;
+    }
+
+    /* =========================
+       LEGAL NOTE
+    ========================== */
+
+    .legal-note {
+      padding: 22px 0;
+      color: #9eb0c5;
+      background: #061426;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .legal-note p {
+      max-width: 1040px;
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       MODAL
+    ========================== */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
       display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.78);
     }
 
-    @media (max-width: 980px) {
-
-      .hero-grid {
-        min-height: auto;
-        grid-template-columns: 1fr;
-        gap: 42px;
-      }
-
-      .hero-content {
-        max-width: 780px;
-      }
-
-      .hero-panel {
-        max-width: 680px;
-      }
-
-      .trust-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .trust-item:nth-child(2) {
-        border-right: 0;
-      }
-
-      .trust-item:nth-child(-n+2) {
-        border-bottom: 1px solid var(--border);
-      }
-
-      .packages-grid,
-      .process-grid {
-        max-width: 700px;
-        grid-template-columns: 1fr;
-        margin-inline: auto;
-      }
-
-      .package-intro {
-        min-height: 0;
-      }
+    .modal.open {
+      display: flex;
     }
 
-    @media (max-width: 820px) {
+    .modal-card {
+      width: min(760px,100%);
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.42);
+      overflow: hidden;
+    }
 
-      .desktop-cta {
-        display: none;
-      }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      color: white;
+      background: var(--navy);
+    }
 
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
+    .modal-header h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .modal-close {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 38px;
+      color: white;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .modal-important {
+      margin: 0 0 20px;
+      padding: 13px 15px;
+      color: #173354;
+      background: #eef4fb;
+      border-left: 4px solid var(--blue);
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .modal-section {
+      margin-top: 23px;
+    }
+
+    .modal-section:first-of-type {
+      margin-top: 0;
+    }
+
+    .modal-section h4 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .modal-section p {
+      margin: 0 0 10px;
+      color: #44566c;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .modal-section ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      color: #44566c;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .modal-footer {
+      padding: 17px 22px;
+      background: #f4f7fa;
+      border-top: 1px solid #dce4ec;
+    }
+
+    .modal-footer .button {
+      width: 100%;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 30px 0;
+      color: #95a9c0;
+      background: #020a18;
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-light);
+    }
+
+    .footer-disclosure-button {
+      padding: 0;
+      border: 0;
+      background: none;
+      color: inherit;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .footer-disclosure-button:hover {
+      color: var(--blue-light);
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 880px) {
 
       .nav-links {
-        position: absolute;
-        top: 74px;
-        left: 0;
-        right: 0;
         display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-        padding: 14px 16px 18px;
-        background: var(--white);
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 18px 36px rgba(7, 23, 45, 0.08);
       }
 
-      .nav-links.active {
-        display: flex;
+      .mobile-nav-cta {
+        display: inline-flex;
       }
 
-      .nav-link {
-        padding: 12px;
-        border-radius: 8px;
-      }
-
-      .nav-link:hover {
-        background: var(--off-white);
-      }
-
-      .cta-band-inner {
+      .package-choices,
+      .request-grid {
         grid-template-columns: 1fr;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
+      .referral-box {
+        grid-template-columns: auto 1fr;
       }
 
-      .footer-brand {
+      .referral-box .button {
         grid-column: 1 / -1;
-      }
-
-      .mobile-cta {
-        position: fixed;
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-        z-index: 1500;
-        display: block;
-      }
-
-      .mobile-cta .btn {
         width: 100%;
-        box-shadow: 0 14px 36px rgba(7, 23, 45, 0.28);
-      }
-
-      body {
-        padding-bottom: 72px;
       }
     }
 
-    @media (max-width: 620px) {
+    /* =========================
+       MOBILE
+    ========================== */
 
-      .container {
-        width: min(calc(100% - 24px), var(--container));
+    @media (max-width: 520px) {
+
+      .announcement {
+        font-size: 10.5px;
+        line-height: 1.4;
       }
 
-      .section {
-        padding: 68px 0;
+      .announcement .divider {
+        margin: 0 5px;
       }
 
-      .hero-grid {
-        padding: 58px 0 64px;
+      nav {
+        min-height: 76px;
+        gap: 8px;
       }
 
-      .hero h1 {
-        font-size: clamp(2.45rem, 12vw, 3.5rem);
+      .brand {
+        gap: 8px;
+        font-size: 16.5px;
+        letter-spacing: .2px;
       }
 
-      .hero-actions {
+      .brand-icon {
+        width: 41px;
+        height: 41px;
+        flex-basis: 41px;
+      }
+
+      .brand small {
+        font-size: 7px;
+        letter-spacing: 1.25px;
+      }
+
+      .mobile-nav-cta {
+        padding: 10px 11px;
+        font-size: 10px;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 56px 0 52px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: clamp(39px,11vw,54px);
+        letter-spacing: -1.7px;
+      }
+
+      .hero-copy {
+        font-size: 15.5px;
+      }
+
+      .starting-price strong {
+        font-size: 29px;
+      }
+
+      .hero-buttons {
         display: grid;
       }
 
-      .hero-actions .btn {
+      .hero-buttons .button {
         width: 100%;
       }
 
       .hero-points {
         display: grid;
+        gap: 10px;
       }
 
-      .hero-panel {
+      section {
+        padding: 54px 0;
+      }
+
+      .package-flyer {
+        margin-top: 25px;
+        padding: 5px;
+        border-radius: 13px;
+      }
+
+      .package-flyer img {
+        border-radius: 8px;
+      }
+
+      .package-select-title {
+        margin-top: 32px;
+        font-size: 23px;
+      }
+
+      .package-choices {
+        gap: 18px;
+      }
+
+      .package-choice {
+        padding: 23px;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+
+      form {
         padding: 22px;
-        border-radius: var(--radius-medium);
       }
 
-      .trust-grid {
+      .referral {
+        padding: 38px 0;
+      }
+
+      .referral-box {
         grid-template-columns: 1fr;
+        gap: 13px;
+        padding: 23px;
       }
 
-      .trust-item,
-      .trust-item:nth-child(2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
+      .referral-money {
+        font-size: 46px;
       }
 
-      .trust-item:last-child {
-        border-bottom: 0;
-      }
-
-      .package-card {
-        padding: 24px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-group-full {
-        grid-column: auto;
-      }
-
-      .intake-card {
-        padding: 28px 20px 22px;
-      }
-
-      .intake-nav {
-        flex-direction: column-reverse;
-      }
-
-      .intake-nav .btn {
-        width: 100%;
+      .legal-note {
+        padding: 20px 0;
       }
 
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: block;
       }
 
-      .footer-brand {
-        grid-column: auto;
+      .footer-links {
+        margin-top: 14px;
       }
 
-      .footer-bottom {
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
+      .modal {
+        padding: 10px;
       }
 
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.001ms !important;
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
+      .modal-card {
+        max-height: 94vh;
+        border-radius: 12px;
+      }
+
+      .modal-header {
+        padding: 16px;
+      }
+
+      .modal-header h3 {
+        font-size: 17px;
+      }
+
+      .modal-body {
+        padding: 18px;
       }
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <header class="site-header">
+  <!-- =========================
+       ANNOUNCEMENT
+  ========================== -->
 
-    <div class="container nav-wrap">
+  <div class="announcement">
+
+    <strong>
+      Serving Omaha &amp; Surrounding Areas
+    </strong>
+
+    <span class="divider">
+      |
+    </span>
+
+    Security Services Provided by Independent Provider
+
+  </div>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <nav class="container">
 
       <a
-        class="logo"
+        class="brand"
         href="#top"
         aria-label="Smart Home Security home"
       >
 
-        <span
-          class="logo-mark"
-          aria-hidden="true"
-        >
-          SH
-        </span>
+        <div class="brand-icon">
 
-        <span>
-          Smart Home Security
-        </span>
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M24 3.5 L41 10.5 V22.5 C41 33.5 33.6 41.2 24 44.5 C14.4 41.2 7 33.5 7 22.5 V10.5 Z"
+              fill="url(#navGrad)"
+              stroke="rgba(255,255,255,0.55)"
+              stroke-width="1.4"
+            />
+
+            <path
+              d="M24 13 L33 17.6 V23.4 C33 29.6 29.2 33.9 24 36 C18.8 33.9 15 29.6 15 23.4 V17.6 Z"
+              fill="rgba(255,255,255,0.14)"
+            />
+
+            <path
+              d="M17.6 24.2 L22 28.6 L30.6 19.6"
+              stroke="#ffffff"
+              stroke-width="2.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <defs>
+
+              <linearGradient
+                id="navGrad"
+                x1="7"
+                y1="3.5"
+                x2="41"
+                y2="44.5"
+                gradientUnits="userSpaceOnUse"
+              >
+
+                <stop
+                  offset="0"
+                  stop-color="#2378e8"
+                />
+
+                <stop
+                  offset="1"
+                  stop-color="#155cbd"
+                />
+
+              </linearGradient>
+
+            </defs>
+
+          </svg>
+
+        </div>
+
+        <div>
+
+          SMART HOME SECURITY
+
+          <small>
+            HOME SECURITY OPTIONS
+          </small>
+
+        </div>
 
       </a>
 
-      <nav
-        class="nav-links"
-        id="site-nav"
-        aria-label="Primary navigation"
-      >
+      <div class="nav-links">
 
-        <a class="nav-link" href="#packages">
+        <a href="#packages">
           Packages
         </a>
 
-        <a class="nav-link" href="#compare">
-          Compare
+        <a href="/referral.html">
+          Referral Program
         </a>
 
-        <a class="nav-link" href="#how-it-works">
-          How It Works
+        <a
+          class="button button-red"
+          href="#request"
+        >
+          Get Started
         </a>
 
-        <a class="nav-link" href="#faq">
-          FAQ
-        </a>
+      </div>
 
-      </nav>
-
-      <button
-        class="btn btn-primary desktop-cta js-open-intake"
-        type="button"
+      <a
+        class="button button-red mobile-nav-cta"
+        href="#request"
       >
-        Get My Security Options
-      </button>
+        Get Started
+      </a>
 
-      <button
-        class="menu-toggle"
-        id="menu-toggle"
-        type="button"
-        aria-controls="site-nav"
-        aria-expanded="false"
-        aria-label="Open navigation menu"
-      >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-    </div>
+    </nav>
 
   </header>
 
   <main id="top">
 
-    <section
-      class="hero"
-      aria-labelledby="hero-title"
-    >
+    <!-- =========================
+         HERO
+    ========================== -->
 
-      <div class="container hero-grid">
+    <section class="hero">
 
-        <div class="hero-content">
+      <div class="container hero-content">
 
-          <div class="eyebrow">
-            Serving Omaha &amp; surrounding areas
-          </div>
+        <h1>
 
-          <h1 id="hero-title">
-            Smart security built around your home.
-          </h1>
+          SMART SECURITY.<br>
 
-          <p class="hero-copy">
-            Compare straightforward smart-home security packages
-            with touchscreen control, door and window protection,
-            video doorbell options, and outdoor camera coverage.
-          </p>
+          <span>
+            TOTAL PEACE OF MIND.
+          </span>
 
-          <div class="hero-actions">
+        </h1>
 
-            <button
-              class="btn btn-primary js-open-intake"
-              type="button"
-            >
-              Set Up My Home
-            </button>
+        <p class="hero-copy">
 
-            <a
-              class="btn btn-secondary"
-              href="#packages"
-            >
-              See Packages
-            </a>
+          Explore cameras, video doorbells,
+          touchscreen control, door and window
+          protection, and professionally monitored
+          home-security options available through
+          independent security providers.
 
-          </div>
+        </p>
 
-          <ul
-            class="hero-points"
-            aria-label="Service highlights"
-          >
+        <div class="starting-price">
 
-            <li>
-              <span class="check-dot" aria-hidden="true">✓</span>
-              Homeowners &amp; renters can inquire
-            </li>
+          Advertised packages starting at
 
-            <li>
-              <span class="check-dot" aria-hidden="true">✓</span>
-              Professional installation options
-            </li>
-
-            <li>
-              <span class="check-dot" aria-hidden="true">✓</span>
-              Straightforward package comparison
-            </li>
-
-          </ul>
+          <strong>
+            $63.99/month
+          </strong>
 
         </div>
 
-        <aside
-          class="hero-panel"
-          aria-label="Security package overview"
-        >
+        <div class="hero-buttons">
 
-          <div class="hero-panel-kicker">
-            Package overview
-          </div>
-
-          <h2>
-            Choose the coverage that fits.
-          </h2>
-
-          <p>
-            Start with a package, then tell us what you want
-            protected. Final equipment and service details are
-            confirmed during setup.
-          </p>
-
-          <div class="mini-package-list">
-
-            <div class="mini-package">
-              <strong>Smart Essentials</strong>
-              <span>$63.99/mo</span>
-            </div>
-
-            <div class="mini-package">
-              <strong>Balanced Security</strong>
-              <span>$74.99/mo</span>
-            </div>
-
-            <div class="mini-package">
-              <strong>More Coverage</strong>
-              <span>$79.99/mo</span>
-            </div>
-
-          </div>
-
-          <button
-            class="btn btn-primary btn-full js-open-intake"
-            type="button"
+          <a
+            class="button button-red"
+            href="#packages"
           >
-            Get My Security Options
-          </button>
+            View Packages
+          </a>
 
-        </aside>
+          <a
+            class="button button-outline"
+            href="#request"
+          >
+            Get Started
+          </a>
+
+        </div>
+
+        <div class="hero-points">
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            Professional Installation Options
+
+          </div>
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            24/7 Monitoring Options
+
+          </div>
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            No Credit Check Options
+
+          </div>
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            No Startup Fee Options
+
+          </div>
+
+          <div class="hero-point">
+
+            <span class="check">
+              ✓
+            </span>
+
+            No Long-Term Contract Options
+
+          </div>
+
+        </div>
+
+        <p class="hero-offer-note">
+
+          Advertised features, prices and promotional
+          terms are subject to provider confirmation
+          and may depend on equipment selection,
+          location, eligibility and availability.
+          Smart Home Security does not issue the final
+          security-service agreement.
+
+        </p>
 
       </div>
 
     </section>
 
-    <section
-      class="trust-strip"
-      aria-label="Security service highlights"
-    >
-
-      <div class="container trust-grid">
-
-        <div class="trust-item">
-
-          <div class="trust-icon" aria-hidden="true">
-            01
-          </div>
-
-          <div>
-            <strong>Smart Control</strong>
-            <span>Touchscreen-based security options</span>
-          </div>
-
-        </div>
-
-        <div class="trust-item">
-
-          <div class="trust-icon" aria-hidden="true">
-            02
-          </div>
-
-          <div>
-            <strong>Video Coverage</strong>
-            <span>Doorbell and outdoor camera options</span>
-          </div>
-
-        </div>
-
-        <div class="trust-item">
-
-          <div class="trust-icon" aria-hidden="true">
-            03
-          </div>
-
-          <div>
-            <strong>Installed Setup</strong>
-            <span>Professional installation options</span>
-          </div>
-
-        </div>
-
-        <div class="trust-item">
-
-          <div class="trust-icon" aria-hidden="true">
-            04
-          </div>
-
-          <div>
-            <strong>Local Service Area</strong>
-            <span>Omaha &amp; surrounding areas</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+    <!-- =========================
+         PACKAGES
+    ========================== -->
 
     <section
-      class="section"
+      class="packages"
       id="packages"
-      aria-labelledby="packages-title"
     >
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="section-label">
+          Security Packages
+        </div>
 
-          <div class="eyebrow">
-            Security packages
-          </div>
+        <h2 class="section-title">
+          Find the package that fits your home.
+        </h2>
 
-          <h2 id="packages-title">
-            Three clear ways to secure your home.
-          </h2>
+        <p class="section-copy">
 
-          <p>
-            Choose the package that comes closest to what you
-            want and send your information to get the process
-            started.
-          </p>
+          Compare the currently advertised package
+          options and tell us which setup you're
+          interested in. Your final setup is confirmed
+          by the applicable security provider.
+
+        </p>
+
+        <div class="package-flyer">
+
+          <img
+            src="8CBD8DB9-3163-4814-9BB7-9F14556976CB.png"
+            width="1404"
+            height="1120"
+            alt="Smart Home Security Packages A, B and C with equipment and monthly pricing"
+            loading="eager"
+          >
 
         </div>
 
-        <div class="packages-grid">
+        <h3 class="package-select-title">
+          Select Your Package Interest
+        </h3>
 
-          <article class="package-card">
+        <p class="package-select-copy">
+          Selecting a package starts an inquiry. It does not purchase service.
+        </p>
 
-            <div class="package-label">
-              Package C
-            </div>
+        <div class="package-choices">
 
-            <h3>
-              Smart Essentials
-            </h3>
+          <!-- PACKAGE A -->
 
-            <p class="package-intro">
-              A streamlined smart-home security starting point.
-            </p>
+          <article class="package-choice">
 
-            <div class="price">
-              <span class="price-currency">$</span>
-              <span class="price-amount">63.99</span>
-              <span class="price-period">/ month</span>
-            </div>
-
-            <ul class="feature-list">
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Touchscreen control panel
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Door/window protection
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Video doorbell camera
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Smart-home security setup
-              </li>
-
-            </ul>
-
-            <button
-              class="btn btn-secondary btn-full js-package"
-              type="button"
-              data-package="Smart Essentials"
-            >
-              Choose Smart Essentials
-            </button>
-
-            <p class="package-note">
-              Final equipment, availability, eligibility,
-              and provider terms are confirmed during setup.
-            </p>
-
-          </article>
-
-          <article class="package-card package-card-featured">
-
-            <div class="package-label">
-              Package B
-            </div>
-
-            <h3>
-              Balanced Security
-            </h3>
-
-            <p class="package-intro">
-              Video coverage plus core entry protection.
-            </p>
-
-            <div class="price">
-              <span class="price-currency">$</span>
-              <span class="price-amount">74.99</span>
-              <span class="price-period">/ month</span>
-            </div>
-
-            <ul class="feature-list">
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Touchscreen control panel
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Door/window protection
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Video doorbell camera
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                One outdoor camera
-              </li>
-
-            </ul>
-
-            <button
-              class="btn btn-primary btn-full js-package"
-              type="button"
-              data-package="Balanced Security"
-            >
-              Choose Balanced Security
-            </button>
-
-            <p class="package-note">
-              Final equipment, availability, eligibility,
-              and provider terms are confirmed during setup.
-            </p>
-
-          </article>
-
-          <article class="package-card">
-
-            <div class="package-label">
-              Package A
-            </div>
+            <span class="package-tag">
+              PACKAGE A
+            </span>
 
             <h3>
               More Coverage
             </h3>
 
-            <p class="package-intro">
-              Expanded exterior camera coverage for your property.
-            </p>
+            <div class="package-price">
 
-            <div class="price">
-              <span class="price-currency">$</span>
-              <span class="price-amount">79.99</span>
-              <span class="price-period">/ month</span>
+              $79.99
+
+              <span>
+                / month
+              </span>
+
             </div>
 
-            <ul class="feature-list">
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Touchscreen control panel
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Door/window protection
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Video doorbell camera
-              </li>
-
-              <li>
-                <span class="feature-check" aria-hidden="true">✓</span>
-                Two outdoor cameras
-              </li>
-
-            </ul>
-
-            <button
-              class="btn btn-secondary btn-full js-package"
-              type="button"
-              data-package="More Coverage"
+            <a
+              class="button button-blue"
+              href="#request"
+              onclick="setPackage('Package A — $79.99/month')"
             >
-              Choose More Coverage
-            </button>
-
-            <p class="package-note">
-              Final equipment, availability, eligibility,
-              and provider terms are confirmed during setup.
-            </p>
+              Interested in Package A
+            </a>
 
           </article>
+
+          <!-- PACKAGE B -->
+
+          <article class="package-choice featured">
+
+            <span class="package-tag red">
+              PACKAGE B
+            </span>
+
+            <h3>
+              Balanced Security
+            </h3>
+
+            <div class="package-price">
+
+              $74.99
+
+              <span>
+                / month
+              </span>
+
+            </div>
+
+            <a
+              class="button button-red"
+              href="#request"
+              onclick="setPackage('Package B — $74.99/month')"
+            >
+              Interested in Package B
+            </a>
+
+          </article>
+
+          <!-- PACKAGE C -->
+
+          <article class="package-choice">
+
+            <span class="package-tag green">
+              PACKAGE C
+            </span>
+
+            <h3>
+              Smart Essentials
+            </h3>
+
+            <div class="package-price">
+
+              $63.99
+
+              <span>
+                / month
+              </span>
+
+            </div>
+
+            <a
+              class="button button-blue"
+              href="#request"
+              onclick="setPackage('Package C — $63.99/month')"
+            >
+              Interested in Package C
+            </a>
+
+          </article>
+
+        </div>
+
+        <div class="package-note">
+
+          <strong>
+            Important package disclosure:
+          </strong>
+
+          Package names, descriptions, equipment,
+          pricing and promotions displayed on this
+          website are marketing information provided
+          for comparison and referral purposes.
+          Final equipment, pricing, taxes, fees,
+          promotions, property eligibility,
+          availability, installation requirements,
+          monitoring terms, payment requirements and
+          other service terms are determined or
+          confirmed by the applicable independent
+          security provider.
+
+          Selecting a package or submitting this
+          website form does not purchase equipment,
+          activate monitoring, schedule a guaranteed
+          installation, or create a security-service
+          agreement.
 
         </div>
 
@@ -1806,307 +1659,639 @@
 
     </section>
 
-    <section
-      class="section section-soft"
-      id="compare"
-      aria-labelledby="compare-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            Compare coverage
-          </div>
-
-          <h2 id="compare-title">
-            See the packages side by side.
-          </h2>
-
-          <p>
-            Compare the three starting options and choose
-            the level of camera coverage that fits your home.
-          </p>
-
-        </div>
-
-        <div
-          class="comparison-wrap"
-          role="region"
-          aria-label="Security package comparison"
-          tabindex="0"
-        >
-
-          <table class="comparison-table">
-
-            <thead>
-              <tr>
-                <th scope="col">Included</th>
-                <th scope="col">Smart Essentials</th>
-                <th scope="col">Balanced Security</th>
-                <th scope="col">More Coverage</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td>Monthly price</td>
-                <td>$63.99</td>
-                <td>$74.99</td>
-                <td>$79.99</td>
-              </tr>
-
-              <tr>
-                <td>Touchscreen control panel</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-              </tr>
-
-              <tr>
-                <td>Door/window protection</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-              </tr>
-
-              <tr>
-                <td>Video doorbell camera</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-                <td class="yes">Yes</td>
-              </tr>
-
-              <tr>
-                <td>Outdoor cameras</td>
-                <td class="dash">—</td>
-                <td>1</td>
-                <td>2</td>
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </section>
+    <!-- =========================
+         REQUEST
+    ========================== -->
 
     <section
-      class="section"
-      id="how-it-works"
-      aria-labelledby="how-title"
+      class="request"
+      id="request"
     >
 
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            How it works
-          </div>
-
-          <h2 id="how-title">
-            Getting started is simple.
-          </h2>
-
-          <p>
-            Choose what you want, send your information,
-            and confirm the final security setup.
-          </p>
-
-        </div>
-
-        <div class="process-grid">
-
-          <article class="process-card">
-
-            <div class="process-number">
-              1
-            </div>
-
-            <h3>
-              Choose your coverage
-            </h3>
-
-            <p>
-              Select a package or tell us what you want
-              protected around your home.
-            </p>
-
-          </article>
-
-          <article class="process-card">
-
-            <div class="process-number">
-              2
-            </div>
-
-            <h3>
-              Send your information
-            </h3>
-
-            <p>
-              Provide your name, address, email, phone
-              number, and preferred package.
-            </p>
-
-          </article>
-
-          <article class="process-card">
-
-            <div class="process-number">
-              3
-            </div>
-
-            <h3>
-              Confirm your setup
-            </h3>
-
-            <p>
-              Final equipment, availability, provider terms,
-              and installation details are confirmed before
-              service moves forward.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section
-      class="cta-band"
-      aria-labelledby="cta-title"
-    >
-
-      <div class="container cta-band-inner">
+      <div class="container request-grid">
 
         <div>
 
-          <h2 id="cta-title">
-            Ready to see which setup fits your home?
+          <div class="section-label">
+            Get Started
+          </div>
+
+          <h2>
+            Ready to start your request?
           </h2>
 
-          <p>
-            Tell us what you are looking for and choose
-            the package that comes closest to your needs.
+          <p class="request-copy">
+
+            Send us the basic information needed
+            to process your inquiry and connect
+            your request with the applicable
+            security provider.
+
           </p>
+
+          <div class="steps">
+
+            <div class="step">
+
+              <span class="step-check">
+                ✓
+              </span>
+
+              Choose the package you're interested in
+
+            </div>
+
+            <div class="step">
+
+              <span class="step-check">
+                ✓
+              </span>
+
+              Enter your basic contact information
+
+            </div>
+
+            <div class="step">
+
+              <span class="step-check">
+                ✓
+              </span>
+
+              Review and accept the disclosures
+
+            </div>
+
+            <div class="step">
+
+              <span class="step-check">
+                ✓
+              </span>
+
+              Your inquiry moves to the next step
+
+            </div>
+
+          </div>
+
+          <div class="role-disclosure">
+
+            <strong>
+              How Smart Home Security Works
+            </strong>
+
+            Smart Home Security is an independent
+            marketing and customer-referral resource
+            operated by Murrays Empire LLC.
+
+            We provide general information about
+            available home-security options, receive
+            customer inquiries, and may connect
+            interested customers with an applicable
+            independent security provider.
+
+            Smart Home Security and Murrays Empire LLC
+            do not directly provide the customer's
+            security equipment, installation,
+            activation, monitoring, billing,
+            warranties, repairs, technical support
+            or final security-service agreement.
+
+          </div>
 
         </div>
 
-        <button
-          class="btn btn-primary js-open-intake"
-          type="button"
+        <!-- =========================
+             WEB3FORMS
+        ========================== -->
+
+        <form
+          id="security-request-form"
+          name="smart-home-security-package-request"
+          action="https://api.web3forms.com/submit"
+          method="POST"
         >
-          Get My Security Options
-        </button>
+
+          <!-- WEB3FORMS -->
+
+          <input
+            type="hidden"
+            name="access_key"
+            value="cb3969cb-c305-4bf1-a016-2e5d9b1bb7f2"
+          >
+
+          <input
+            type="hidden"
+            name="subject"
+            value="NEW SMART HOME SECURITY LEAD"
+          >
+
+          <input
+            type="hidden"
+            name="from_name"
+            value="Smart Home Security Website"
+          >
+
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://smarthomesecurityomaha.com/thank-you.html"
+          >
+
+          <!-- RECORDKEEPING -->
+
+          <input
+            id="submission-id"
+            type="hidden"
+            name="Submission ID"
+            value=""
+          >
+
+          <input
+            id="acceptance-timestamp"
+            type="hidden"
+            name="Acceptance Timestamp"
+            value=""
+          >
+
+          <input
+            id="page-url"
+            type="hidden"
+            name="Submission Page"
+            value=""
+          >
+
+          <input
+            type="hidden"
+            name="Form Version"
+            value="SHS-LEAD-FORM-2026-08-30"
+          >
+
+          <input
+            type="hidden"
+            name="Disclosure Version"
+            value="SHS-PROVIDER-REFERRAL-DISCLOSURE-2026-08-30"
+          >
+
+          <!-- SPAM CHECK -->
+
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display:none;"
+            tabindex="-1"
+            autocomplete="off"
+          >
+
+          <p class="form-heading">
+            Let's Get Your Request Started
+          </p>
+
+          <p class="form-lead">
+            Tell us where to reach you.
+          </p>
+
+          <div class="sensitive-warning">
+
+            <strong>
+              Please do not submit sensitive financial or security information.
+            </strong>
+
+            Do not enter a credit/debit card number,
+            bank information, Social Security number,
+            password, alarm code, PIN or other security
+            credential in this form.
+
+          </div>
+
+          <!-- NAME / PHONE -->
+
+          <div class="field-row">
+
+            <div>
+
+              <label for="name">
+                Full Name
+              </label>
+
+              <input
+                id="name"
+                name="Full Name"
+                type="text"
+                placeholder="Your full name"
+                autocomplete="name"
+                maxlength="100"
+                required
+              >
+
+            </div>
+
+            <div>
+
+              <label for="phone">
+                Phone Number
+              </label>
+
+              <input
+                id="phone"
+                name="Phone Number"
+                type="tel"
+                placeholder="Best number to reach you"
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="25"
+                required
+              >
+
+            </div>
+
+          </div>
+
+          <!-- EMAIL -->
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Your email address"
+            autocomplete="email"
+            maxlength="150"
+            required
+          >
+
+          <!-- ADDRESS -->
+
+          <label for="address">
+            Service Address
+          </label>
+
+          <input
+            id="address"
+            name="Service Address"
+            type="text"
+            placeholder="Street address, unit, city and ZIP"
+            autocomplete="street-address"
+            maxlength="180"
+            required
+          >
+
+          <!-- PROPERTY TYPE -->
+
+          <label for="property-type">
+            Property Type
+          </label>
+
+          <select
+            id="property-type"
+            name="Property Type"
+            required
+          >
+
+            <option value="">
+              Select property type
+            </option>
+
+            <option value="House — Owner">
+              House — Owner
+            </option>
+
+            <option value="House — Renter">
+              House — Renter
+            </option>
+
+            <option value="Apartment">
+              Apartment
+            </option>
+
+            <option value="Townhome / Condo">
+              Townhome / Condo
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+          <!-- PACKAGE -->
+
+          <label for="package">
+            Package Interest
+          </label>
+
+          <select
+            id="package"
+            name="Package Interest"
+            required
+          >
+
+            <option value="">
+              Select a package
+            </option>
+
+            <option value="Package A — $79.99/month">
+              Package A — $79.99/month
+            </option>
+
+            <option value="Package B — $74.99/month">
+              Package B — $74.99/month
+            </option>
+
+            <option value="Package C — $63.99/month">
+              Package C — $63.99/month
+            </option>
+
+            <option value="Help Me Choose a Package">
+              Help Me Choose
+            </option>
+
+          </select>
+
+          <!-- REFERRAL -->
+
+          <label for="referred-by">
+
+            Referred By
+
+            <span class="optional">
+              (optional)
+            </span>
+
+          </label>
+
+          <input
+            id="referred-by"
+            name="Referred By"
+            type="text"
+            placeholder="Name of the person who referred you"
+            autocomplete="off"
+            maxlength="100"
+          >
+
+          <!-- =========================
+               REQUIRED ACKNOWLEDGMENTS
+          ========================== -->
+
+          <div class="legal-consents">
+
+            <!-- 1. REFERRAL ROLE -->
+
+            <div class="consent-box">
+
+              <input
+                id="referral-disclosure"
+                name="Provider And Referral Disclosure Accepted"
+                type="checkbox"
+                value="Yes"
+                required
+              >
+
+              <label for="referral-disclosure">
+
+                I have reviewed and acknowledge the
+
+                <button
+                  type="button"
+                  class="legal-link"
+                  onclick="openDisclosure()"
+                  style="
+                    background:none;
+                    border:0;
+                    padding:0;
+                    font:inherit;
+                  "
+                >
+                  Provider &amp; Referral Disclosure
+                </button>
+
+                and understand that Smart Home Security /
+                Murrays Empire LLC is an independent
+                marketing and customer-referral resource,
+                not the company providing my security
+                equipment, installation, monitoring,
+                billing or final security-service agreement.
+
+              </label>
+
+            </div>
+
+            <!-- 2. PACKAGE TERMS -->
+
+            <div class="consent-box">
+
+              <input
+                id="package-acknowledgment"
+                name="Package And Promotion Terms Acknowledged"
+                type="checkbox"
+                value="Yes"
+                required
+              >
+
+              <label for="package-acknowledgment">
+
+                I understand that website package
+                descriptions, equipment, pricing and
+                promotional statements are subject to
+                confirmation by the applicable security
+                provider and that the provider's final
+                written terms control if they differ
+                from information displayed or discussed
+                before activation.
+
+              </label>
+
+            </div>
+
+            <!-- 3. TERMS AND PRIVACY -->
+
+            <div class="consent-box">
+
+              <input
+                id="terms-consent"
+                name="Terms And Privacy Accepted"
+                type="checkbox"
+                value="Yes"
+                required
+              >
+
+              <label for="terms-consent">
+
+                I agree to the
+
+                <a
+                  class="legal-link"
+                  href="/terms.html"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Terms of Use
+                </a>
+
+                and acknowledge the
+
+                <a
+                  class="legal-link"
+                  href="/privacy-policy.html"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Privacy Policy
+                </a>.
+
+              </label>
+
+            </div>
+
+            <!-- 4. CONTACT / DATA SHARING -->
+
+            <div class="consent-box">
+
+              <input
+                id="provider-consent"
+                name="Inquiry Contact And Data Sharing Permission"
+                type="checkbox"
+                value="Yes"
+                required
+              >
+
+              <label for="provider-consent">
+
+                I request follow-up regarding this
+                security inquiry and authorize Smart
+                Home Security / Murrays Empire LLC to
+                contact me and to provide the information
+                submitted in this form to the applicable
+                security provider so that the provider
+                may respond to this specific inquiry by
+                phone, text message or email.
+
+                This permission relates to my submitted
+                inquiry and is not itself an agreement
+                to purchase service. Consent is not a
+                condition of purchase. Any additional
+                consent legally required for automated,
+                artificial-voice or prerecorded
+                telemarketing must be obtained separately
+                by the applicable provider.
+
+              </label>
+
+            </div>
+
+            <!-- 5. AGE / PROPERTY AUTHORITY -->
+
+            <div class="consent-box">
+
+              <input
+                id="authority-consent"
+                name="Age And Property Authority Confirmed"
+                type="checkbox"
+                value="Yes"
+                required
+              >
+
+              <label for="authority-consent">
+
+                I confirm that I am at least 18 years
+                old and that I am authorized to request
+                information about security installation
+                at the address submitted. If I rent or
+                do not own the property, I understand
+                that landlord, property-manager or other
+                required permission may be necessary
+                before equipment can be installed.
+
+              </label>
+
+            </div>
+
+          </div>
+
+          <p class="form-legal-note">
+
+            By submitting this form, you are requesting
+            information and referral assistance only.
+
+            Submission does not purchase equipment,
+            activate monitoring, guarantee approval,
+            guarantee installation, create a
+            security-service agreement with Smart Home
+            Security or Murrays Empire LLC, or authorize
+            Smart Home Security or Murrays Empire LLC
+            to charge a credit card, debit card, bank
+            account or other payment method.
+
+            Any security-service agreement and any
+            payment authorization are handled separately
+            by the applicable independent security provider.
+
+          </p>
+
+          <button
+            class="button button-red form-button"
+            type="submit"
+          >
+            Request My Security Options
+          </button>
+
+        </form>
 
       </div>
 
     </section>
 
+    <!-- =========================
+         REFERRAL PROGRAM
+    ========================== -->
+
     <section
-      class="section section-soft"
-      id="faq"
-      aria-labelledby="faq-title"
+      class="referral"
+      id="referral"
     >
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="referral-box">
 
-          <div class="eyebrow">
-            Common questions
+          <div class="referral-money">
+            $100
           </div>
 
-          <h2 id="faq-title">
-            Before you request your setup.
-          </h2>
+          <div class="referral-copy">
 
-        </div>
-
-        <div class="faq-list">
-
-          <details>
-
-            <summary>
-              Do I have to be a homeowner?
-            </summary>
+            <strong>
+              Refer Someone. Earn $100.
+            </strong>
 
             <p>
-              No. Homeowners and renters can submit a request.
-              Final eligibility and installation details depend
-              on the property and provider requirements.
+
+              Refer an eligible customer to Smart Home
+              Security and receive $100 after the
+              referred customer's qualifying security
+              installation is completed and confirmed
+              under the referral program terms.
+
             </p>
 
-          </details>
+            <small>
 
-          <details>
+              Referral eligibility, qualification,
+              verification and payment terms apply.
+              See the full referral terms before participating.
 
-            <summary>
-              What information do you need from me?
-            </summary>
+            </small>
 
-            <p>
-              The request form asks for your full name,
-              service address, email, phone number, and
-              the security package you are interested in.
-            </p>
+          </div>
 
-          </details>
-
-          <details>
-
-            <summary>
-              Can I get more camera coverage?
-            </summary>
-
-            <p>
-              The packages shown provide different starting
-              levels of camera coverage. Additional equipment
-              availability can be confirmed during setup.
-            </p>
-
-          </details>
-
-          <details>
-
-            <summary>
-              Who provides the final security service?
-            </summary>
-
-            <p>
-              Smart Home Security is operated by Murrays Empire
-              LLC and handles marketing and customer intake.
-              Installation, monitoring, equipment fulfillment,
-              billing, and final service terms are handled by
-              the applicable third-party security provider.
-            </p>
-
-          </details>
-
-          <details>
-
-            <summary>
-              Are the prices guaranteed for every property?
-            </summary>
-
-            <p>
-              The listed amounts are the package prices being
-              advertised. Final equipment, eligibility,
-              availability, taxes, provider terms, and any
-              applicable requirements are confirmed before
-              activation.
-            </p>
-
-          </details>
+          <a
+            class="button button-blue"
+            href="/referral.html"
+          >
+            View Referral Terms
+          </a>
 
         </div>
 
@@ -2116,118 +2301,98 @@
 
   </main>
 
-  <footer class="site-footer">
+  <!-- =========================
+       SITE-WIDE LEGAL DISCLOSURE
+  ========================== -->
+
+  <section class="legal-note">
 
     <div class="container">
 
-      <div class="footer-grid">
+      <p>
 
-        <div class="footer-brand">
+        <strong>
+          IMPORTANT DISCLOSURE:
+        </strong>
 
-          <a
-            class="logo"
-            href="#top"
-            aria-label="Smart Home Security home"
-          >
+        Smart Home Security is an independent marketing
+        and customer-referral resource operated by
+        Murrays Empire LLC.
 
-            <span
-              class="logo-mark"
-              aria-hidden="true"
-            >
-              SH
-            </span>
+        Smart Home Security and Murrays Empire LLC are
+        not the security-system installer, monitoring
+        company, equipment manufacturer, lender,
+        insurer or security-service provider.
 
-            <span>
-              Smart Home Security
-            </span>
+        Security equipment, installation, activation,
+        monitoring, billing, warranties, technical
+        support, repairs and final customer service
+        agreements are provided, arranged or
+        administered by the applicable independent
+        security provider.
 
-          </a>
+        Final pricing, equipment, promotions,
+        eligibility, availability, taxes, fees,
+        payment requirements and service terms are
+        subject to provider confirmation.
 
-          <p>
-            Smart Home Security is operated by Murrays Empire LLC
-            as an independent marketing and customer-intake resource.
-            Smart Home Security and Murrays Empire LLC do not directly
-            provide security monitoring, equipment fulfillment, or
-            installation services. Those services, along with billing,
-            eligibility, availability, and final service terms, are
-            provided and determined by the applicable third-party
-            security provider.
-          </p>
+        Any security-service agreement is entered into
+        separately between the customer and the
+        applicable security provider.
 
-        </div>
+        No security system can guarantee prevention of
+        burglary, theft, fire, property damage, injury
+        or other loss.
 
-        <div>
+      </p>
 
-          <div class="footer-heading">
-            Explore
-          </div>
+    </div>
 
-          <ul class="footer-links">
+  </section>
 
-            <li>
-              <a href="#packages">Packages</a>
-            </li>
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
-            <li>
-              <a href="#compare">Compare</a>
-            </li>
+  <footer>
 
-            <li>
-              <a href="#how-it-works">How It Works</a>
-            </li>
+    <div class="container footer-grid">
 
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
+      <div>
 
-          </ul>
-
-        </div>
-
-        <div>
-
-          <div class="footer-heading">
-            Legal
-          </div>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="privacy.html">
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="terms.html">
-                Terms
-              </a>
-            </li>
-
-            <li>
-              <a href="disclosures.html">
-                Disclosures
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
+        ©
+        <span id="year"></span>
+        Smart Home Security.
+        All rights reserved.
+        Operated by Murrays Empire LLC.
 
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-links">
 
-        <span>
-          ©
-          <span id="year"></span>
-          Smart Home Security.
-          Operated by Murrays Empire LLC.
-        </span>
+        <a href="#packages">
+          Packages
+        </a>
 
-        <span>
-          Serving Omaha &amp; surrounding areas.
-        </span>
+        <a href="/referral.html">
+          Referral Program
+        </a>
+
+        <a href="/privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/terms.html">
+          Terms
+        </a>
+
+        <button
+          type="button"
+          class="footer-disclosure-button"
+          onclick="openDisclosure()"
+        >
+          Provider Disclosure
+        </button>
 
       </div>
 
@@ -2235,869 +2400,910 @@
 
   </footer>
 
-  <div class="mobile-cta">
-
-    <button
-      class="btn btn-primary js-open-intake"
-      type="button"
-    >
-      Set Up My Home
-    </button>
-
-  </div>
+  <!-- =========================
+       PROVIDER & REFERRAL
+       DISCLOSURE MODAL
+  ========================== -->
 
   <div
-    class="modal-overlay"
-    id="intake-modal"
+    class="modal"
+    id="disclosure-modal"
     role="dialog"
     aria-modal="true"
-    aria-labelledby="intake-title"
+    aria-labelledby="disclosure-title"
     aria-hidden="true"
   >
 
-    <div class="intake-card">
+    <div
+      class="modal-card"
+      role="document"
+    >
 
-      <button
-        class="modal-close"
-        id="modal-close"
-        type="button"
-        aria-label="Close form"
-      >
-        ×
-      </button>
+      <div class="modal-header">
 
-      <div
-        class="progress-track"
-        aria-hidden="true"
-      >
+        <h3 id="disclosure-title">
+          Provider &amp; Referral Disclosure
+        </h3>
 
-        <div
-          class="progress-fill"
-          id="progress-fill"
-        ></div>
+        <button
+          type="button"
+          class="modal-close"
+          id="disclosure-close"
+          aria-label="Close disclosure"
+          onclick="closeDisclosure()"
+        >
+          ×
+        </button>
 
       </div>
 
-      <form
-        id="intake-form"
-        name="security-lead"
-        method="POST"
-        action="/thank-you.html"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
+      <div class="modal-body">
 
-        <input
-          type="hidden"
-          name="form-name"
-          value="security-lead"
-        >
+        <p class="modal-important">
 
-        <input
-          type="hidden"
-          id="selected-package"
-          name="package"
-          value=""
-        >
-
-        <p hidden>
-
-          <label>
-            Do not fill this out:
-
-            <input name="bot-field">
-
-          </label>
+          IMPORTANT — PLEASE REVIEW BEFORE
+          SUBMITTING YOUR SECURITY REQUEST
 
         </p>
 
-        <section
-          class="intake-step active"
-          data-step="1"
-        >
+        <!-- 1 -->
 
-          <h2 id="intake-title">
-            What are you most interested in?
-          </h2>
+        <div class="modal-section">
 
-          <p>
-            Choose what you want to focus on first.
-          </p>
-
-          <div class="option-list">
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="focus"
-                value="Doorbell and entry protection"
-                required
-              >
-
-              Doorbell &amp; entry protection
-
-            </label>
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="focus"
-                value="Outdoor camera coverage"
-              >
-
-              Outdoor camera coverage
-
-            </label>
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="focus"
-                value="Whole-home smart security"
-              >
-
-              Whole-home smart security
-
-            </label>
-
-          </div>
-
-          <div class="intake-nav">
-
-            <span></span>
-
-            <button
-              class="btn btn-primary"
-              type="button"
-              data-next="2"
-            >
-              Continue
-            </button>
-
-          </div>
-
-          <div
-            class="form-status"
-            id="step1-status"
-            aria-live="polite"
-          ></div>
-
-        </section>
-
-        <section
-          class="intake-step"
-          data-step="2"
-        >
-
-          <h2>
-            Which package looks closest?
-          </h2>
+          <h4>
+            1. Smart Home Security's Role
+          </h4>
 
           <p>
-            You can change the details later.
-            This just gives us a starting point.
+
+            Smart Home Security is an independent
+            marketing and customer-referral resource
+            operated by Murrays Empire LLC.
+
           </p>
-
-          <div class="option-list">
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="package-choice"
-                value="Smart Essentials"
-              >
-
-              Smart Essentials — $63.99/mo
-
-            </label>
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="package-choice"
-                value="Balanced Security"
-              >
-
-              Balanced Security — $74.99/mo
-
-            </label>
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="package-choice"
-                value="More Coverage"
-              >
-
-              More Coverage — $79.99/mo
-
-            </label>
-
-            <label class="option-card">
-
-              <input
-                type="radio"
-                name="package-choice"
-                value="Not sure yet"
-              >
-
-              I'm not sure yet
-
-            </label>
-
-          </div>
-
-          <div class="intake-nav">
-
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-back="1"
-            >
-              Back
-            </button>
-
-            <button
-              class="btn btn-primary"
-              type="button"
-              data-next="3"
-            >
-              Continue
-            </button>
-
-          </div>
-
-          <div
-            class="form-status"
-            id="step2-status"
-            aria-live="polite"
-          ></div>
-
-        </section>
-
-        <section
-          class="intake-step"
-          data-step="3"
-        >
-
-          <h2>
-            Let's get your information.
-          </h2>
 
           <p>
-            Enter the basic information needed
-            to follow up about your security options.
+
+            Smart Home Security and Murrays Empire LLC
+            are not the security-system installer,
+            monitoring company, equipment manufacturer,
+            lender, insurer or security-service provider.
+
           </p>
 
-          <div class="form-grid">
+          <p>
 
-            <div class="form-group form-group-full">
+            Our role is limited to marketing available
+            security options, providing general package
+            information, receiving customer inquiries
+            and connecting interested customers with
+            an applicable independent security provider.
 
-              <label for="full-name">
-                Full name
-              </label>
+          </p>
 
-              <input
-                class="form-control"
-                id="full-name"
-                name="full-name"
-                type="text"
-                autocomplete="name"
-                maxlength="80"
-                required
-              >
+        </div>
 
-            </div>
+        <!-- 2 -->
 
-            <div class="form-group">
+        <div class="modal-section">
 
-              <label for="phone">
-                Phone number
-              </label>
+          <h4>
+            2. Independent Security Provider
+          </h4>
 
-              <input
-                class="form-control"
-                id="phone"
-                name="phone"
-                type="tel"
-                autocomplete="tel"
-                inputmode="tel"
-                maxlength="25"
-                required
-              >
+          <p>
 
-            </div>
+            The applicable independent security
+            provider is responsible for determining
+            final eligibility and availability and for
+            providing, arranging or administering the
+            actual security products and services.
 
-            <div class="form-group">
+          </p>
 
-              <label for="email">
-                Email address
-              </label>
+          <p>
 
-              <input
-                class="form-control"
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                maxlength="120"
-                required
-              >
+            These responsibilities may include equipment,
+            installation, activation, monitoring,
+            billing, payment processing, warranties,
+            technical support, repairs, scheduling,
+            customer service and the customer's final
+            security-service agreement.
 
-            </div>
+          </p>
 
-            <div class="form-group form-group-full">
+          <p>
 
-              <label for="address">
-                Service address
-              </label>
+            Smart Home Security does not control the
+            provider's technicians, employees,
+            contractors, scheduling, installation
+            practices, monitoring operations, billing
+            decisions, equipment performance, warranty
+            decisions or customer-service decisions.
 
-              <input
-                class="form-control"
-                id="address"
-                name="address"
-                type="text"
-                autocomplete="street-address"
-                maxlength="160"
-                required
-              >
+          </p>
 
-            </div>
+        </div>
 
-          </div>
+        <!-- 3 -->
 
-          <label class="legal-check">
+        <div class="modal-section">
 
-            <input
-              type="checkbox"
-              name="contact-consent"
-              value="yes"
-              required
-            >
+          <h4>
+            3. No Security-Service Agreement With Us
+          </h4>
 
-            <span>
-              I agree that the information I submit may be
-              used to contact me about my security request
-              and may be shared with the applicable security
-              provider for that purpose.
-            </span>
+          <p>
 
-          </label>
+            Viewing package information, selecting a
+            package, speaking with Smart Home Security
+            or submitting this website form does not
+            purchase a security system and does not
+            create a monitoring, equipment,
+            installation or security-service agreement
+            with Smart Home Security or Murrays Empire LLC.
 
-          <div class="intake-nav">
+          </p>
 
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-back="2"
-            >
-              Back
-            </button>
+          <p>
 
-            <button
-              class="btn btn-primary"
-              type="submit"
-            >
-              Request My Options
-            </button>
+            Any final security-service agreement is
+            entered into separately between the
+            customer and the applicable independent
+            security provider.
 
-          </div>
+          </p>
 
-          <div
-            class="form-status"
-            id="form-status"
-            aria-live="polite"
-          ></div>
+          <p>
 
-        </section>
+            Smart Home Security and Murrays Empire LLC
+            do not have authority to modify, waive,
+            cancel, guarantee or replace the provider's
+            written contract or provider obligations.
 
-      </form>
+          </p>
+
+        </div>
+
+        <!-- 4 -->
+
+        <div class="modal-section">
+
+          <h4>
+            4. Prices, Packages and Promotions
+          </h4>
+
+          <p>
+
+            Package descriptions, equipment lists,
+            prices, monthly amounts and promotional
+            statements displayed or discussed by
+            Smart Home Security are marketing
+            information and are subject to provider
+            confirmation.
+
+          </p>
+
+          <p>
+
+            The security provider determines or
+            confirms final equipment, pricing,
+            applicable taxes and fees, property
+            eligibility, availability, installation
+            requirements, payment requirements,
+            monitoring terms and other service terms.
+
+          </p>
+
+          <p>
+
+            Statements concerning offers such as
+            "No Credit Check," "No Startup Fee,"
+            "No Long-Term Contract," delayed billing,
+            promotional equipment or other incentives
+            apply only when offered and confirmed by
+            the applicable security provider.
+
+          </p>
+
+          <p>
+
+            Customers should review the provider's
+            final written agreement and disclosures
+            before accepting service.
+
+          </p>
+
+        </div>
+
+        <!-- 5 -->
+
+        <div class="modal-section">
+
+          <h4>
+            5. Customer Information
+          </h4>
+
+          <p>
+
+            When a customer submits a request, Smart
+            Home Security / Murrays Empire LLC may
+            collect the information entered into this
+            website form for the purpose of handling
+            that request.
+
+          </p>
+
+          <p>
+
+            Information may include the customer's
+            name, telephone number, email address,
+            service address, property type, package
+            interest and referral information.
+
+          </p>
+
+          <p>
+
+            Information submitted for the request may
+            be provided to the applicable independent
+            security provider so that the provider can
+            respond to the customer's inquiry.
+
+          </p>
+
+          <p>
+
+            Customers should not submit payment-card
+            information, bank information, Social
+            Security numbers, passwords, alarm codes,
+            PINs or other security credentials through
+            this form.
+
+          </p>
+
+          <p>
+
+            Additional information concerning personal
+            information is contained in our Privacy Policy.
+
+          </p>
+
+        </div>
+
+        <!-- 6 -->
+
+        <div class="modal-section">
+
+          <h4>
+            6. Contact Regarding the Inquiry
+          </h4>
+
+          <p>
+
+            If the customer checks the contact and
+            information-sharing acknowledgment and
+            submits the form, the customer is requesting
+            follow-up concerning the submitted security
+            inquiry.
+
+          </p>
+
+          <p>
+
+            Smart Home Security may contact the customer
+            regarding that inquiry and may provide the
+            submitted information to the applicable
+            security provider so that the provider may
+            respond by phone, text message or email.
+
+          </p>
+
+          <p>
+
+            This website acknowledgment is limited to
+            the customer's submitted inquiry and does
+            not itself authorize unrelated marketing.
+
+          </p>
+
+          <p>
+
+            Any separate consent legally required for
+            automated, artificial-voice, prerecorded
+            or other regulated telemarketing must be
+            obtained separately by the party required
+            to obtain that consent.
+
+          </p>
+
+        </div>
+
+        <!-- 7 -->
+
+        <div class="modal-section">
+
+          <h4>
+            7. No Payment Authorization
+          </h4>
+
+          <p>
+
+            Submitting this website form does not
+            authorize Smart Home Security or Murrays
+            Empire LLC to charge a credit card, debit
+            card, bank account or other payment method.
+
+          </p>
+
+          <p>
+
+            Any payment information or authorization
+            required for equipment, installation,
+            activation, monitoring or other provider
+            services is handled separately under the
+            applicable provider's procedures and agreement.
+
+          </p>
+
+        </div>
+
+        <!-- 8 -->
+
+        <div class="modal-section">
+
+          <h4>
+            8. Property Permission
+          </h4>
+
+          <p>
+
+            Customers are responsible for having any
+            permission required to install equipment
+            at the service address.
+
+          </p>
+
+          <p>
+
+            Renters, apartment residents and customers
+            who do not own the property may need
+            permission from a landlord, property
+            manager, owner, homeowners association or
+            another authorized party before equipment
+            can be installed.
+
+          </p>
+
+          <p>
+
+            Submission of a request does not guarantee
+            that installation is permitted at a
+            particular property.
+
+          </p>
+
+        </div>
+
+        <!-- 9 -->
+
+        <div class="modal-section">
+
+          <h4>
+            9. Installation and Scheduling
+          </h4>
+
+          <p>
+
+            Any appointment date or arrival window
+            communicated before installation is subject
+            to provider scheduling and availability.
+
+          </p>
+
+          <p>
+
+            Smart Home Security does not guarantee
+            technician arrival times, installation
+            completion dates, equipment availability
+            or the amount of time required for the
+            provider to complete installation.
+
+          </p>
+
+        </div>
+
+        <!-- 10 -->
+
+        <div class="modal-section">
+
+          <h4>
+            10. Security-System Limitations
+          </h4>
+
+          <p>
+
+            No alarm, camera, monitoring service or
+            other security system can guarantee that
+            burglary, theft, fire, vandalism, property
+            damage, personal injury or another loss
+            will not occur.
+
+          </p>
+
+          <p>
+
+            Smart Home Security does not warrant or
+            guarantee the performance, availability,
+            reliability, response time or effectiveness
+            of equipment, monitoring or services
+            supplied by an independent security provider.
+
+          </p>
+
+          <p>
+
+            Warranties, limitations, remedies and
+            service commitments regarding actual
+            equipment and security services are
+            governed by the customer's agreement with
+            the applicable provider.
+
+          </p>
+
+        </div>
+
+        <!-- 11 -->
+
+        <div class="modal-section">
+
+          <h4>
+            11. Referral Compensation
+          </h4>
+
+          <p>
+
+            Smart Home Security / Murrays Empire LLC
+            may receive compensation from a security
+            provider when an eligible customer obtains
+            service through a referral.
+
+          </p>
+
+          <p>
+
+            This compensation does not create a
+            security-service relationship between the
+            customer and Smart Home Security or
+            Murrays Empire LLC.
+
+          </p>
+
+        </div>
+
+        <!-- 12 -->
+
+        <div class="modal-section">
+
+          <h4>
+            12. Separate Consumer Referral Program
+          </h4>
+
+          <p>
+
+            Smart Home Security may separately offer
+            promotional referral rewards to eligible
+            individuals who refer qualifying customers.
+
+          </p>
+
+          <p>
+
+            Referral rewards are subject to the
+            eligibility, installation verification,
+            payment and other conditions contained in
+            the separate Referral Program Terms.
+
+          </p>
+
+          <p>
+
+            Mentioning or submitting the name of a
+            referrer does not by itself guarantee that
+            a referral reward is earned.
+
+          </p>
+
+        </div>
+
+        <!-- 13 -->
+
+        <div class="modal-section">
+
+          <h4>
+            13. Customer Acknowledgment
+          </h4>
+
+          <p>
+
+            By checking the Provider &amp; Referral
+            Disclosure box, the customer acknowledges
+            that the customer understands:
+
+          </p>
+
+          <ul>
+
+            <li>
+              Smart Home Security is an independent
+              marketing and customer-referral resource
+              operated by Murrays Empire LLC.
+            </li>
+
+            <li>
+              Smart Home Security and Murrays Empire LLC
+              do not directly provide the customer's
+              security equipment, installation,
+              monitoring, billing, warranties or final
+              security-service agreement.
+            </li>
+
+            <li>
+              Actual security products and services
+              are provided, arranged or administered
+              by the applicable independent security
+              provider.
+            </li>
+
+            <li>
+              Package descriptions, advertised prices
+              and promotional terms remain subject to
+              provider confirmation.
+            </li>
+
+            <li>
+              Information submitted may be provided
+              to the applicable security provider for
+              the purpose of responding to the
+              customer's security inquiry.
+            </li>
+
+            <li>
+              Submitting the form does not itself
+              create a security-service agreement.
+            </li>
+
+            <li>
+              Submitting the form does not authorize
+              Smart Home Security or Murrays Empire LLC
+              to charge a payment method.
+            </li>
+
+            <li>
+              The customer has the opportunity to
+              review this disclosure, the Terms of Use
+              and the Privacy Policy before submitting
+              the request.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button
+          type="button"
+          class="button button-blue"
+          onclick="acknowledgeDisclosure()"
+        >
+          I Understand — Return to Form
+        </button>
+
+      </div>
 
     </div>
 
   </div>
 
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script>
 
     (() => {
 
-      const menuToggle =
-        document.getElementById(
-          "menu-toggle"
-        );
+      const DISCLOSURE_VERSION =
+        "SHS-PROVIDER-REFERRAL-DISCLOSURE-2026-08-30";
 
-      const nav =
-        document.getElementById(
-          "site-nav"
-        );
+      const FORM_VERSION =
+        "SHS-LEAD-FORM-2026-08-30";
 
       const modal =
         document.getElementById(
-          "intake-modal"
+          "disclosure-modal"
         );
 
-      const modalClose =
+      const modalCloseButton =
         document.getElementById(
-          "modal-close"
+          "disclosure-close"
         );
 
-      const form =
+      const disclosureCheckbox =
         document.getElementById(
-          "intake-form"
+          "referral-disclosure"
         );
 
-      const progressFill =
+      const requestForm =
         document.getElementById(
-          "progress-fill"
+          "security-request-form"
         );
 
-      const selectedPackage =
-        document.getElementById(
-          "selected-package"
-        );
+      let previouslyFocusedElement = null;
 
-      const steps =
-        Array.from(
-          document.querySelectorAll(
-            ".intake-step"
-          )
-        );
+      /* =========================
+         YEAR
+      ========================== */
 
-      const packageChoiceRadios =
-        Array.from(
-          document.querySelectorAll(
-            'input[name="package-choice"]'
-          )
-        );
+      const yearElement =
+        document.getElementById("year");
 
-      const openButtons =
-        document.querySelectorAll(
-          ".js-open-intake"
-        );
+      if (yearElement) {
 
-      const packageButtons =
-        document.querySelectorAll(
-          ".js-package"
-        );
-
-      let currentStep = 1;
-      let lastFocusedElement = null;
-
-      document.getElementById(
-        "year"
-      ).textContent =
-        new Date().getFullYear();
-
-      function setMenu(open) {
-
-        nav.classList.toggle(
-          "active",
-          open
-        );
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(open)
-        );
-
-        menuToggle.setAttribute(
-          "aria-label",
-          open
-            ? "Close navigation menu"
-            : "Open navigation menu"
-        );
+        yearElement.textContent =
+          new Date().getFullYear();
 
       }
 
-      menuToggle.addEventListener(
-        "click",
-        () => {
+      /* =========================
+         PACKAGE SELECTION
+      ========================== */
 
-          const open =
-            menuToggle.getAttribute(
-              "aria-expanded"
-            ) !== "true";
+      window.setPackage =
+        function(packageName) {
 
-          setMenu(open);
-
-        }
-      );
-
-      nav
-        .querySelectorAll("a")
-        .forEach(link => {
-
-          link.addEventListener(
-            "click",
-            () => {
-
-              setMenu(false);
-
-            }
-          );
-
-        });
-
-      /*
-        NEW:
-        CLOSE MOBILE MENU WHEN USER
-        TAPS ANYWHERE OUTSIDE IT
-      */
-
-      document.addEventListener(
-        "click",
-        event => {
-
-          const menuIsOpen =
-            menuToggle.getAttribute(
-              "aria-expanded"
-            ) === "true";
-
-          if (
-            menuIsOpen &&
-            !nav.contains(event.target) &&
-            !menuToggle.contains(event.target)
-          ) {
-
-            setMenu(false);
-
-          }
-
-        }
-      );
-
-      function showStep(stepNumber) {
-
-        currentStep =
-          Math.min(
-            Math.max(
-              stepNumber,
-              1
-            ),
-            steps.length
-          );
-
-        steps.forEach(step => {
-
-          const stepValue =
-            Number(
-              step.dataset.step
+          const packageSelect =
+            document.getElementById(
+              "package"
             );
 
-          step.classList.toggle(
-            "active",
-            stepValue === currentStep
+          if (packageSelect) {
+
+            packageSelect.value =
+              packageName;
+
+          }
+
+        };
+
+      /* =========================
+         DISCLOSURE MODAL
+      ========================== */
+
+      window.openDisclosure =
+        function() {
+
+          if (!modal) {
+            return;
+          }
+
+          previouslyFocusedElement =
+            document.activeElement;
+
+          modal.classList.add("open");
+
+          modal.setAttribute(
+            "aria-hidden",
+            "false"
           );
 
-        });
+          document.body.classList.add(
+            "modal-open"
+          );
 
-        const progress =
-          (
-            currentStep /
-            steps.length
-          ) * 100;
+          if (modalCloseButton) {
 
-        progressFill.style.width =
-          `${progress}%`;
-
-      }
-
-      function openModal(
-        packageName = ""
-      ) {
-
-        lastFocusedElement =
-          document.activeElement;
-
-        modal.classList.add(
-          "active"
-        );
-
-        modal.setAttribute(
-          "aria-hidden",
-          "false"
-        );
-
-        document.body.classList.add(
-          "modal-open"
-        );
-
-        if (packageName) {
-
-          selectedPackage.value =
-            packageName;
-
-          const matchingRadio =
-            packageChoiceRadios.find(
-              radio =>
-                radio.value === packageName
+            setTimeout(
+              () => modalCloseButton.focus(),
+              0
             );
 
-          if (matchingRadio) {
-            matchingRadio.checked = true;
           }
 
-          showStep(3);
+        };
 
-        } else {
+      window.closeDisclosure =
+        function() {
 
-          showStep(1);
-
-        }
-
-        setTimeout(
-          () => {
-            modalClose.focus();
-          },
-          0
-        );
-
-      }
-
-      function closeModal() {
-
-        modal.classList.remove(
-          "active"
-        );
-
-        modal.setAttribute(
-          "aria-hidden",
-          "true"
-        );
-
-        document.body.classList.remove(
-          "modal-open"
-        );
-
-        if (lastFocusedElement) {
-          lastFocusedElement.focus();
-        }
-
-      }
-
-      openButtons.forEach(button => {
-
-        button.addEventListener(
-          "click",
-          () => {
-            openModal();
+          if (!modal) {
+            return;
           }
-        );
 
-      });
+          modal.classList.remove("open");
 
-      packageButtons.forEach(button => {
+          modal.setAttribute(
+            "aria-hidden",
+            "true"
+          );
 
-        button.addEventListener(
-          "click",
-          () => {
-
-            const packageName =
-              button.dataset.package || "";
-
-            openModal(packageName);
-
-          }
-        );
-
-      });
-
-      modalClose.addEventListener(
-        "click",
-        closeModal
-      );
-
-      modal.addEventListener(
-        "click",
-        event => {
+          document.body.classList.remove(
+            "modal-open"
+          );
 
           if (
-            event.target === modal
+            previouslyFocusedElement &&
+            typeof previouslyFocusedElement.focus === "function"
           ) {
-            closeModal();
+
+            previouslyFocusedElement.focus();
+
           }
 
-        }
-      );
+        };
+
+      window.acknowledgeDisclosure =
+        function() {
+
+          if (disclosureCheckbox) {
+
+            disclosureCheckbox.checked =
+              true;
+
+          }
+
+          window.closeDisclosure();
+
+        };
 
       document.addEventListener(
         "keydown",
-        event => {
+        function(event) {
 
           if (
             event.key === "Escape" &&
-            modal.classList.contains(
-              "active"
-            )
+            modal &&
+            modal.classList.contains("open")
           ) {
-            closeModal();
+
+            window.closeDisclosure();
+
           }
 
         }
       );
 
-      document
-        .querySelectorAll(
-          "[data-next]"
-        )
-        .forEach(button => {
+      if (modal) {
 
-          button.addEventListener(
-            "click",
-            () => {
+        modal.addEventListener(
+          "click",
+          function(event) {
 
-              if (currentStep === 1) {
+            if (event.target === modal) {
 
-                const focusChoice =
-                  form.querySelector(
-                    'input[name="focus"]:checked'
-                  );
+              window.closeDisclosure();
 
-                const status =
-                  document.getElementById(
-                    "step1-status"
-                  );
+            }
 
-                if (!focusChoice) {
+          }
+        );
 
-                  status.textContent =
-                    "Choose one option to continue.";
+      }
 
-                  return;
+      /* =========================
+         SUBMISSION ID
+      ========================== */
 
-                }
+      function createSubmissionId() {
 
-                status.textContent = "";
+        if (
+          window.crypto &&
+          typeof window.crypto.randomUUID === "function"
+        ) {
 
-              }
+          return window.crypto.randomUUID();
 
-              if (currentStep === 2) {
+        }
 
-                const packageChoice =
-                  form.querySelector(
-                    'input[name="package-choice"]:checked'
-                  );
+        return (
+          "SHS-" +
+          Date.now().toString(36) +
+          "-" +
+          Math.random()
+            .toString(36)
+            .slice(2,10)
+        ).toUpperCase();
 
-                const status =
-                  document.getElementById(
-                    "step2-status"
-                  );
+      }
 
-                if (!packageChoice) {
+      /* =========================
+         FORM RECORDKEEPING
+      ========================== */
 
-                  status.textContent =
-                    "Choose a package or select “I'm not sure yet.”";
+      if (requestForm) {
 
-                  return;
+        requestForm.addEventListener(
+          "submit",
+          function(event) {
 
-                }
-
-                status.textContent = "";
-
-                selectedPackage.value =
-                  packageChoice.value;
-
-              }
-
-              showStep(
-                Number(
-                  button.dataset.next
-                )
+            const submissionId =
+              document.getElementById(
+                "submission-id"
               );
 
-            }
-          );
-
-        });
-
-      document
-        .querySelectorAll(
-          "[data-back]"
-        )
-        .forEach(button => {
-
-          button.addEventListener(
-            "click",
-            () => {
-
-              showStep(
-                Number(
-                  button.dataset.back
-                )
+            const timestamp =
+              document.getElementById(
+                "acceptance-timestamp"
               );
 
-            }
-          );
+            const pageUrl =
+              document.getElementById(
+                "page-url"
+              );
 
-        });
+            if (submissionId) {
 
-      packageChoiceRadios.forEach(
-        radio => {
-
-          radio.addEventListener(
-            "change",
-            () => {
-
-              selectedPackage.value =
-                radio.value;
+              submissionId.value =
+                createSubmissionId();
 
             }
-          );
 
-        }
-      );
+            if (timestamp) {
 
-      form.addEventListener(
-        "submit",
-        event => {
+              timestamp.value =
+                new Date().toISOString();
 
-          const finalPackageChoice =
-            form.querySelector(
-              'input[name="package-choice"]:checked'
-            );
+            }
 
-          if (finalPackageChoice) {
+            if (pageUrl) {
 
-            selectedPackage.value =
-              finalPackageChoice.value;
+              pageUrl.value =
+                window.location.href;
 
-          }
+            }
 
-          if (!selectedPackage.value) {
+            /*
+              Browser validation should already
+              stop submission if a required
+              checkbox or field is incomplete.
 
-            event.preventDefault();
+              This extra check makes the behavior
+              explicit.
+            */
 
-            document.getElementById(
-              "step2-status"
-            ).textContent =
-              "Choose a package or select “I'm not sure yet.”";
+            if (!requestForm.checkValidity()) {
 
-            showStep(2);
+              event.preventDefault();
 
-            return;
+              requestForm.reportValidity();
 
-          }
+              return;
 
-          if (!form.checkValidity()) {
-
-            event.preventDefault();
-
-            form.reportValidity();
+            }
 
           }
+        );
 
-        }
-      );
+      }
+
+      /*
+        Keep version strings available
+        in JavaScript for easy future
+        maintenance.
+      */
+
+      window.SHS_FORM_VERSION =
+        FORM_VERSION;
+
+      window.SHS_DISCLOSURE_VERSION =
+        DISCLOSURE_VERSION;
 
     })();
 
   </script>
 
 </body>
+
 </html>
