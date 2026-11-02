@@ -1266,6 +1266,56 @@
       margin-top: 24px;
     }
 
+    /* STATUS MODAL STYLES */
+    .status-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2600;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(4, 16, 34, 0.82);
+      backdrop-filter: blur(8px);
+    }
+
+    .status-modal[hidden] {
+      display: none;
+    }
+
+    .status-modal-card {
+      width: min(100%, 520px);
+      padding: 36px 30px;
+      border-radius: var(--radius-large);
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .status-icon-wrap {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      color: #d97706;
+      background: #fef3c7;
+      font-size: 1.8rem;
+    }
+
+    .status-modal-card h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.6rem;
+    }
+
+    .status-modal-card p {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     @media (max-width: 980px) {
 
       .hero-grid {
@@ -2190,8 +2240,6 @@
 
           <form
             id="security-form"
-            action="https://api.web3forms.com/submit"
-            method="POST"
           >
 
             <input
@@ -2997,6 +3045,42 @@
 
   </div>
 
+  <!-- STATUS MODAL (Applications Closed Notice) -->
+  <div
+    class="status-modal"
+    id="status-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="status-modal-title"
+    hidden
+  >
+
+    <div class="status-modal-card">
+
+      <div class="status-icon-wrap" aria-hidden="true">
+        ⓘ
+      </div>
+
+      <h2 id="status-modal-title">
+        Applications Currently Closed
+      </h2>
+
+      <p>
+        We are not accepting new security applications at this time due to high local volume. Please check back with us soon as provider slots open back up!
+      </p>
+
+      <button
+        class="btn btn-primary btn-full"
+        id="status-modal-close"
+        type="button"
+      >
+        Got It
+      </button>
+
+    </div>
+
+  </div>
+
   <script>
 
     (() => {
@@ -3044,6 +3128,12 @@
 
       const providerModalDone =
         document.getElementById("provider-modal-done");
+
+      const statusModal =
+        document.getElementById("status-modal");
+
+      const statusModalClose =
+        document.getElementById("status-modal-close");
 
       let lastFocusedElement = null;
 
@@ -3412,6 +3502,27 @@
           }
         );
 
+      function showStatusModal() {
+        if (!statusModal) return;
+        statusModal.hidden = false;
+        document.body.classList.add("modal-open");
+        statusModalClose?.focus();
+      }
+
+      function hideStatusModal() {
+        if (!statusModal) return;
+        statusModal.hidden = true;
+        document.body.classList.remove("modal-open");
+      }
+
+      statusModalClose?.addEventListener("click", hideStatusModal);
+
+      statusModal?.addEventListener("click", event => {
+        if (event.target === statusModal) {
+          hideStatusModal();
+        }
+      });
+
       if (
         mobileCta &&
         "IntersectionObserver" in window
@@ -3519,76 +3630,14 @@
           "submit",
           event => {
 
-            if (!form.checkValidity()) {
+            event.preventDefault();
 
-              event.preventDefault();
+            if (!form.checkValidity()) {
               form.reportValidity();
               return;
-
             }
 
-            const submissionId =
-              document.getElementById(
-                "submission-id"
-              );
-
-            const submissionTimestamp =
-              document.getElementById(
-                "submission-timestamp"
-              );
-
-            const submissionUrl =
-              document.getElementById(
-                "submission-url"
-              );
-
-            let idValue =
-              "SHS-";
-
-            if (
-              window.crypto &&
-              typeof window.crypto.randomUUID ===
-                "function"
-            ) {
-
-              idValue +=
-                window.crypto.randomUUID();
-
-            } else {
-
-              idValue +=
-                Date.now().toString(36) +
-                "-" +
-                Math.random()
-                  .toString(36)
-                  .slice(2, 12);
-
-            }
-
-            if (submissionId) {
-              submissionId.value =
-                idValue;
-            }
-
-            if (submissionTimestamp) {
-              submissionTimestamp.value =
-                new Date().toISOString();
-            }
-
-            if (submissionUrl) {
-              submissionUrl.value =
-                window.location.href;
-            }
-
-            if (submitButton) {
-
-              submitButton.disabled =
-                true;
-
-              submitButton.textContent =
-                "Submitting...";
-
-            }
+            showStatusModal();
 
           }
         );
