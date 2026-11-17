@@ -332,7 +332,7 @@ header {
     color: #344b64;
 }
 
-/* CONTENT */
+/* MAIN CONTENT */
 
 .section {
     padding: 65px 0;
@@ -387,6 +387,13 @@ header {
     margin-bottom: 22px;
 }
 
+/* INTERNET PLAN CARDS */
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+}
+
 .featured {
     background: #102d52;
     border-color: #102d52;
@@ -397,27 +404,67 @@ header {
     color: #d5e5f8;
 }
 
+.price-row {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.featured .price-row {
+    border-color: #ffffff30;
+}
+
 .price {
-    font-size: 58px;
+    font-size: 52px;
     line-height: 1.2;
     letter-spacing: -3px;
     font-weight: 800;
-    margin: 10px 0;
 }
 
 .price small {
     font-size: 16px;
     letter-spacing: 0;
+    font-weight: 600;
+}
+
+.price-description {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.featured .price-description {
+    color: #d5e5f8;
 }
 
 .reward {
     background: #e8f3ff;
     color: #0959a9;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px;
-    border-radius: 7px;
-    margin: 16px 0;
+    padding: 20px;
+    border-radius: 9px;
+    margin: 24px 0;
+}
+
+.reward-amount {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+}
+
+.reward-description {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.plan-card .button {
+    width: 100%;
+    margin-top: auto;
+}
+
+.plan-disclaimer {
+    margin-top: 22px;
+    margin-bottom: 0;
 }
 
 /* CUSTOMER FORM */
@@ -521,6 +568,10 @@ summary:focus-visible {
     font-weight: 600;
 }
 
+.form-status:empty {
+    display: none;
+}
+
 .legal-disclosure {
     border-top: 1px solid var(--border);
     margin-top: 20px;
@@ -531,7 +582,7 @@ summary:focus-visible {
 }
 
 .legal-disclosure p {
-    margin-bottom: 12px;
+    margin: 0;
 }
 
 /* POP-UP WINDOWS */
@@ -626,7 +677,7 @@ dialog::backdrop {
 footer {
     background: var(--navy);
     color: #dce9f8;
-    padding: 40px 0;
+    padding: 35px 0;
 }
 
 .footer-brand {
@@ -645,6 +696,13 @@ footer {
 footer .fine {
     color: #afc3dc;
     max-width: 760px;
+    margin-bottom: 0;
+}
+
+.footer-ownership {
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 0;
 }
 
 .footer-links {
@@ -754,7 +812,7 @@ footer .fine {
     }
 
     .price {
-        font-size: 48px;
+        font-size: 46px;
     }
 
     .identity-bar {
@@ -768,9 +826,18 @@ footer .fine {
     .consent-box {
         padding: 14px;
     }
+
+    .reward-amount {
+        font-size: 26px;
+    }
+
+    .footer-links {
+        gap: 12px 18px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -780,6 +847,8 @@ footer .fine {
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
 
@@ -1116,7 +1185,9 @@ footer .fine {
 
             <div class="grid-two">
 
-                <article class="card">
+                <!-- 1 GIG PLAN -->
+
+                <article class="card plan-card">
 
                     <h3>
 
@@ -1124,44 +1195,68 @@ footer .fine {
 
                     </h3>
 
-                    <p>
+                    <div class="price-row">
 
-                        Example monthly pricing
+                        <div class="price">
 
-                    </p>
+                            $40<small>/month*</small>
 
-                    <div class="price">
+                        </div>
 
-                        $40<small>/month*</small>
+                        <div class="price-description">
+
+                            With qualifying modem
+
+                        </div>
+
+                    </div>
+
+                    <div class="price-row">
+
+                        <div class="price">
+
+                            $50<small>/month*</small>
+
+                        </div>
+
+                        <div class="price-description">
+
+                            Without qualifying modem
+
+                        </div>
 
                     </div>
 
                     <div class="reward">
 
-                        Explore current gift card offers
+                        <div class="reward-amount">
+
+                            $50 Gift Card
+
+                        </div>
+
+                        <div class="reward-description">
+
+                            With qualifying service*
+
+                        </div>
 
                     </div>
 
-                    <p class="fine">
-
-                        Example pricing includes a qualifying
-                        modem. Equipment, availability and
-                        promotional eligibility may affect
-                        your final offer.
-
-                    </p>
-
                     <a class="button select-plan"
                        href="#request"
-                       data-plan="1 Gig">
+                       data-plan="1 Gig"
+                       aria-label="Select 1 Gig Fiber Internet">
 
-                        Request 1 Gig Details
+                        Select This Plan
 
                     </a>
 
                 </article>
 
-                <article class="card featured">
+                <!-- 2 GIG PLAN -->
+
+                <article class="card plan-card featured">
 
                     <h3>
 
@@ -1169,38 +1264,60 @@ footer .fine {
 
                     </h3>
 
-                    <p>
+                    <div class="price-row">
 
-                        Example monthly pricing
+                        <div class="price">
 
-                    </p>
+                            $50<small>/month*</small>
 
-                    <div class="price">
+                        </div>
 
-                        $50<small>/month*</small>
+                        <div class="price-description">
+
+                            With qualifying modem
+
+                        </div>
+
+                    </div>
+
+                    <div class="price-row">
+
+                        <div class="price">
+
+                            $70<small>/month*</small>
+
+                        </div>
+
+                        <div class="price-description">
+
+                            Without qualifying modem
+
+                        </div>
 
                     </div>
 
                     <div class="reward">
 
-                        Explore current gift card offers
+                        <div class="reward-amount">
+
+                            $200 Gift Card
+
+                        </div>
+
+                        <div class="reward-description">
+
+                            With qualifying service*
+
+                        </div>
 
                     </div>
 
-                    <p class="fine">
-
-                        Example pricing includes a qualifying
-                        modem. Equipment, availability and
-                        promotional eligibility may affect
-                        your final offer.
-
-                    </p>
-
                     <a class="button select-plan"
                        href="#request"
-                       data-plan="2 Gig">
+                       data-plan="2 Gig"
+                       aria-label="Select 2 Gig Fiber Internet">
 
-                        Request 2 Gig Details
+                        Select This Plan
 
                     </a>
 
@@ -1208,17 +1325,16 @@ footer .fine {
 
             </div>
 
-            <p class="fine"
-               style="margin-top:20px;">
+            <p class="fine plan-disclaimer">
 
-                *Example prices require a qualifying modem.
-                Availability, speeds, equipment, taxes, fees
-                and promotional eligibility vary by service
-                address and provider. Gift card promotions
-                may include continued-service, eligibility
-                and redemption requirements. Final pricing
-                and promotional terms are provided before
-                enrollment.
+                *Advertised pricing and promotions are subject
+                to service availability, address eligibility,
+                equipment requirements and applicable terms.
+                Taxes and fees may apply. Gift cards are
+                subject to qualifying service, applicable
+                continued-service periods and redemption
+                requirements. Final terms will be confirmed
+                before enrollment.
 
             </p>
 
@@ -1249,23 +1365,9 @@ footer .fine {
 
                 <p>
 
-                    Request information about internet
-                    availability or express interest
-                    in future home security options.
-
-                </p>
-
-                <p>
-
-                    There is no obligation to purchase.
-
-                </p>
-
-                <p class="fine">
-
-                    This form is an independent referral
-                    inquiry, not a service order or
-                    purchase agreement.
+                    Submit your information to explore
+                    internet availability or future
+                    home security options at your address.
 
                 </p>
 
@@ -1352,22 +1454,19 @@ footer .fine {
 
                     </label>
 
+                    <!-- MANUAL STATE ENTRY -->
+
                     <label>
 
                         State *
 
-                        <select name="state"
-                                required>
-
-                            <option value="">
-                                Select state
-                            </option>
-
-                            <option value="Nebraska">
-                                Nebraska
-                            </option>
-
-                        </select>
+                        <input type="text"
+                               name="state"
+                               autocomplete="address-level1"
+                               autocapitalize="words"
+                               maxlength="50"
+                               placeholder="Enter state"
+                               required>
 
                     </label>
 
@@ -1545,9 +1644,9 @@ footer .fine {
                            target="_blank"
                            rel="noopener">
 
-                            Privacy Policy.
+                            Privacy Policy
 
-                        </a>
+                        </a>.
 
                         This consent is limited to my
                         inquiry and does not authorize
@@ -1581,7 +1680,7 @@ footer .fine {
 
                 </div>
 
-                <!-- REFERRAL AND LEGAL DISCLOSURES -->
+                <!-- CONCISE LEGAL DISCLOSURE -->
 
                 <div class="legal-disclosure">
 
@@ -1589,42 +1688,13 @@ footer .fine {
 
                         Smart Home Security & Internet is
                         an independent referral service
-                        operated by Murrays Empire LLC
-                        and may receive compensation for
-                        qualifying referrals.
-
-                    </p>
-
-                    <p>
-
-                        Service availability, pricing,
-                        promotions, equipment, installation
-                        and billing are subject to the
-                        applicable service provider's terms.
-
-                    </p>
-
-                    <p>
-
-                        Submitting this inquiry does not
-                        create a purchase, service agreement
-                        or payment obligation. You may
-                        withdraw permission for further
-                        contact by contacting us.
-
-                    </p>
-
-                    <p>
-
-                        For information about how your
-                        inquiry information is handled,
-                        please review our
-
-                        <a href="privacy-policy.html">
-
-                            Privacy Policy.
-
-                        </a>
+                        operated by Murrays Empire LLC and
+                        may receive compensation for qualifying
+                        referrals. Service availability,
+                        pricing and promotions are subject
+                        to applicable terms. Submitting an
+                        inquiry does not create a purchase,
+                        service agreement or payment obligation.
 
                     </p>
 
@@ -1645,7 +1715,7 @@ footer .fine {
 
 </main>
 
-<!-- FOOTER -->
+<!-- CLEAN FOOTER -->
 
 <footer>
 
@@ -1659,24 +1729,13 @@ footer .fine {
 
         </div>
 
-        <p style="margin-top:18px;">
+        <p class="footer-ownership">
 
             Operated by Murrays Empire LLC
 
             <br>
 
             Omaha, Nebraska
-
-        </p>
-
-        <p class="fine">
-
-            Independent marketing and referral website.
-            Murrays Empire LLC may receive compensation
-            for qualifying referrals. Internet service,
-            home security installation, monitoring and
-            billing are handled by participating
-            third-party providers.
 
         </p>
 
@@ -1881,17 +1940,85 @@ footer .fine {
 
             <summary>
 
-                When would I receive a promotional gift card?
+                Do you offer internet in other states?
 
             </summary>
 
             <p>
 
-                Gift card timing depends on the
-                applicable promotion, eligibility
-                requirements, service period and
-                redemption instructions. These details
-                can be reviewed before enrollment.
+                Internet options may be available
+                outside Nebraska. Submit your service
+                address and state so we can review
+                available options in your area.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                How much does internet cost?
+
+            </summary>
+
+            <p>
+
+                The advertised 1 Gig plan is $40 per
+                month with a qualifying modem or $50
+                per month without one.
+
+                The advertised 2 Gig plan is $50 per
+                month with a qualifying modem or $70
+                per month without one.
+
+                Availability and final pricing depend
+                on your address, equipment and applicable
+                service terms.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                What gift card promotions are available?
+
+            </summary>
+
+            <p>
+
+                The advertised 1 Gig promotion includes
+                a $50 gift card with qualifying service.
+
+                The advertised 2 Gig promotion includes
+                a $200 gift card with qualifying service.
+
+                Promotional eligibility, service-period
+                requirements and redemption terms apply.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                When would I receive my gift card?
+
+            </summary>
+
+            <p>
+
+                Gift card timing depends on the applicable
+                promotion, eligibility requirements,
+                qualifying service period and redemption
+                instructions. These terms will be
+                confirmed before enrollment.
 
             </p>
 
@@ -1992,9 +2119,9 @@ footer .fine {
 
                 <a href="privacy-policy.html">
 
-                    Privacy Policy.
+                    Privacy Policy
 
-                </a>
+                </a>.
 
             </p>
 
@@ -2015,9 +2142,9 @@ footer .fine {
 
                 <a href="contact.html">
 
-                    Contact page.
+                    Contact page
 
-                </a>
+                </a>.
 
             </p>
 
@@ -2314,7 +2441,7 @@ customerConsent.addEventListener(
     }
 );
 
-// SERVICE SELECTION
+// AUTOMATIC PLAN SELECTION
 
 document
     .querySelectorAll(".select-plan")
