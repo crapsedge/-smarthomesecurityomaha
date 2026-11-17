@@ -13,6 +13,7 @@
 <meta name="theme-color" content="#08182b">
 
 <style>
+
 :root {
     --navy: #08182b;
     --blue: #0764db;
@@ -43,11 +44,16 @@ a {
     color: inherit;
 }
 
-button, input, select {
+button,
+input,
+select {
     font: inherit;
 }
 
-button, a, input, select {
+button,
+a,
+input,
+select {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -64,14 +70,16 @@ button {
     margin: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.15;
     letter-spacing: -0.035em;
     margin: 0 0 18px;
 }
 
 h1 {
-    font-size: clamp(40px, 5.5vw, 76px);
+    font-size: clamp(40px, 5vw, 72px);
 }
 
 h2 {
@@ -122,7 +130,7 @@ p {
 }
 
 .button:disabled {
-    opacity: 0.6;
+    opacity: 0.45;
     cursor: not-allowed;
 }
 
@@ -198,7 +206,7 @@ header {
 .mobile-menu summary {
     cursor: pointer;
     list-style: none;
-    padding: 9px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -254,40 +262,39 @@ header {
 /* HERO */
 
 .hero {
-    position: relative;
-    isolation: isolate;
     background: var(--navy);
     color: white;
     overflow: hidden;
 }
 
-.hero-art {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-image: url("hero.webp");
-    background-size: cover;
-    background-position: center;
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: auto;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(
-        90deg,
-        #08182b 0%,
-        rgba(8,24,43,.98) 25%,
-        rgba(8,24,43,.85) 43%,
-        rgba(8,24,43,.30) 75%,
-        rgba(8,24,43,.10) 100%
-    );
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .hero-content {
-    padding: 100px 0;
-    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 65px 40px;
 }
 
 .hero h1 span {
@@ -300,7 +307,7 @@ header {
 
 .hero p {
     color: #dce9f8;
-    max-width: 490px;
+    max-width: 520px;
     font-size: 18px;
 }
 
@@ -308,12 +315,13 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 28px 0 22px;
+    margin: 20px 0 22px;
 }
 
 .hero .hero-note {
     font-size: 14px;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .identity-bar {
@@ -412,10 +420,6 @@ header {
     margin: 16px 0;
 }
 
-.about-content {
-    max-width: 800px;
-}
-
 /* CUSTOMER FORM */
 
 .form-layout {
@@ -460,29 +464,55 @@ select {
 }
 
 input:focus,
-select:focus {
+select:focus,
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
     outline: 2px solid var(--blue);
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
-.check {
+.consent-box {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    font-weight: 400;
-    margin: 18px 0;
-    font-size: 14px;
+    gap: 12px;
+    background: #f5f8fc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 17px;
+    margin: 25px 0 16px;
 }
 
-.check input {
-    width: 19px;
-    height: 19px;
+.consent-box input {
+    width: 21px;
+    height: 21px;
+    margin: 4px 0 0;
+    accent-color: var(--blue);
     flex-shrink: 0;
-    margin-top: 4px;
+    cursor: pointer;
+}
+
+.consent-box label {
+    font-size: 13px;
+    line-height: 1.7;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.consent-box a {
+    color: #0757b3;
+    font-weight: 600;
 }
 
 .form-submit {
     width: 100%;
+}
+
+.consent-reminder {
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    margin: 9px 0 16px;
 }
 
 .form-status {
@@ -491,15 +521,20 @@ select:focus {
     font-weight: 600;
 }
 
-.notice {
-    background: #edf5ff;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-bottom: 18px;
+.legal-disclosure {
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding-top: 16px;
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--muted);
 }
 
-/* FAQ */
+.legal-disclosure p {
+    margin-bottom: 12px;
+}
+
+/* POP-UP WINDOWS */
 
 dialog {
     width: min(680px, calc(100% - 32px));
@@ -518,7 +553,7 @@ dialog::backdrop {
     background: #08182b99;
 }
 
-.faq-heading {
+.dialog-heading {
     position: sticky;
     top: 0;
     background: white;
@@ -528,14 +563,15 @@ dialog::backdrop {
     gap: 12px;
     padding: 20px;
     border-bottom: 1px solid var(--border);
+    z-index: 1;
 }
 
-.faq-heading h2 {
+.dialog-heading h2 {
     font-size: 22px;
     margin: 0;
 }
 
-.faq-close {
+.dialog-close {
     border: 1px solid var(--border);
     background: var(--light);
     padding: 9px 13px;
@@ -543,23 +579,46 @@ dialog::backdrop {
     color: var(--text);
 }
 
-.faq-content {
-    padding: 12px 24px 24px;
+.dialog-content {
+    padding: 24px;
 }
 
-.faq-content details {
+.dialog-content details {
     padding: 18px 0;
     border-bottom: 1px solid var(--border);
 }
 
-.faq-content summary {
+.dialog-content details:last-child {
+    border-bottom: 0;
+}
+
+.dialog-content summary {
     font-weight: 700;
     cursor: pointer;
 }
 
-.faq-content details p {
+.dialog-content details p {
     color: var(--muted);
     margin: 14px 0 0;
+}
+
+.about-dialog-content h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-dialog-content p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.about-ownership {
+    padding: 18px;
+    border-radius: 9px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    font-size: 14px;
+    margin-top: 25px;
 }
 
 /* FOOTER */
@@ -639,22 +698,24 @@ footer .fine {
         display: block;
     }
 
-    .hero-art {
-        height: 285px;
-        background-position: center;
+    .hero-layout {
+        display: flex;
+        flex-direction: column;
     }
 
-    .hero::before {
-        background: linear-gradient(
-            180deg,
-            rgba(8,24,43,0) 0,
-            rgba(8,24,43,.05) 130px,
-            #08182b 285px
-        );
+    .hero-image {
+        padding-top: 12px;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .hero-content {
-        padding: 240px 0 35px;
+        padding: 30px 20px 35px;
     }
 
     .hero h1 {
@@ -700,8 +761,12 @@ footer .fine {
         font-size: 13px;
     }
 
-    .faq-content {
-        padding: 12px 18px 20px;
+    .dialog-content {
+        padding: 18px;
+    }
+
+    .consent-box {
+        padding: 14px;
     }
 }
 
@@ -717,45 +782,98 @@ footer .fine {
 <body>
 
 <header>
-    <nav class="container navigation" aria-label="Main navigation">
+
+    <nav class="container navigation"
+         aria-label="Main navigation">
 
         <a class="wordmark" href="#home">
+
             SMART HOME
+
             <small>SECURITY & INTERNET</small>
+
         </a>
 
         <div class="desktop-nav">
-            <a href="#security">Home Security</a>
-            <a href="#plans">Internet</a>
-            <a href="#about">About Us</a>
-            <button class="nav-button faq-trigger" type="button">
-                FAQ
+
+            <a href="#security">
+                Home Security
+            </a>
+
+            <a href="#plans">
+                Internet
+            </a>
+
+            <button class="nav-button dialog-trigger"
+                    data-dialog="aboutDialog"
+                    type="button">
+
+                About Us
+
             </button>
+
+            <button class="nav-button dialog-trigger"
+                    data-dialog="faqDialog"
+                    type="button">
+
+                FAQ
+
+            </button>
+
         </div>
 
-        <details class="mobile-menu" id="mobileMenu">
+        <details class="mobile-menu"
+                 id="mobileMenu">
+
             <summary aria-label="Navigation menu">
-                <span class="menu-icon">
+
+                <span class="menu-icon"
+                      aria-hidden="true">
+
                     <span></span>
                     <span></span>
                     <span></span>
+
                 </span>
+
             </summary>
 
             <div class="menu-panel">
-                <a href="#security">Home Security</a>
-                <a href="#plans">Internet</a>
-                <a href="#about">About Us</a>
 
-                <button class="faq-trigger" type="button">
-                    FAQ
+                <a href="#security">
+                    Home Security
+                </a>
+
+                <a href="#plans">
+                    Internet
+                </a>
+
+                <button class="dialog-trigger"
+                        data-dialog="aboutDialog"
+                        type="button">
+
+                    About Us
+
                 </button>
 
-                <a href="contact.html">Contact</a>
+                <button class="dialog-trigger"
+                        data-dialog="faqDialog"
+                        type="button">
+
+                    FAQ
+
+                </button>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
+
         </details>
 
     </nav>
+
 </header>
 
 <main id="home">
@@ -764,41 +882,64 @@ footer .fine {
 
     <section class="hero">
 
-        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-layout">
 
-        <div class="container">
+            <div class="hero-image">
+
+                <img src="hero.webp"
+                     alt="Modern home with security cameras and a family using connected technology."
+                     fetchpriority="high">
+
+            </div>
 
             <div class="hero-content">
 
                 <div class="eyebrow">
+
                     Home Security & Internet
+
                 </div>
 
                 <h1>
+
                     Feel at home.<br>
+
                     <span>Stay connected.</span>
+
                 </h1>
 
                 <p>
-                    Helping you explore home security and internet
-                    options that fit your household.
+
+                    Helping you explore home security
+                    and internet options that fit
+                    your household.
+
                 </p>
 
                 <div class="hero-actions">
 
-                    <a class="button" href="#plans">
+                    <a class="button"
+                       href="#plans">
+
                         View Internet Plans
+
                     </a>
 
-                    <a class="button secondary" href="#security">
+                    <a class="button secondary"
+                       href="#security">
+
                         Explore Home Security
+
                     </a>
 
                 </div>
 
                 <p class="hero-note">
+
                     Internet inquiries are currently available.
-                    Home security enrollment is temporarily unavailable.
+                    Home security enrollment is temporarily
+                    unavailable.
+
                 </p>
 
             </div>
@@ -807,36 +948,52 @@ footer .fine {
 
     </section>
 
+    <!-- BUSINESS IDENTITY -->
+
     <div class="identity-bar">
+
         <div class="container">
+
             Smart Home Security & Internet is an independent
             referral website operated by Murrays Empire LLC.
+
         </div>
+
     </div>
 
     <!-- HOME SECURITY -->
 
-    <section class="section soft" id="security">
+    <section class="section soft"
+             id="security">
 
         <div class="container">
 
             <div class="section-heading">
 
                 <div class="eyebrow">
+
                     Home Security
+
                 </div>
 
                 <h2>
+
                     Peace of mind starts at home.
+
                 </h2>
 
                 <p>
-                    Explore connected home technology designed
-                    around everyday comfort and convenience.
+
+                    Explore connected home technology
+                    designed around everyday comfort
+                    and convenience.
+
                 </p>
 
                 <span class="availability">
+
                     Enrollment temporarily unavailable
+
                 </span>
 
             </div>
@@ -845,55 +1002,81 @@ footer .fine {
 
                 <article class="card">
 
-                    <div class="card-number">01</div>
+                    <div class="card-number">
+                        01
+                    </div>
 
-                    <h3>Video Doorbells</h3>
+                    <h3>
+                        Video Doorbells
+                    </h3>
 
                     <p>
-                        Stay connected to activity at your front door
-                        with compatible video doorbell technology.
+
+                        Stay connected to activity at
+                        your front door with compatible
+                        video doorbell technology.
+
                     </p>
 
                 </article>
 
                 <article class="card">
 
-                    <div class="card-number">02</div>
+                    <div class="card-number">
+                        02
+                    </div>
 
-                    <h3>Outdoor Cameras</h3>
+                    <h3>
+                        Outdoor Cameras
+                    </h3>
 
                     <p>
-                        Explore camera options that help you stay
-                        informed about activity around your home.
+
+                        Explore camera options that help
+                        you stay informed about activity
+                        around your home.
+
                     </p>
 
                 </article>
 
                 <article class="card">
 
-                    <div class="card-number">03</div>
+                    <div class="card-number">
+                        03
+                    </div>
 
-                    <h3>Smart Home Security</h3>
+                    <h3>
+                        Smart Home Security
+                    </h3>
 
                     <p>
-                        Discover connected home security options
-                        when enrollment becomes available.
+
+                        Discover connected home security
+                        options when enrollment becomes
+                        available.
+
                     </p>
 
                 </article>
 
             </div>
 
-            <p class="fine" style="margin-top:20px;">
+            <p class="fine"
+               style="margin-top:20px;">
+
                 These are examples of home security technology.
                 Equipment and service options will be confirmed
                 when enrollment resumes.
+
             </p>
 
             <a class="button select-plan"
                href="#request"
                data-plan="Security updates">
+
                 Request Security Updates
+
             </a>
 
         </div>
@@ -902,21 +1085,31 @@ footer .fine {
 
     <!-- INTERNET PLANS -->
 
-    <section class="section" id="plans">
+    <section class="section"
+             id="plans">
 
         <div class="container">
 
             <div class="section-heading">
 
                 <div class="eyebrow">
+
                     High-Speed Internet
+
                 </div>
 
-                <h2>Find your connection.</h2>
+                <h2>
+
+                    Find your connection.
+
+                </h2>
 
                 <p>
-                    Explore fiber internet options for streaming,
-                    working, gaming and everyday connectivity.
+
+                    Explore fiber internet options for
+                    streaming, working, gaming and
+                    everyday connectivity.
+
                 </p>
 
             </div>
@@ -925,71 +1118,107 @@ footer .fine {
 
                 <article class="card">
 
-                    <h3>1 Gig Fiber Internet</h3>
+                    <h3>
 
-                    <p>Example monthly pricing</p>
+                        1 Gig Fiber Internet
+
+                    </h3>
+
+                    <p>
+
+                        Example monthly pricing
+
+                    </p>
 
                     <div class="price">
+
                         $40<small>/month*</small>
+
                     </div>
 
                     <div class="reward">
+
                         Explore current gift card offers
+
                     </div>
 
                     <p class="fine">
-                        Example pricing includes a qualifying modem.
-                        Equipment, availability and promotional
-                        eligibility may affect your final offer.
+
+                        Example pricing includes a qualifying
+                        modem. Equipment, availability and
+                        promotional eligibility may affect
+                        your final offer.
+
                     </p>
 
                     <a class="button select-plan"
                        href="#request"
                        data-plan="1 Gig">
+
                         Request 1 Gig Details
+
                     </a>
 
                 </article>
 
                 <article class="card featured">
 
-                    <h3>2 Gig Fiber Internet</h3>
+                    <h3>
 
-                    <p>Example monthly pricing</p>
+                        2 Gig Fiber Internet
+
+                    </h3>
+
+                    <p>
+
+                        Example monthly pricing
+
+                    </p>
 
                     <div class="price">
+
                         $50<small>/month*</small>
+
                     </div>
 
                     <div class="reward">
+
                         Explore current gift card offers
+
                     </div>
 
                     <p class="fine">
-                        Example pricing includes a qualifying modem.
-                        Equipment, availability and promotional
-                        eligibility may affect your final offer.
+
+                        Example pricing includes a qualifying
+                        modem. Equipment, availability and
+                        promotional eligibility may affect
+                        your final offer.
+
                     </p>
 
                     <a class="button select-plan"
                        href="#request"
                        data-plan="2 Gig">
+
                         Request 2 Gig Details
+
                     </a>
 
                 </article>
 
             </div>
 
-            <p class="fine" style="margin-top:20px;">
+            <p class="fine"
+               style="margin-top:20px;">
 
                 *Example prices require a qualifying modem.
                 Availability, speeds, equipment, taxes, fees
                 and promotional eligibility vary by service
-                address and provider. Gift card promotions may
-                include continued-service, eligibility and
-                redemption requirements. Final pricing and
-                promotional terms are provided before enrollment.
+                address and provider. Gift card promotions
+                may include continued-service, eligibility
+                and redemption requirements. Final pricing
+                and promotional terms are provided before
+                enrollment.
 
             </p>
 
@@ -997,66 +1226,47 @@ footer .fine {
 
     </section>
 
-    <!-- ABOUT US -->
+    <!-- CUSTOMER INQUIRY FORM -->
 
-    <section class="section soft" id="about">
-
-        <div class="container about-content">
-
-            <div class="eyebrow">About Us</div>
-
-            <h2>
-                Here to help you explore your options.
-            </h2>
-
-            <p>
-                Smart Home Security & Internet is operated
-                by Murrays Empire LLC.
-            </p>
-
-            <p>
-                Our mission is to connect households with home
-                security and internet options through independent
-                marketing and referrals.
-            </p>
-
-            <p>
-                We help customers explore available options
-                and connect with participating service providers.
-                Internet service, security installation, monitoring
-                and billing are handled by the applicable providers.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- INQUIRY FORM -->
-
-    <section class="section" id="request">
+    <section class="section soft"
+             id="request">
 
         <div class="container form-layout">
 
             <div>
 
                 <div class="eyebrow">
+
                     Customer Inquiries
+
                 </div>
 
-                <h2>How can we help you?</h2>
+                <h2>
+
+                    How can we help you?
+
+                </h2>
 
                 <p>
-                    Request information about internet availability
-                    or express interest in future home security options.
+
+                    Request information about internet
+                    availability or express interest
+                    in future home security options.
+
                 </p>
 
                 <p>
+
                     There is no obligation to purchase.
+
                 </p>
 
                 <p class="fine">
-                    This form is an independent referral inquiry,
-                    not a service order or purchase agreement.
+
+                    This form is an independent referral
+                    inquiry, not a service order or
+                    purchase agreement.
+
                 </p>
 
             </div>
@@ -1077,6 +1287,20 @@ footer .fine {
                        name="from_name"
                        value="Smart Home Security & Internet">
 
+                <input type="hidden"
+                       name="consent_version"
+                       value="2026-11-17-v1">
+
+                <input type="hidden"
+                       name="consent_timestamp"
+                       id="consentTimestamp"
+                       value="">
+
+                <input type="hidden"
+                       name="consent_statement"
+                       id="consentStatement"
+                       value="">
+
                 <input type="checkbox"
                        name="botcheck"
                        tabindex="-1"
@@ -1084,13 +1308,16 @@ footer .fine {
                        hidden>
 
                 <p class="fine">
-                    Please complete the required fields so we can
-                    respond to your inquiry.
+
+                    Please complete the required fields
+                    so we can respond to your inquiry.
+
                 </p>
 
                 <div class="fields">
 
                     <label class="full">
+
                         Full Name *
 
                         <input type="text"
@@ -1098,9 +1325,11 @@ footer .fine {
                                autocomplete="name"
                                maxlength="120"
                                required>
+
                     </label>
 
                     <label class="full">
+
                         Service Address *
 
                         <input type="text"
@@ -1108,27 +1337,42 @@ footer .fine {
                                autocomplete="street-address"
                                maxlength="190"
                                required>
+
                     </label>
 
                     <label>
+
                         City *
 
                         <input type="text"
                                name="city"
                                autocomplete="address-level2"
+                               maxlength="100"
                                required>
+
                     </label>
 
                     <label>
+
                         State *
 
-                        <select name="state" required>
-                            <option value="">Select state</option>
-                            <option value="Nebraska">Nebraska</option>
+                        <select name="state"
+                                required>
+
+                            <option value="">
+                                Select state
+                            </option>
+
+                            <option value="Nebraska">
+                                Nebraska
+                            </option>
+
                         </select>
+
                     </label>
 
                     <label>
+
                         ZIP Code *
 
                         <input type="text"
@@ -1138,9 +1382,11 @@ footer .fine {
                                pattern="[0-9]{5}"
                                maxlength="5"
                                required>
+
                     </label>
 
                     <label>
+
                         Phone Number *
 
                         <input type="tel"
@@ -1148,18 +1394,23 @@ footer .fine {
                                autocomplete="tel"
                                maxlength="30"
                                required>
+
                     </label>
 
                     <label class="full">
+
                         Email Address *
 
                         <input type="email"
                                name="email"
                                autocomplete="email"
+                               maxlength="254"
                                required>
+
                     </label>
 
                     <label class="full">
+
                         Service Interest *
 
                         <select name="plan"
@@ -1167,57 +1418,82 @@ footer .fine {
                                 required>
 
                             <option value="">
+
                                 Select a service
+
                             </option>
 
                             <option value="Help me choose">
+
                                 Help Me Choose
+
                             </option>
 
                             <option value="1 Gig">
+
                                 1 Gig Fiber Internet
+
                             </option>
 
                             <option value="2 Gig">
+
                                 2 Gig Fiber Internet
+
                             </option>
 
                             <option value="Security updates">
+
                                 Home Security Updates
+
                             </option>
 
                             <option value="Internet and security updates">
+
                                 Internet and Home Security
+
                             </option>
 
                         </select>
+
                     </label>
 
                     <label class="full">
+
                         Preferred Contact Method *
 
-                        <select name="contact_method" required>
+                        <select name="contact_method"
+                                required>
 
                             <option value="">
+
                                 Select contact method
+
                             </option>
 
                             <option value="Email">
+
                                 Email
+
                             </option>
 
                             <option value="Phone call">
+
                                 Phone Call
+
                             </option>
 
                             <option value="Text message">
+
                                 Text Message
+
                             </option>
 
                         </select>
+
                     </label>
 
                     <label class="full">
+
                         Referred By (Optional)
 
                         <input type="text"
@@ -1229,54 +1505,57 @@ footer .fine {
 
                 </div>
 
-                <label class="check">
+                <!-- REQUIRED CUSTOMER CONSENT -->
+
+                <div class="consent-box">
 
                     <input type="checkbox"
-                           name="contact_consent"
-                           value="Yes"
+                           name="customer_consent"
+                           id="customerConsent"
+                           value="Agreed"
                            required>
 
-                    <span>
-                        I am 18 or older and agree to be contacted
-                        by Murrays Empire LLC regarding this inquiry
+                    <label for="customerConsent"
+                           id="consentText">
+
+                        I confirm that I am 18 or older
+                        and authorize Murrays Empire LLC
+                        to contact me regarding my inquiry
                         using my preferred contact method.
-                    </span>
 
-                </label>
+                        When necessary to assist with my
+                        requested internet service, I
+                        authorize my inquiry information
+                        to be shared with relevant service
+                        providers and referral partners.
 
-                <label class="check" id="sharingLabel">
-
-                    <input type="checkbox"
-                           name="referral_consent"
-                           id="sharingConsent"
-                           value="Yes"
-                           required>
-
-                    <span>
-                        I authorize my inquiry information to be
-                        shared with participating referral partners
-                        and the relevant internet provider for the
-                        purpose of reviewing my requested internet
-                        service.
-                    </span>
-
-                </label>
-
-                <label class="check">
-
-                    <input type="checkbox"
-                           name="terms_consent"
-                           value="Yes"
-                           required>
-
-                    <span>
                         I agree to the
-                        <a href="terms.html">Terms of Use</a>
-                        and acknowledge the
-                        <a href="privacy-policy.html">Privacy Policy</a>.
-                    </span>
 
-                </label>
+                        <a href="terms.html"
+                           target="_blank"
+                           rel="noopener">
+
+                            Terms of Use
+
+                        </a>
+
+                        and acknowledge the
+
+                        <a href="privacy-policy.html"
+                           target="_blank"
+                           rel="noopener">
+
+                            Privacy Policy.
+
+                        </a>
+
+                        This consent is limited to my
+                        inquiry and does not authorize
+                        unrelated promotional communications.
+
+                    </label>
+
+                </div>
 
                 <button type="submit"
                         class="button form-submit"
@@ -1287,10 +1566,11 @@ footer .fine {
 
                 </button>
 
-                <p class="fine" style="margin-top:15px;">
+                <p class="consent-reminder"
+                   id="consentReminder">
 
-                    Your inquiry does not create a purchase,
-                    service agreement or payment obligation.
+                    Please review and accept the consent
+                    statement to continue.
 
                 </p>
 
@@ -1298,10 +1578,63 @@ footer .fine {
                      class="form-status"
                      role="status"
                      aria-live="polite">
+
+                </div>
+
+                <!-- REFERRAL AND LEGAL DISCLOSURES -->
+
+                <div class="legal-disclosure">
+
+                    <p>
+
+                        Smart Home Security & Internet is
+                        an independent referral service
+                        operated by Murrays Empire LLC
+                        and may receive compensation for
+                        qualifying referrals.
+
+                    </p>
+
+                    <p>
+
+                        Service availability, pricing,
+                        promotions, equipment, installation
+                        and billing are subject to the
+                        applicable service provider's terms.
+
+                    </p>
+
+                    <p>
+
+                        Submitting this inquiry does not
+                        create a purchase, service agreement
+                        or payment obligation. You may
+                        withdraw permission for further
+                        contact by contacting us.
+
+                    </p>
+
+                    <p>
+
+                        For information about how your
+                        inquiry information is handled,
+                        please review our
+
+                        <a href="privacy-policy.html">
+
+                            Privacy Policy.
+
+                        </a>
+
+                    </p>
+
                 </div>
 
                 <noscript>
-                    Please enable JavaScript to submit your inquiry.
+
+                    Please enable JavaScript to
+                    submit your inquiry.
+
                 </noscript>
 
             </form>
@@ -1327,59 +1660,89 @@ footer .fine {
         </div>
 
         <p style="margin-top:18px;">
+
             Operated by Murrays Empire LLC
+
             <br>
+
             Omaha, Nebraska
+
         </p>
 
         <p class="fine">
+
             Independent marketing and referral website.
-            Internet service, home security installation,
-            monitoring and billing are handled by participating
+            Murrays Empire LLC may receive compensation
+            for qualifying referrals. Internet service,
+            home security installation, monitoring and
+            billing are handled by participating
             third-party providers.
+
         </p>
 
         <div class="footer-links">
 
-            <button type="button" class="faq-trigger">
+            <button type="button"
+                    class="dialog-trigger"
+                    data-dialog="aboutDialog">
+
+                About Us
+
+            </button>
+
+            <button type="button"
+                    class="dialog-trigger"
+                    data-dialog="faqDialog">
+
                 FAQ
+
             </button>
 
             <a href="contact.html">
+
                 Contact
+
             </a>
 
             <a href="privacy-policy.html">
+
                 Privacy Policy
+
             </a>
 
             <a href="terms.html">
+
                 Terms of Use
+
             </a>
 
         </div>
 
         <p class="fine">
+
             &copy; 2026 Murrays Empire LLC.
             All rights reserved.
+
         </p>
 
     </div>
 
 </footer>
 
-<!-- FAQ DIALOG -->
+<!-- ABOUT US POP-UP -->
 
-<dialog id="faqDialog" aria-labelledby="faqTitle">
+<dialog id="aboutDialog"
+        aria-labelledby="aboutTitle">
 
-    <div class="faq-heading">
+    <div class="dialog-heading">
 
-        <h2 id="faqTitle">
-            Frequently Asked Questions
+        <h2 id="aboutTitle">
+
+            About Us
+
         </h2>
 
-        <button class="faq-close"
-                id="closeFaq"
+        <button class="dialog-close"
                 type="button">
 
             Close
@@ -1388,18 +1751,128 @@ footer .fine {
 
     </div>
 
-    <div class="faq-content">
+    <div class="dialog-content about-dialog-content">
+
+        <div class="eyebrow">
+
+            Smart Home Security & Internet
+
+        </div>
+
+        <h3>
+
+            Here to help you explore your options.
+
+        </h3>
+
+        <p>
+
+            Smart Home Security & Internet is operated
+            by Murrays Empire LLC.
+
+        </p>
+
+        <p>
+
+            Our mission is to connect households with
+            home security and internet options through
+            independent marketing and referrals.
+
+        </p>
+
+        <p>
+
+            We believe exploring services for your home
+            should be straightforward, informative
+            and comfortable.
+
+        </p>
+
+        <p>
+
+            We help customers explore available options
+            and connect with participating service
+            providers.
+
+        </p>
+
+        <p>
+
+            Internet service, security installation,
+            monitoring and billing are handled by the
+            applicable service providers.
+
+        </p>
+
+        <p>
+
+            As an independent referral business,
+            Murrays Empire LLC may receive compensation
+            for qualifying referrals.
+
+        </p>
+
+        <div class="about-ownership">
+
+            <strong>
+
+                Murrays Empire LLC
+
+            </strong>
+
+            <br>
+
+            Omaha, Nebraska
+
+            <br>
+
+            Independent Marketing & Referrals
+
+        </div>
+
+    </div>
+
+</dialog>
+
+<!-- FAQ POP-UP -->
+
+<dialog id="faqDialog"
+        aria-labelledby="faqTitle">
+
+    <div class="dialog-heading">
+
+        <h2 id="faqTitle">
+
+            Frequently Asked Questions
+
+        </h2>
+
+        <button class="dialog-close"
+                type="button">
+
+            Close
+
+        </button>
+
+    </div>
+
+    <div class="dialog-content">
 
         <details>
 
             <summary>
+
                 Is fiber internet available at my address?
+
             </summary>
 
             <p>
-                Availability depends on your service address.
-                You are welcome to request an address review
-                through our inquiry form.
+
+                Availability depends on your service
+                address. You are welcome to request
+                an address review through our inquiry
+                form.
+
             </p>
 
         </details>
@@ -1407,14 +1880,19 @@ footer .fine {
         <details>
 
             <summary>
+
                 When would I receive a promotional gift card?
+
             </summary>
 
             <p>
-                Gift card timing depends on the applicable
-                promotion, eligibility requirements, service
-                period and redemption instructions. These
-                details can be reviewed before enrollment.
+
+                Gift card timing depends on the
+                applicable promotion, eligibility
+                requirements, service period and
+                redemption instructions. These details
+                can be reviewed before enrollment.
+
             </p>
 
         </details>
@@ -1422,14 +1900,19 @@ footer .fine {
         <details>
 
             <summary>
+
                 Who provides my internet service?
+
             </summary>
 
             <p>
+
                 Participating internet providers supply,
                 manage and bill for internet service.
-                Murrays Empire LLC assists with independent
-                referrals and customer inquiries.
+                Murrays Empire LLC assists with
+                independent referrals and customer
+                inquiries.
+
             </p>
 
         </details>
@@ -1437,13 +1920,17 @@ footer .fine {
         <details>
 
             <summary>
+
                 Is home security currently available?
+
             </summary>
 
             <p>
+
                 Home security enrollment is temporarily
                 unavailable. You are welcome to request
                 information about future options.
+
             </p>
 
         </details>
@@ -1451,13 +1938,87 @@ footer .fine {
         <details>
 
             <summary>
+
                 Does requesting information create an obligation?
+
             </summary>
 
             <p>
-                No. Completing our inquiry form does not
-                create a service order, purchase agreement
-                or payment obligation.
+
+                No. Completing our inquiry form does
+                not create a service order, purchase
+                agreement or payment obligation.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                Does Murrays Empire LLC receive referral compensation?
+
+            </summary>
+
+            <p>
+
+                Murrays Empire LLC may receive
+                compensation for qualifying referrals
+                through participating service providers
+                or referral partners.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                How is my information used?
+
+            </summary>
+
+            <p>
+
+                Your inquiry information is used to
+                respond to your request and, when
+                necessary and authorized, assist
+                with reviewing your requested service.
+
+                Additional information is available
+                in our
+
+                <a href="privacy-policy.html">
+
+                    Privacy Policy.
+
+                </a>
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+
+                Can I withdraw my consent to be contacted?
+
+            </summary>
+
+            <p>
+
+                Yes. You may request that we stop
+                contacting you by using our
+
+                <a href="contact.html">
+
+                    Contact page.
+
+                </a>
+
             </p>
 
         </details>
@@ -1472,220 +2033,479 @@ footer .fine {
 
 // MOBILE NAVIGATION
 
-const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
-window.addEventListener("scroll", function () {
+function closeMobileMenu() {
 
     if (mobileMenu.open) {
-        mobileMenu.open = false;
-    }
-
-}, { passive: true });
-
-document.addEventListener("pointerdown", function (event) {
-
-    if (
-        mobileMenu.open &&
-        !mobileMenu.contains(event.target)
-    ) {
-        mobileMenu.open = false;
-    }
-
-});
-
-mobileMenu.querySelectorAll("a, button").forEach(function (item) {
-
-    item.addEventListener("click", function () {
-        mobileMenu.open = false;
-    });
-
-});
-
-document.addEventListener("keydown", function (event) {
-
-    if (event.key === "Escape" && mobileMenu.open) {
 
         mobileMenu.open = false;
 
-        mobileMenu.querySelector("summary").focus();
-
-    }
-
-});
-
-// FAQ DIALOG
-
-const faqDialog = document.getElementById("faqDialog");
-
-const closeFaq = document.getElementById("closeFaq");
-
-let faqOpener = null;
-
-document.querySelectorAll(".faq-trigger").forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        faqOpener = mobileMenu.contains(button)
-            ? mobileMenu.querySelector("summary")
-            : button;
-
-        mobileMenu.open = false;
-
-        faqDialog.showModal();
-
-        closeFaq.focus();
-
-    });
-
-});
-
-closeFaq.addEventListener("click", function () {
-    faqDialog.close();
-});
-
-faqDialog.addEventListener("close", function () {
-
-    if (faqOpener) {
-        faqOpener.focus();
-    }
-
-});
-
-faqDialog.addEventListener("click", function (event) {
-
-    if (event.target === faqDialog) {
-
-        const bounds = faqDialog.getBoundingClientRect();
-
-        const outside =
-            event.clientX < bounds.left ||
-            event.clientX > bounds.right ||
-            event.clientY < bounds.top ||
-            event.clientY > bounds.bottom;
-
-        if (outside) {
-            faqDialog.close();
-        }
-
-    }
-
-});
-
-// SERVICE SELECTION
-
-const servicePlan = document.getElementById("servicePlan");
-
-const sharingConsent = document.getElementById("sharingConsent");
-
-const sharingLabel = document.getElementById("sharingLabel");
-
-function updateConsent() {
-
-    const securityOnly =
-        servicePlan.value === "Security updates";
-
-    sharingLabel.hidden = securityOnly;
-
-    sharingConsent.disabled = securityOnly;
-
-    sharingConsent.required = !securityOnly;
-
-    if (securityOnly) {
-        sharingConsent.checked = false;
     }
 
 }
 
-document.querySelectorAll(".select-plan").forEach(function (button) {
+window.addEventListener(
+    "scroll",
+    closeMobileMenu,
+    { passive: true }
+);
 
-    button.addEventListener("click", function () {
+window.addEventListener(
+    "resize",
+    closeMobileMenu
+);
 
-        servicePlan.value = button.dataset.plan;
+document.addEventListener(
+    "pointerdown",
+    function (event) {
 
-        updateConsent();
+        if (
+            mobileMenu.open &&
+            !mobileMenu.contains(event.target)
+        ) {
 
-    });
-
-});
-
-servicePlan.addEventListener("change", updateConsent);
-
-updateConsent();
-
-// WEB3FORMS CUSTOMER INQUIRY
-
-const leadForm = document.getElementById("leadForm");
-
-const submitButton = document.getElementById("submitButton");
-
-const formStatus = document.getElementById("formStatus");
-
-submitButton.disabled = false;
-
-leadForm.addEventListener("submit", async function (event) {
-
-    event.preventDefault();
-
-    if (!leadForm.reportValidity()) {
-        return;
-    }
-
-    submitButton.disabled = true;
-
-    submitButton.textContent = "Sending Inquiry...";
-
-    formStatus.textContent = "";
-
-    try {
-
-        const formData = new FormData(leadForm);
-
-        const response = await fetch(
-            "https://api.web3forms.com/submit",
-            {
-                method: "POST",
-                body: formData
-            }
-        );
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-
-            formStatus.style.color = "#176b3a";
-
-            formStatus.textContent =
-                "Thank you. Your inquiry has been received.";
-
-            leadForm.reset();
-
-            updateConsent();
-
-        } else {
-
-            formStatus.style.color = "#9d2525";
-
-            formStatus.textContent =
-                "We were unable to send your inquiry. Please try again.";
+            closeMobileMenu();
 
         }
 
-    } catch (error) {
+    }
+);
 
-        formStatus.style.color = "#9d2525";
+mobileMenu
+    .querySelectorAll("a, button")
+    .forEach(function (item) {
 
-        formStatus.textContent =
-            "Your inquiry could not be sent. Please check your connection and try again.";
+        item.addEventListener(
+            "click",
+            closeMobileMenu
+        );
 
-    } finally {
+    });
 
-        submitButton.disabled = false;
+document.addEventListener(
+    "keydown",
+    function (event) {
 
-        submitButton.textContent = "Request Information";
+        if (
+            event.key === "Escape" &&
+            mobileMenu.open
+        ) {
+
+            closeMobileMenu();
+
+            mobileMenu
+                .querySelector("summary")
+                .focus();
+
+        }
 
     }
+);
+
+// FAQ AND ABOUT US POP-UPS
+
+const dialogs =
+    document.querySelectorAll("dialog");
+
+const dialogOpeners =
+    new WeakMap();
+
+document
+    .querySelectorAll(".dialog-trigger")
+    .forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const dialog =
+                    document.getElementById(
+                        button.dataset.dialog
+                    );
+
+                if (!dialog) {
+                    return;
+                }
+
+                const opener =
+                    mobileMenu.contains(button)
+                    ? mobileMenu.querySelector("summary")
+                    : button;
+
+                dialogOpeners.set(
+                    dialog,
+                    opener
+                );
+
+                closeMobileMenu();
+
+                dialogs.forEach(function (otherDialog) {
+
+                    if (
+                        otherDialog !== dialog &&
+                        otherDialog.open
+                    ) {
+
+                        otherDialog.close();
+
+                    }
+
+                });
+
+                if (!dialog.open) {
+
+                    dialog.showModal();
+
+                }
+
+                document.body.style.overflow =
+                    "hidden";
+
+                dialog
+                    .querySelector(".dialog-close")
+                    .focus();
+
+            }
+        );
+
+    });
+
+dialogs.forEach(function (dialog) {
+
+    dialog
+        .querySelector(".dialog-close")
+        .addEventListener(
+            "click",
+            function () {
+
+                dialog.close();
+
+            }
+        );
+
+    dialog.addEventListener(
+        "close",
+        function () {
+
+            const stillOpen =
+                Array.from(dialogs).some(
+                    function (item) {
+                        return item.open;
+                    }
+                );
+
+            if (!stillOpen) {
+
+                document.body.style.overflow =
+                    "";
+
+                const opener =
+                    dialogOpeners.get(dialog);
+
+                if (opener) {
+
+                    opener.focus();
+
+                }
+
+            }
+
+        }
+    );
+
+    dialog.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target !== dialog) {
+                return;
+            }
+
+            const bounds =
+                dialog.getBoundingClientRect();
+
+            const outside =
+                event.clientX < bounds.left ||
+                event.clientX > bounds.right ||
+                event.clientY < bounds.top ||
+                event.clientY > bounds.bottom;
+
+            if (outside) {
+
+                dialog.close();
+
+            }
+
+        }
+    );
 
 });
+
+// CUSTOMER FORM
+
+const leadForm =
+    document.getElementById("leadForm");
+
+const submitButton =
+    document.getElementById("submitButton");
+
+const servicePlan =
+    document.getElementById("servicePlan");
+
+const customerConsent =
+    document.getElementById("customerConsent");
+
+const consentReminder =
+    document.getElementById("consentReminder");
+
+const consentTimestamp =
+    document.getElementById("consentTimestamp");
+
+const consentStatement =
+    document.getElementById("consentStatement");
+
+const consentText =
+    document.getElementById("consentText");
+
+const formStatus =
+    document.getElementById("formStatus");
+
+let isSubmitting = false;
+
+// REQUIRED CHECKBOX CONTROL
+
+function updateSubmitButton() {
+
+    submitButton.disabled =
+        isSubmitting ||
+        !customerConsent.checked;
+
+    consentReminder.hidden =
+        customerConsent.checked;
+
+}
+
+customerConsent.addEventListener(
+    "change",
+    function () {
+
+        if (customerConsent.checked) {
+
+            consentTimestamp.value =
+                new Date().toISOString();
+
+            consentStatement.value =
+                consentText.textContent
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+        } else {
+
+            consentTimestamp.value = "";
+
+            consentStatement.value = "";
+
+        }
+
+        updateSubmitButton();
+
+    }
+);
+
+// SERVICE SELECTION
+
+document
+    .querySelectorAll(".select-plan")
+    .forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    servicePlan.value !==
+                    button.dataset.plan
+                ) {
+
+                    servicePlan.value =
+                        button.dataset.plan;
+
+                    resetConsent();
+
+                }
+
+            }
+        );
+
+    });
+
+function resetConsent() {
+
+    customerConsent.checked = false;
+
+    consentTimestamp.value = "";
+
+    consentStatement.value = "";
+
+    updateSubmitButton();
+
+}
+
+servicePlan.addEventListener(
+    "change",
+    resetConsent
+);
+
+leadForm
+    .querySelector('[name="contact_method"]')
+    .addEventListener(
+        "change",
+        resetConsent
+    );
+
+// START WITH CONSENT UNCHECKED
+
+resetConsent();
+
+window.addEventListener(
+    "pageshow",
+    function (event) {
+
+        if (event.persisted) {
+
+            resetConsent();
+
+        }
+
+    }
+);
+
+// WEB3FORMS CUSTOMER INQUIRY
+
+leadForm.addEventListener(
+    "submit",
+    async function (event) {
+
+        event.preventDefault();
+
+        if (isSubmitting) {
+            return;
+        }
+
+        if (
+            !customerConsent.checked ||
+            !leadForm.reportValidity()
+        ) {
+
+            updateSubmitButton();
+
+            return;
+
+        }
+
+        if (!consentTimestamp.value) {
+
+            consentTimestamp.value =
+                new Date().toISOString();
+
+        }
+
+        consentStatement.value =
+            consentText.textContent
+                .replace(/\s+/g, " ")
+                .trim();
+
+        isSubmitting = true;
+
+        updateSubmitButton();
+
+        submitButton.textContent =
+            "Sending Inquiry...";
+
+        formStatus.textContent = "";
+
+        let timeoutId;
+
+        try {
+
+            const formData =
+                new FormData(leadForm);
+
+            const controller =
+                new AbortController();
+
+            timeoutId = setTimeout(
+                function () {
+
+                    controller.abort();
+
+                },
+                20000
+            );
+
+            const response =
+                await fetch(
+                    "https://api.web3forms.com/submit",
+                    {
+                        method: "POST",
+                        body: formData,
+                        signal: controller.signal
+                    }
+                );
+
+            const result =
+                await response.json();
+
+            if (
+                response.ok &&
+                result.success
+            ) {
+
+                formStatus.style.color =
+                    "#176b3a";
+
+                formStatus.textContent =
+                    "Thank you. Your inquiry has been received.";
+
+                leadForm.reset();
+
+                resetConsent();
+
+            } else {
+
+                formStatus.style.color =
+                    "#9d2525";
+
+                formStatus.textContent =
+                    "We were unable to send your inquiry. Please try again.";
+
+            }
+
+        } catch (error) {
+
+            formStatus.style.color =
+                "#9d2525";
+
+            formStatus.textContent =
+                "We could not confirm that your inquiry was received. Please contact us if you are unsure before submitting again.";
+
+        } finally {
+
+            clearTimeout(timeoutId);
+
+            isSubmitting = false;
+
+            submitButton.textContent =
+                "Request Information";
+
+            updateSubmitButton();
+
+        }
+
+    }
+);
 
 </script>
 
